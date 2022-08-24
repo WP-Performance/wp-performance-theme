@@ -4,6 +4,8 @@
 
 @import 'tailwindcss/utilities';
 
+@import './patterns.css';
+
 .wp-block[data-align='full'] {
   @apply max-w-none;
 }

@@ -1,0 +1,27 @@
+.gm-exemple-pattern {
+  @apply grid lg:grid-cols-2 m-0;
+}
+
+.gm-exemple-pattern > div {
+  @apply m-0;
+}
+
+.gm-exemple-pattern > div:first-child figure {
+  @apply h-full overflow-hidden max-w-full flex;
+}
+
+.gm-exemple-pattern > div:first-child figure img {
+  @apply object-cover object-center;
+}
+
+.gm-exemple-pattern > div:last-child {
+  @apply py-10 px-6 lg:px-12 xl:px-16 m-0 flex flex-col justify-center;
+}
+
+.gm-exemple-pattern-reverse > div:first-child {
+  @apply lg:col-start-2 row-start-1;
+}
+
+.gm-exemple-pattern-reverse > div:last-child {
+  @apply lg:col-start-1 row-start-1;
+}

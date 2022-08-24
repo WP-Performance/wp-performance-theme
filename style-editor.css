@@ -367,6 +367,109 @@
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
+.gm-exemple-pattern {
+
+    margin: 0px;
+
+    display: grid
+}
+
+@media (min-width: 1024px) {
+
+    .gm-exemple-pattern {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+}
+
+.gm-exemple-pattern > div {
+
+    margin: 0px
+}
+
+.gm-exemple-pattern > div:first-child figure {
+
+    display: flex;
+
+    height: 100%;
+
+    max-width: 100%;
+
+    overflow: hidden
+}
+
+.gm-exemple-pattern > div:first-child figure img {
+
+    object-fit: cover;
+
+    object-position: center
+}
+
+.gm-exemple-pattern > div:last-child {
+
+    margin: 0px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-top: 2.5rem;
+
+    padding-bottom: 2.5rem;
+
+    padding-left: 1.5rem;
+
+    padding-right: 1.5rem
+}
+
+@media (min-width: 1024px) {
+
+    .gm-exemple-pattern > div:last-child {
+
+        padding-left: 3rem;
+
+        padding-right: 3rem
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .gm-exemple-pattern > div:last-child {
+
+        padding-left: 4rem;
+
+        padding-right: 4rem
+    }
+}
+
+.gm-exemple-pattern-reverse > div:first-child {
+
+    grid-row-start: 1
+}
+
+@media (min-width: 1024px) {
+
+    .gm-exemple-pattern-reverse > div:first-child {
+
+        grid-column-start: 2
+    }
+}
+
+.gm-exemple-pattern-reverse > div:last-child {
+
+    grid-row-start: 1
+}
+
+@media (min-width: 1024px) {
+
+    .gm-exemple-pattern-reverse > div:last-child {
+
+        grid-column-start: 1
+    }
+}
+
 .wp-block[data-align='full'] {
 
     max-width: none
