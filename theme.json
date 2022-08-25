@@ -145,51 +145,58 @@
         {
           "fontFace": [
             {
-              "fontFamily": "PlayfairDisplay",
+              "fontFamily": "Sora",
               "fontStretch": "normal",
               "fontStyle": "normal",
-              "fontWeight": "600",
-              "src": ["file:./assets/fonts/PlayfairDisplay-Bold.woff2"]
+              "fontWeight": "700",
+              "src": ["file:./assets/fonts/Sora-Bold.woff2"]
+            },
+            {
+              "fontFamily": "Sora",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["file:./assets/fonts/Sora-Regular.woff2"]
             }
           ],
-          "fontFamily": "\"PlayfairDisplay\", serif",
-          "name": "PlayfairDisplay",
-          "slug": "PlayfairDisplay"
+          "fontFamily": "\"Sora\", sans-serif",
+          "name": "Sora",
+          "slug": "Sora"
         },
         {
           "fontFace": [
             {
-              "fontFamily": "Roboto",
-              "fontStretch": "normal",
-              "fontStyle": "normal",
-              "fontWeight": "300",
-              "src": ["file:./assets/fonts/roboto-v27-latin-300.woff2"]
-            },
-            {
-              "fontFamily": "Roboto",
+              "fontFamily": "Lora",
               "fontStretch": "normal",
               "fontStyle": "normal",
               "fontWeight": "400",
-              "src": ["file:./assets/fonts/roboto-v27-latin-regular.woff2"]
+              "src": ["file:./assets/fonts/Lora-Regular.woff2"]
             },
             {
-              "fontFamily": "Roboto",
+              "fontFamily": "Lora",
               "fontStretch": "normal",
               "fontStyle": "italic",
-              "fontWeight": "300",
-              "src": ["file:./assets/fonts/roboto-v27-latin-italic.woff2"]
+              "fontWeight": "400",
+              "src": ["file:./assets/fonts/Lora-Italic.woff2"]
             },
             {
-              "fontFamily": "Roboto",
+              "fontFamily": "Lora",
+              "fontStretch": "normal",
+              "fontStyle": "italic",
+              "fontWeight": "700",
+              "src": ["file:./assets/fonts/Lora-BoldItalic.woff2"]
+            },
+            {
+              "fontFamily": "Lora",
               "fontStretch": "normal",
               "fontStyle": "normal",
               "fontWeight": "700",
-              "src": ["file:./assets/fonts/roboto-v27-latin-700.woff2"]
+              "src": ["file:./assets/fonts/Lora-Bold.woff2"]
             }
           ],
-          "fontFamily": "\"Roboto\", sans-serif",
-          "name": "Roboto",
-          "slug": "Roboto"
+          "fontFamily": "\"Lora\", serif",
+          "name": "Lora",
+          "slug": "Lora"
         }
       ],
       "fontSizes": [
@@ -235,7 +242,7 @@
       },
       "core/post-title": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--playfair-display)",
+          "fontFamily": "var(--wp--preset--font-family--sora)",
           "fontSize": "var(--wp--custom--typography--font-size--gigantic)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -248,7 +255,7 @@
       },
       "core/query-title": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--playfair-display)",
+          "fontFamily": "var(--wp--preset--font-family--sora)",
           "fontSize": "var(--wp--custom--typography--font-size--gigantic)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--small)"
@@ -261,7 +268,7 @@
       },
       "core/site-title": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--playfair-display)",
+          "fontFamily": "var(--wp--preset--font-family--sora)",
           "fontSize": "var(--wp--preset--font-size--medium)",
           "fontStyle": "normal",
           "fontWeight": "normal",
@@ -276,7 +283,7 @@
     "elements": {
       "h1": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--playfair-display)",
+          "fontFamily": "var(--wp--preset--font-family--sora)",
           "fontSize": "var(--wp--custom--typography--font-size--colossal)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -284,7 +291,7 @@
       },
       "h2": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--playfair-display)",
+          "fontFamily": "var(--wp--preset--font-family--sora)",
           "fontSize": "var(--wp--custom--typography--font-size--gigantic)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--small)"
@@ -292,7 +299,7 @@
       },
       "h3": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--playfair-display)",
+          "fontFamily": "var(--wp--preset--font-family--sora)",
           "fontSize": "var(--wp--custom--typography--font-size--huge)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -300,7 +307,7 @@
       },
       "h4": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--playfair-display)",
+          "fontFamily": "var(--wp--preset--font-family--sora)",
           "fontSize": "var(--wp--preset--font-size--x-large)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -308,7 +315,7 @@
       },
       "h5": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontFamily": "var(--wp--preset--font-family--lora)",
           "fontSize": "var(--wp--preset--font-size--medium)",
           "fontWeight": "700",
           "lineHeight": "var(--wp--custom--typography--line-height--normal)",
@@ -317,7 +324,7 @@
       },
       "h6": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontFamily": "var(--wp--preset--font-family--lora)",
           "fontSize": "var(--wp--preset--font-size--medium)",
           "fontWeight": "400",
           "lineHeight": "var(--wp--custom--typography--line-height--normal)",
@@ -334,7 +341,7 @@
       "blockGap": "1.5rem"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--roboto)",
+      "fontFamily": "var(--wp--preset--font-family--lora)",
       "fontSize": "var(--wp--preset--font-size--medium)",
       "lineHeight": "var(--wp--custom--typography--line-height--normal)"
     }

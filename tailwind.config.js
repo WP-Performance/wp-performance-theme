@@ -7,8 +7,8 @@ module.exports = {
   safelist: [],
   theme: {
     fontFamily: {
-      display: ['var(--wp--preset--font-family--playfair-display)'],
-      body: ['var(--wp--preset--font-family--roboto)'],
+      display: ['var(--wp--preset--font-family--sora)'],
+      body: ['var(--wp--preset--font-family--lora)'],
     },
     extend: {
       gridTemplateColumns: {

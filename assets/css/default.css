@@ -12,7 +12,7 @@ a {
 }
 
 .site-branding {
-  @apply flex flex-col mx-2 lg:mx-10;
+  @apply flex flex-col mx-2 lg:mx-10 font-display;
 }
 
 .site-branding > p,
