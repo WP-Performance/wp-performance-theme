@@ -1,0 +1,68 @@
+/** header **/
+.site-header {
+  @apply flex flex-row justify-between p-0 px-1 py-4 xl:mx-auto xl:max-w-screen-2xl lg:items-center lg:flex-row;
+}
+
+/** logo */
+.site-header .gm-logo-website {
+  @apply p-2 lg:pl-9;
+}
+.site-header .gm-logo-website a {
+  @apply flex items-center;
+}
+
+.site-header .gm-logo-website a svg {
+  @apply w-64 lg:w-80;
+}
+
+/** navigation **/
+.main-navigation {
+  @apply max-w-full my-3 ml-6 mr-2 md:mx-10 font-display;
+}
+
+.main-navigation > ul,
+.main-navigation ul > li,
+.wp-block-navigation__responsive-container-content > ul,
+.wp-block-navigation__responsive-container-content ul > li {
+  @apply p-0 m-0 list-none;
+}
+
+.main-navigation ul,
+.wp-block-navigation__responsive-container-content ul {
+  @apply p-0 m-0 lg:flex;
+}
+
+.main-navigation ul > li,
+.wp-block-navigation__responsive-container-content ul > li {
+  @apply p-0 lg:mx-5;
+}
+
+.main-navigation ul > li > ul,
+.wp-block-navigation__responsive-container-content ul > li > ul {
+  @apply pl-3 ml-3;
+}
+/** nav link */
+
+.main-navigation a.wp-block-navigation-item__content,
+.wp-block-navigation__responsive-container-content a {
+  @apply text-xl font-bold text-gray-500 no-underline hover:text-accent md:text-sm;
+}
+
+.main-navigation li.current-menu-item a {
+  @apply text-gray-800;
+}
+
+/** burger button */
+.wp-block-navigation__responsive-container-open svg,
+.wp-block-navigation__responsive-container-close svg {
+  @apply text-accent;
+}
+
+.wp-block-navigation__responsive-container-close {
+  @apply top-5 right-4;
+}
+
+/** menu mobile */
+.wp-block-navigation__responsive-container.is-menu-open {
+  @apply px-0;
+}

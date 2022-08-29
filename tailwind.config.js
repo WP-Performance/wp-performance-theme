@@ -18,6 +18,9 @@ module.exports = {
       backgroundImage: (theme) => ({
         'wp-performance': "url('/assets/media/wp-performance.png')",
       }),
+      colors: {
+        accent: 'var(--wp--preset--color--accent)',
+      },
     },
   },
   plugins: [],
