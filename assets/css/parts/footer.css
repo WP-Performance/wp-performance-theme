@@ -1,0 +1,51 @@
+footer.wp-block-template-part {
+  @apply pt-12 bg-white;
+}
+
+footer.wp-block-template-part > div > div {
+  @apply flex flex-col items-center mx-auto md:flex-row xl:max-w-screen-xl;
+}
+/** logo */
+footer.wp-block-template-part > div > div > a {
+  @apply p-2 lg:pl-9;
+}
+
+footer.wp-block-template-part > div > div a svg {
+  @apply w-64;
+}
+
+/** nav */
+footer.wp-block-template-part > div > div > nav {
+  @apply flex-1 md:m-0 mt-7;
+}
+
+footer.wp-block-template-part > div > div > nav ul {
+  @apply justify-center;
+}
+
+footer.wp-block-template-part > div > div > nav ul a {
+  @apply text-sm text-gray-500 no-underline hover:text-accent;
+}
+
+/** social */
+footer.wp-block-template-part
+  .wp-block-social-links:not(.is-style-logos-only)
+  .wp-social-link-youtube,
+footer.wp-block-template-part
+  .wp-block-social-links:not(.is-style-logos-only)
+  .wp-social-link-github {
+  @apply bg-gray-700;
+}
+
+footer.wp-block-template-part .wp-block-social-links {
+  @apply gap-2 mt-12 md:mt-0 md:mr-12;
+}
+
+footer.wp-block-template-part .wp-block-social-links .wp-social-link svg {
+  @apply w-5 h-5;
+}
+
+/** text */
+footer.wp-block-template-part > div > div:last-child {
+  @apply flex items-center justify-center py-6 mx-auto text-xs text-gray-500 border-t border-gray-100 border-solid;
+}
