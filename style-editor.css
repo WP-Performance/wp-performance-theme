@@ -367,11 +367,19 @@
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
+/** parts */
+
 /** header **/
 
 .site-header {
 
+    position: absolute;
+
     display: flex;
+
+    width: 100%;
+
+    max-width: 100%;
 
     flex-direction: row;
 
@@ -582,7 +590,7 @@
 
     top: 1.25rem;
 
-    right: 1rem
+    right: 1.25rem
 }
 
 /** menu mobile */
@@ -767,12 +775,133 @@ footer.wp-block-template-part > div > div:last-child {
     color: rgb(107 114 128 / var(--tw-text-opacity))
 }
 
-.wp-block[data-align='full'] {
+/** patterns */
 
-    max-width: none
+.gm-hero-home {
+
+    display: grid;
+
+    min-height: 100vh;
+
+    width: 100%
 }
 
-.wp-block[data-align='wide'] {
+@media (min-width: 1024px) {
 
-    max-width: 100%
+    .gm-hero-home {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+}
+
+/** image */
+
+.gm-hero-home > div:first-child figure {
+
+    overflow: hidden;
+
+    display: flex;
+
+    height: 100%;
+
+    width: 83.333333%
+}
+
+@media (min-width: 768px) {
+
+    .gm-hero-home > div:first-child figure {
+
+        width: 100%
+    }
+}
+
+.gm-hero-home > div:first-child figure img {
+
+    object-fit: cover
+}
+
+/** content */
+
+.gm-hero-home > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding-left: 2.5rem;
+
+    padding-right: 2.5rem
+}
+
+@media (min-width: 1024px) {
+
+    .gm-hero-home > div:last-child {
+
+        padding-left: 5rem;
+
+        padding-right: 5rem
+    }
+}
+
+.gm-hero-home > div:last-child > p:first-child {
+
+    display: flex;
+
+    align-items: center;
+
+    --tw-text-opacity: 1;
+
+    color: rgb(75 85 99 / var(--tw-text-opacity))
+}
+
+.gm-hero-home > div:last-child > p:first-child::before {
+
+    margin-right: 0.5rem;
+
+    height: 1px;
+
+    width: 4rem;
+
+    background-color: var(--wp--preset--color--accent);
+
+    --tw-content: '';
+
+    content: var(--tw-content)
+}
+
+.gm-hero-home > div:last-child h2 {
+
+    margin-top: 2.5rem
+}
+
+.gm-hero-home > div:last-child p {
+
+    font-size: 1rem;
+
+    line-height: 1.5rem;
+
+    --tw-text-opacity: 1;
+
+    color: rgb(107 114 128 / var(--tw-text-opacity))
+}
+
+.gm-hero-home > div:last-child p a {
+
+    font-family: var(--wp--preset--font-family--sora);
+
+    font-size: 1rem;
+
+    line-height: 1.5rem;
+
+    font-weight: 700;
+
+    color: var(--wp--preset--color--accent);
+
+    -webkit-text-decoration-line: none;
+
+            text-decoration-line: none
 }

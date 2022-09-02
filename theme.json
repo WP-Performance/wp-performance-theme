@@ -128,8 +128,8 @@
       }
     },
     "layout": {
-      "contentSize": "1024px",
-      "wideSize": "1275px"
+      "contentSize": "100%",
+      "wideSize": "100%"
     },
     "spacing": {
       "units": ["%", "px", "em", "rem", "vh", "vw"]
