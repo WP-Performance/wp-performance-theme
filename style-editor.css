@@ -379,7 +379,7 @@
 
     width: 100%;
 
-    max-width: 100%;
+    max-width: 99vw;
 
     flex-direction: row;
 
@@ -391,9 +391,19 @@
 
     padding-right: 0.25rem;
 
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 
-    padding-bottom: 1rem
+    padding-bottom: 0.5rem
+}
+
+@media (min-width: 768px) {
+
+    .site-header {
+
+        padding-top: 1rem;
+
+        padding-bottom: 1rem
+    }
 }
 
 @media (min-width: 1024px) {
@@ -779,6 +789,8 @@ footer.wp-block-template-part > div > div:last-child {
 
 .gm-hero-home {
 
+    margin: 0px;
+
     display: grid;
 
     min-height: 100vh;
@@ -804,6 +816,8 @@ footer.wp-block-template-part > div > div:last-child {
 
     height: 100%;
 
+    max-height: 40vh;
+
     width: 83.333333%
 }
 
@@ -815,12 +829,22 @@ footer.wp-block-template-part > div > div:last-child {
     }
 }
 
+@media (min-width: 1024px) {
+
+    .gm-hero-home > div:first-child figure {
+
+        max-height: 100vh
+    }
+}
+
 .gm-hero-home > div:first-child figure img {
+
+    width: 100%;
 
     object-fit: cover
 }
 
-/** content */
+/** column right */
 
 .gm-hero-home > div:last-child {
 
@@ -830,7 +854,7 @@ footer.wp-block-template-part > div > div:last-child {
 
     align-items: flex-start;
 
-    justify-content: center;
+    justify-content: space-between;
 
     padding-left: 2.5rem;
 
@@ -847,7 +871,22 @@ footer.wp-block-template-part > div > div:last-child {
     }
 }
 
-.gm-hero-home > div:last-child > p:first-child {
+/** content */
+
+.gm-hero-home > div:last-child > div:first-child {
+
+    display: flex;
+
+    flex: 1 1 0%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center
+}
+
+.gm-hero-home > div:last-child > div p:first-child {
 
     display: flex;
 
@@ -858,7 +897,7 @@ footer.wp-block-template-part > div > div:last-child {
     color: rgb(75 85 99 / var(--tw-text-opacity))
 }
 
-.gm-hero-home > div:last-child > p:first-child::before {
+.gm-hero-home > div:last-child > div p:first-child::before {
 
     margin-right: 0.5rem;
 
@@ -873,12 +912,12 @@ footer.wp-block-template-part > div > div:last-child {
     content: var(--tw-content)
 }
 
-.gm-hero-home > div:last-child h2 {
+.gm-hero-home > div:last-child > div h2 {
 
     margin-top: 2.5rem
 }
 
-.gm-hero-home > div:last-child p {
+.gm-hero-home > div:last-child > div p {
 
     font-size: 1rem;
 
@@ -889,7 +928,7 @@ footer.wp-block-template-part > div > div:last-child {
     color: rgb(107 114 128 / var(--tw-text-opacity))
 }
 
-.gm-hero-home > div:last-child p a {
+.gm-hero-home > div:last-child > div p a {
 
     font-family: var(--wp--preset--font-family--sora);
 
@@ -905,3 +944,80 @@ footer.wp-block-template-part > div > div:last-child {
 
             text-decoration-line: none
 }
+
+/** social */
+
+.gm-hero-home > div:last-child > div:last-child {
+
+    margin-bottom: 0.75rem;
+
+    display: flex;
+
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start
+}
+
+.gm-hero-home > div:last-child > div:last-child h3 {
+
+    width: 100%;
+
+    font-size: 1.125rem;
+
+    line-height: 1.75rem;
+
+    --tw-text-opacity: 1;
+
+    color: rgb(156 163 175 / var(--tw-text-opacity))
+}
+
+.gm-hero-home > div:last-child > div:last-child > div h4 {
+
+    margin-top: 0.25rem;
+
+    -webkit-user-select: none;
+
+            user-select: none;
+
+    font-size: 1.125rem;
+
+    line-height: 1.75rem;
+
+    --tw-text-opacity: 1;
+
+    color: rgb(31 41 55 / var(--tw-text-opacity))
+}
+
+.gm-hero-home > div:last-child > div:last-child > div ul {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    display: inline-flex
+}
+
+.gm-hero-home > div:last-child > div:last-child > div {
+
+    position: relative;
+
+    margin-right: 0.5rem;
+
+    padding-left: 0px;
+
+    padding-right: 2rem;
+
+    text-align: center
+}
+
+.gm-hero-home > div:last-child > div:last-child > div:last-child {
+
+    padding-left: 2rem
+}
+
+/* .gm-hero-home > div:last-child > div:last-child > div a,
+.gm-hero-home > div:last-child > div:last-child > div a:hover {
+  @apply before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:content-[''] before:transform-none before:flex before:z-20 before:bg-transparent before:w-full before:h-full;
+} */
