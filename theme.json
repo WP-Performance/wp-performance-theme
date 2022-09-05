@@ -90,7 +90,7 @@
           "slug": "background"
         },
         {
-          "color": "#1a4548",
+          "color": "#261578",
           "name": "Primary",
           "slug": "primary"
         },
@@ -146,17 +146,11 @@
           "fontFace": [
             {
               "fontFamily": "Sora",
-              "fontStretch": "normal",
-              "fontStyle": "normal",
-              "fontWeight": "700",
-              "src": ["file:./assets/fonts/Sora-Bold.woff2"]
-            },
-            {
-              "fontFamily": "Sora",
-              "fontStretch": "normal",
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "src": ["file:./assets/fonts/Sora-Regular.woff2"]
+              "fontStretch": "25% 151%",
+              "fontWeight": "100 800",
+              "fontStyle": "oblique 0deg 10deg",
+              "unicodeRange": "U+000-5FF;",
+              "src": ["file:./assets/fonts/Sora-VariableFont_wght.woff2"]
             }
           ],
           "fontFamily": "\"Sora\", sans-serif",
