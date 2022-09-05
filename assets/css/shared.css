@@ -7,6 +7,21 @@ body {
   @apply mt-0;
 }
 
+.main-content {
+  @apply py-16 mt-0;
+}
+
+.home .main-content {
+  @apply py-0;
+}
+
+/** width content */
+.wp-block-post-content
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
+  /* max-width: ; */
+  @apply max-w-screen-lg mx-auto;
+}
+
 ::selection {
   @apply text-white bg-accent;
 }
