@@ -47,11 +47,11 @@
 }
 
 .gm-hero-home > div:last-child > div:last-child h3 {
-  @apply w-full text-lg text-gray-400;
+  @apply w-full text-lg font-medium text-gray-400;
 }
 
 .gm-hero-home > div:last-child > div:last-child > div h4 {
-  @apply mt-1 text-lg text-gray-800 select-none;
+  @apply mt-1 text-base font-normal text-gray-800;
 }
 
 .gm-hero-home > div:last-child > div:last-child > div ul {
