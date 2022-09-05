@@ -7,8 +7,8 @@
  */
 ?>
 
-<!-- wp:group {"className":"gm-hero-home"} -->
-<div class="wp-block-group gm-hero-home">
+<!-- wp:group {"className":"gm-hero-home", "align":"wide"} -->
+<div class="wp-block-group gm-hero-home alignwide">
   <!-- wp:group -->
   <div class="wp-block-group">
     <!-- wp:image {"id":74,"sizeSlug":"large","linkDestination":"none"} -->
