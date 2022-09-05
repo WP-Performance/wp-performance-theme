@@ -1,6 +1,6 @@
 /** header **/
 .site-header {
-  @apply flex flex-row justify-between p-0 px-1 py-4 xl:mx-auto xl:max-w-screen-2xl lg:items-center lg:flex-row;
+  @apply absolute flex flex-row justify-between w-full max-w-full p-0 px-1 py-2 md:py-4 xl:mx-auto xl:max-w-screen-2xl lg:items-center lg:flex-row;
 }
 
 /** logo */
@@ -59,7 +59,7 @@
 }
 
 .wp-block-navigation__responsive-container-close {
-  @apply top-5 right-4;
+  @apply top-5 right-5;
 }
 
 /** menu mobile */

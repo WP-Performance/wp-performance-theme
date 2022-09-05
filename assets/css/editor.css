@@ -4,12 +4,8 @@
 
 @import 'tailwindcss/utilities';
 
+/** parts */
 @import './parts/index.css';
 
-.wp-block[data-align='full'] {
-  @apply max-w-none;
-}
-
-.wp-block[data-align='wide'] {
-  @apply max-w-full;
-}
+/** patterns */
+@import './patterns/index.css';

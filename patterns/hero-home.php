@@ -1,17 +1,18 @@
-<!-- wp:template-part {"slug":"header","theme":"wp-performance","className":"site-header"} /-->
+<?php
+
+/**
+ * Title: Hero Home
+ * Slug: press-wind/hero-home
+ * Categories: press-wind/press-wind-patterns
+ */
+?>
 
 <!-- wp:group {"className":"gm-hero-home"} -->
 <div class="wp-block-group gm-hero-home">
   <!-- wp:group -->
   <div class="wp-block-group">
-    <!-- wp:image {"id":77,"sizeSlug":"large","linkDestination":"none"} -->
-    <figure class="wp-block-image size-large">
-      <img
-        src="/wp-content/uploads/2022/09/alexandru-acea-WBYxmW4yuw-unsplash-683x1024.jpg"
-        alt=""
-        class="wp-image-77"
-      />
-    </figure>
+    <!-- wp:image {"id":74,"sizeSlug":"large","linkDestination":"none"} -->
+    <figure class="wp-block-image size-large"><img src="http://wpperformance.localhost/wp-content/uploads/2022/09/wasa-crispbread-IgYBpcquAg4-unsplash-1024x775.jpg" alt="" class="wp-image-74" /></figure>
     <!-- /wp:image -->
   </div>
   <!-- /wp:group -->
@@ -29,18 +30,11 @@
       <!-- /wp:heading -->
 
       <!-- wp:paragraph -->
-      <p>
-        WP Performance est un regroupement de bonnes pratiques pour développer
-        des sites WordPress performants et maintenables sur le long terme.
-      </p>
+      <p>Massa urna magnis dignissim id euismod porttitor vitae etiam viverra nunc at adipiscing sit morbi aliquet mauris porttitor nisi, senectus pharetra, ac porttitor orci.</p>
       <!-- /wp:paragraph -->
 
       <!-- wp:paragraph -->
-      <p>
-        <a href="/hello-world/" data-type="post" data-id="1">
-          Voir les derniers articles
-        </a>
-      </p>
+      <p><a href="http://wpperformance.localhost/hello-world/" data-type="post" data-id="1">Voir les derniers articles</a></p>
       <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->
@@ -84,5 +78,3 @@
   <!-- /wp:group -->
 </div>
 <!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","theme":"wp-performance"} /-->

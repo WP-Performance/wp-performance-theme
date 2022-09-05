@@ -12,4 +12,8 @@
 /** DEFAULT FOR EXAMPLE */
 @import './default.css';
 
+/** parts */
 @import './parts/index.css';
+
+/** patterns */
+@import './patterns/index.css';
