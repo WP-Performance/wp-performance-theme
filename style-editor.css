@@ -374,7 +374,8 @@ body {
     background-color: rgb(243 244 246 / var(--tw-bg-opacity))
 }
 
-.site-main {
+.site-main, 
+.main-content {
 
     margin-top: 0px
 }

@@ -2,7 +2,8 @@ body {
   @apply bg-gray-100;
 }
 
-.site-main {
+.site-main,
+.main-content {
   @apply mt-0;
 }
 
