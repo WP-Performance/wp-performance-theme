@@ -375,11 +375,14 @@
 
     position: absolute;
 
-    display: flex;
-
     width: 100%;
 
-    max-width: 100%;
+    max-width: 100%
+}
+
+.site-header-wrapper {
+
+    display: flex;
 
     flex-direction: row;
 
@@ -396,9 +399,13 @@
     padding-bottom: 0.5rem
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
-    .site-header {
+    .site-header-wrapper {
+
+        flex-direction: row;
+
+        align-items: center;
 
         padding-top: 1rem;
 
@@ -406,19 +413,9 @@
     }
 }
 
-@media (min-width: 1024px) {
-
-    .site-header {
-
-        flex-direction: row;
-
-        align-items: center
-    }
-}
-
 @media (min-width: 1280px) {
 
-    .site-header {
+    .site-header-wrapper {
 
         margin-left: auto;
 
@@ -759,6 +756,8 @@ footer.wp-block-template-part > div > div:last-child {
     margin-right: auto;
 
     display: flex;
+
+    max-width: none;
 
     align-items: center;
 

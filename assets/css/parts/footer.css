@@ -47,5 +47,5 @@ footer.wp-block-template-part .wp-block-social-links .wp-social-link svg {
 
 /** text */
 footer.wp-block-template-part > div > div:last-child {
-  @apply flex items-center justify-center py-6 mx-auto text-xs text-gray-500 border-t border-gray-100 border-solid;
+  @apply flex items-center justify-center py-6 mx-auto text-xs text-gray-500 border-t border-gray-100 border-solid max-w-none;
 }
