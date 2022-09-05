@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - yarn install
-    - yarn build
