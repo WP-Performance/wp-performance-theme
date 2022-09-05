@@ -2,34 +2,8 @@ body {
   @apply bg-gray-100;
 }
 
-a {
-  @apply no-underline hover:underline;
-}
-
-/** main **/
 .site-main {
-  @apply xl:max-w-screen-xl max-w-[100%] mx-0 xl:mx-auto min-h-[60vh] grid grid-cols-main-small xl:grid-cols-main;
-}
-
-.site-main .main-content {
-  @apply col-start-2 col-end-3;
-}
-
-.site-main .main-content .alignwide {
-  @apply -ml-1 -mr-1 xl:-ml-32 xl:-mr-32;
-}
-
-.site-main p {
-  @apply text-gray-600;
-}
-
-/** footer */
-.site-footer {
-  @apply mt-20 text-center;
-}
-
-.site-footer > p > a {
-  @apply inline-flex after:content-[''] after:ml-2 after:block after:bg-wp-performance after:bg-contain after:bg-no-repeat after:w-5 after:h-5 after:mt-1;
+  @apply mt-0;
 }
 
 /** pattern example */
