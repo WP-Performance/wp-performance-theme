@@ -9,8 +9,7 @@
 /** GLOBAL */
 @import './has.css';
 
-/** DEFAULT FOR EXAMPLE */
-@import './default.css';
+@import './shared.css';
 
 /** parts */
 @import './parts/index.css';
