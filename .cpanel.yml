@@ -1,5 +1,6 @@
 ---
 deployment:
   tasks:
+    - export DEPLOYPATH=/home/bpvy7911/public_html/wp-performance.com/wp-content/themes/wp-performance
     - yarn install
     - yarn build
