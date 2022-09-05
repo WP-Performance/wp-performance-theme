@@ -1168,6 +1168,15 @@ footer.wp-block-template-part > div > div:last-child {
 
 /** image */
 
+.gm-hero-page > div:first-child {
+
+    min-height: 40vh;
+
+    --tw-bg-opacity: 1;
+
+    background-color: rgb(203 213 225 / var(--tw-bg-opacity))
+}
+
 .gm-hero-page > div:first-child figure {
 
     overflow: hidden;

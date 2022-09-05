@@ -3,6 +3,9 @@
 }
 
 /** image */
+.gm-hero-page > div:first-child {
+  @apply min-h-[40vh] bg-slate-300;
+}
 
 .gm-hero-page > div:first-child figure {
   @apply overflow-hidden;
