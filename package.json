@@ -21,6 +21,7 @@
     "babel-preset-env": "^1.7.0",
     "core-js": "^3.24.1",
     "cross-env": "^7.0.3",
+    "husky": "^8.0.1",
     "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^14.1.0",
