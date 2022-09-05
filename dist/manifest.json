@@ -1,0 +1,20 @@
+{
+  "main-legacy.js": {
+    "file": "assets/main-legacy.ff55f58f.js",
+    "src": "main-legacy.js",
+    "isEntry": true
+  },
+  "-legacy": {
+    "file": "assets/polyfills-legacy.a9f54f36.js",
+    "src": "-legacy",
+    "isEntry": true
+  },
+  "main.js": {
+    "file": "assets/main.abcbade5.js",
+    "src": "main.js",
+    "isEntry": true,
+    "css": [
+      "assets/main.56906aba.css"
+    ]
+  }
+}
