@@ -463,6 +463,16 @@
     }
 }
 
+.site-header .gm-logo-website a svg path:first-child {
+
+    fill: var(--wp--preset--color--primary)
+}
+
+.site-header .gm-logo-website a svg path:last-child {
+
+    fill: var(--wp--preset--color--accent)
+}
+
 /** navigation **/
 
 .main-navigation {
@@ -968,6 +978,8 @@ footer.wp-block-template-part > div > div:last-child {
 
     line-height: 1.75rem;
 
+    font-weight: 500;
+
     --tw-text-opacity: 1;
 
     color: rgb(156 163 175 / var(--tw-text-opacity))
@@ -977,13 +989,11 @@ footer.wp-block-template-part > div > div:last-child {
 
     margin-top: 0.25rem;
 
-    -webkit-user-select: none;
+    font-size: 1rem;
 
-            user-select: none;
+    line-height: 1.5rem;
 
-    font-size: 1.125rem;
-
-    line-height: 1.75rem;
+    font-weight: 400;
 
     --tw-text-opacity: 1;
 

@@ -15,6 +15,14 @@
   @apply w-64 lg:w-80;
 }
 
+.site-header .gm-logo-website a svg path:first-child {
+  @apply fill-primary;
+}
+
+.site-header .gm-logo-website a svg path:last-child {
+  @apply fill-accent;
+}
+
 /** navigation **/
 .main-navigation {
   @apply max-w-full my-3 ml-6 mr-2 md:mx-10 font-display;

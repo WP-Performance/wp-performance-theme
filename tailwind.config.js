@@ -19,6 +19,7 @@ module.exports = {
         'wp-performance': "url('/assets/media/wp-performance.png')",
       }),
       colors: {
+        primary: 'var(--wp--preset--color--primary)',
         accent: 'var(--wp--preset--color--accent)',
       },
     },
