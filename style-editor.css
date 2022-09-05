@@ -1148,3 +1148,121 @@ footer.wp-block-template-part > div > div:last-child {
 .gm-hero-home > div:last-child > div:last-child > div a:hover {
   @apply before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:content-[''] before:transform-none before:flex before:z-20 before:bg-transparent before:w-full before:h-full;
 } */
+
+.gm-hero-page {
+
+    margin: 0px;
+
+    display: grid;
+
+    width: 100%
+}
+
+@media (min-width: 1024px) {
+
+    .gm-hero-page {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+}
+
+/** image */
+
+.gm-hero-page > div:first-child figure {
+
+    overflow: hidden;
+
+    display: flex;
+
+    height: 100%;
+
+    max-height: 45vh;
+
+    width: 83.333333%
+}
+
+@media (min-width: 768px) {
+
+    .gm-hero-page > div:first-child figure {
+
+        width: 100%
+    }
+}
+
+.gm-hero-page > div:first-child figure img {
+
+    width: 100%;
+
+    object-fit: cover
+}
+
+@media (min-width: 1024px) {
+
+    .gm-hero-page > div:first-child figure img {
+
+        object-position: bottom
+    }
+}
+
+/** column right */
+
+.gm-hero-page > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    padding-left: 0.75rem;
+
+    padding-right: 0.75rem
+}
+
+@media (min-width: 1024px) {
+
+    .gm-hero-page > div:last-child {
+
+        padding-left: 5rem;
+
+        padding-right: 5rem
+    }
+}
+
+/** content */
+
+.gm-hero-page > div:last-child > div:first-child {
+
+    display: flex;
+
+    width: 100%;
+
+    flex: 1 1 0%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center
+}
+
+.gm-hero-page > div:last-child > div h1 {
+
+    width: 100%;
+
+    font-size: 2.25rem;
+
+    line-height: 2.5rem
+}
+
+@media (min-width: 768px) {
+
+    .gm-hero-page > div:last-child > div h1 {
+
+        font-size: 3rem;
+
+        line-height: 1
+    }
+}

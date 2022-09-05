@@ -11,9 +11,7 @@
 <div class="wp-block-group gm-hero-page">
   <!-- wp:group -->
   <div class="wp-block-group">
-    <!-- wp:image {"id":74,"sizeSlug":"large","linkDestination":"none"} -->
-    <figure class="wp-block-image size-large"><img src="/wp-content/uploads/2022/09/wasa-crispbread-IgYBpcquAg4-unsplash-1024x775.jpg" alt="" class="wp-image-74" /></figure>
-    <!-- /wp:image -->
+    <!-- wp:post-featured-image /-->
   </div>
   <!-- /wp:group -->
 
@@ -21,14 +19,9 @@
   <div class="wp-block-group">
     <!-- wp:group -->
     <div class="wp-block-group">
-
-      <!-- wp:heading -->
-      <h2>Improve WordPress Performance by example</h2>
-      <!-- /wp:heading -->
-
+      <!-- wp:post-title {"level":1} /-->
     </div>
     <!-- /wp:group -->
-
   </div>
   <!-- /wp:group -->
 </div>
