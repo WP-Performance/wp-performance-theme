@@ -367,6 +367,124 @@
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
+body {
+
+    --tw-bg-opacity: 1;
+
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+}
+
+.site-main {
+
+    margin-top: 0px
+}
+
+::selection {
+
+    background-color: var(--wp--preset--color--accent);
+
+    --tw-text-opacity: 1;
+
+    color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+p > a {
+
+    position: relative
+}
+
+p > a::after {
+
+    position: absolute;
+
+    bottom: -0.25rem;
+
+    left: 0px;
+
+    display: block;
+
+    height: 0.125rem;
+
+    width: 0px;
+
+    background-image: linear-gradient(to left,#BE185D,rgb(150,20,90));;
+
+    transition-property: all;
+
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition-duration: 150ms;
+
+    --tw-content: '';
+
+    content: var(--tw-content)
+}
+
+p > a:hover {
+
+    -webkit-text-decoration-line: none;
+
+            text-decoration-line: none
+}
+
+p > a:hover::after {
+
+    content: var(--tw-content);
+
+    width: 100%
+}
+
+/** pattern example */
+
+.pattern-example {
+
+    padding-left: 0.75rem;
+
+    padding-right: 0.75rem;
+
+    padding-top: 2.5rem;
+
+    padding-bottom: 2.5rem
+}
+
+@media (min-width: 1024px) {
+
+    .pattern-example {
+
+        padding: 2.5rem
+    }
+}
+
+.pattern-example > p {
+
+    margin-left: 1rem;
+
+    margin-right: 1rem;
+
+    margin-top: 2rem;
+
+    margin-bottom: 2rem;
+
+    max-width: 42rem
+}
+
+@media (min-width: 1024px) {
+
+    .pattern-example > p {
+
+        margin-left: auto;
+
+        margin-right: auto
+    }
+}
+
+/** prism */
+
+.wp-block-wp-performance-prism-my-code {
+
+    max-width: calc(100vw - 2rem)
+}
+
 /** parts */
 
 /** header **/

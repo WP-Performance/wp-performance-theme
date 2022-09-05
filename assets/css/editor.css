@@ -4,6 +4,8 @@
 
 @import 'tailwindcss/utilities';
 
+@import './shared.css';
+
 /** parts */
 @import './parts/index.css';
 

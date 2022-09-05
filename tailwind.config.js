@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         'wp-performance': "url('/assets/media/wp-performance.png')",
+        'link-gradient': 'linear-gradient(to left,#BE185D,rgb(150,20,90));',
       }),
       colors: {
         accent: 'var(--wp--preset--color--accent)',
