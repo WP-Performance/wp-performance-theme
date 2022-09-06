@@ -20,6 +20,7 @@ module.exports = {
         'link-gradient': 'linear-gradient(to left,#BE185D,rgb(150,20,90));',
       }),
       colors: {
+        body: 'var(--wp--custom--colors--body)',
         primary: 'var(--wp--preset--color--primary)',
         accent: 'var(--wp--preset--color--accent)',
       },
