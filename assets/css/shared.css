@@ -1,5 +1,5 @@
 body {
-  @apply bg-gray-100;
+  @apply bg-body;
 }
 
 .site-main,
@@ -8,26 +8,36 @@ body {
 }
 
 .main-content {
-  @apply py-16 mt-0;
+  @apply min-h-[40vh] py-16 mt-0;
 }
 
 .home .main-content {
   @apply py-0;
 }
 
-/** width content */
+/** width content align */
 .wp-block-post-content
   > :where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
-  /* max-width: ; */
-  @apply max-w-screen-lg mx-auto;
+  max-width: var(--wp--custom--sizes--content);
+  @apply px-4 mx-auto;
 }
+
+.wp-block-post-content > .alignleft {
+  @apply float-none mr-auto;
+}
+
+.wp-block-post-content > .alignright {
+  @apply float-none ml-auto;
+}
+
+/** text selection color */
 
 ::selection {
   @apply text-white bg-accent;
 }
 
-p > a {
-  @apply after:content-[''] after:block after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 relative after:transition-all hover:after:w-full after:bg-link-gradient hover:no-underline;
+.wp-block-post-content a:not(.wp-block-button__link) {
+  @apply after:content-[''] after:block after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-0.5 relative after:transition-all hover:after:w-full after:bg-link-gradient hover:no-underline no-underline;
 }
 
 /** pattern example */

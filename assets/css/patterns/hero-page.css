@@ -4,7 +4,7 @@
 
 /** image */
 .gm-hero-page > div:first-child {
-  @apply min-h-[40vh] bg-slate-300;
+  @apply min-h-[30vh] md:min-h-[35vh] lg:min-h-[40vh] bg-gradient-to-r from-slate-300 to-slate-100;
 }
 
 .gm-hero-page > div:first-child figure {
@@ -12,7 +12,7 @@
 }
 
 .gm-hero-page > div:first-child figure {
-  @apply flex w-5/6 h-full md:w-full max-h-[45vh];
+  @apply flex w-5/6 h-full md:w-full max-h-[30vh] md:max-h-[35vh] lg:max-h-[40vh];
 }
 
 .gm-hero-page > div:first-child figure img {
@@ -20,14 +20,14 @@
 }
 /** column right */
 .gm-hero-page > div:last-child {
-  @apply flex flex-col items-start justify-between px-3 lg:px-20;
+  @apply flex flex-col items-end justify-between px-3 lg:px-20;
 }
 
 /** content */
 .gm-hero-page > div:last-child > div:first-child {
-  @apply flex flex-col items-start justify-center flex-1 w-full;
+  @apply flex flex-col items-start justify-end flex-1 w-full pt-6 lg:pt-0;
 }
 
 .gm-hero-page > div:last-child > div h1 {
-  @apply w-full text-4xl md:text-5xl;
+  @apply w-full text-4xl lg:mb-10 md:text-5xl text-accent;
 }
