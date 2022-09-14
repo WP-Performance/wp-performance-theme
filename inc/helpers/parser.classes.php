@@ -108,6 +108,7 @@ class HTML_Parser
     $html = '';
 
     foreach ($matches as $token) {
+      $is_js_or_css = false;
       // keep tag type name
       $tag = (isset($token['tag'])) ? strtolower($token['tag']) : null;
       // content tag
@@ -117,9 +118,11 @@ class HTML_Parser
         // is script
         if (!empty($token['script'])) {
           $strip = $this->compress_js;
+          $is_js_or_css = true;
           // is style
         } else if (!empty($token['style'])) {
           $strip = $this->compress_css;
+          $is_js_or_css = true;
           // is comment for no compress
         } else if ($content == '<!--wp-html-compression no compression-->') {
           $overriding = !$overriding;
@@ -149,10 +152,15 @@ class HTML_Parser
           }
         }
       }
+      if ($is_js_or_css) {
+        // remove comment in js and css
+        $content = $this->removeComment($content);
+      }
       // if strip => clean
       if ($strip) {
         $content = $this->removeWhiteSpace($content);
       }
+
       // add to html
       $html .= $content;
     }
@@ -173,6 +181,16 @@ class HTML_Parser
     // add comment result of compression
     $this->html = $this->info_comment ?  $this->html . "\n" . $this->bottomComment($this->raw, $this->html) : $this->html;
   }
+
+  /**
+   * remove comment in js or css because, in one line the comment, comment the code after !
+   */
+  protected function removeComment(string $str): string
+  {
+    return preg_replace('/\/\[\s\S]*?\*\/|([^:]|^)\/\/.*$/m', '', $str);
+    // return preg_replace('/([^\\:]|^)\/\/.*$/m', '', $str);
+  }
+
 
   /**
    * clean whitespace

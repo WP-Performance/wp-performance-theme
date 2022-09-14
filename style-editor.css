@@ -264,13 +264,15 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.wp-block-post-content a:not(.wp-block-button__link) {
+.wp-block-post-content
+  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)) {
   position: relative;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
 
-.wp-block-post-content a:not(.wp-block-button__link)::after {
+.wp-block-post-content
+  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor))::after {
   position: absolute;
   bottom: -0.125rem;
   left: 0px;
@@ -285,12 +287,14 @@ body {
   content: var(--tw-content);
 }
 
-.wp-block-post-content a:not(.wp-block-button__link):hover {
+.wp-block-post-content
+  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)):hover {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
 
-.wp-block-post-content a:not(.wp-block-button__link):hover::after {
+.wp-block-post-content
+  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)):hover::after {
   content: var(--tw-content);
   width: 100%;
 }

@@ -36,7 +36,8 @@ body {
   @apply text-white bg-accent;
 }
 
-.wp-block-post-content a:not(.wp-block-button__link) {
+.wp-block-post-content
+  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)) {
   @apply after:content-[''] after:block after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-0.5 relative after:transition-all hover:after:w-full after:bg-link-gradient hover:no-underline no-underline;
 }
 
