@@ -11,8 +11,8 @@
 <div class="wp-block-group gm-hero-home alignwide">
   <!-- wp:group -->
   <div class="wp-block-group">
-    <!-- wp:image {"id":74,"sizeSlug":"large","linkDestination":"none"} -->
-    <figure class="wp-block-image size-large"><img src="http://wpperformance.localhost/wp-content/uploads/2022/09/wasa-crispbread-IgYBpcquAg4-unsplash-1024x775.jpg" alt="" class="wp-image-74" /></figure>
+    <!-- wp:image {"id":74,"sizeSlug":"large","linkDestination":"none","className":"nolazy"} -->
+    <figure class="wp-block-image size-large nolazy"><img src="http://wpperformance.localhost/wp-content/uploads/2022/09/wasa-crispbread-IgYBpcquAg4-unsplash-1024x775.jpg" alt="" class="wp-image-74" /></figure>
     <!-- /wp:image -->
   </div>
   <!-- /wp:group -->
