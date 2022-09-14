@@ -58,8 +58,8 @@ class HTML_Parser
     return $this->html;
   }
 
-  /** find first image for replace lazy to eager */
-  public function eagerHeroImage()
+  /** find image with classes nolazy for replace lazy to eager */
+  public function eagerImage()
   {
     $content = mb_convert_encoding($this->raw, 'HTML-ENTITIES', "UTF-8");
     $document = new \DOMDocument();
@@ -166,8 +166,8 @@ class HTML_Parser
    */
   public function parseHTML(): void
   {
-    // eager img hero
-    $this->raw = $this->eagerHeroImage();
+    // eager img with nolazy classes
+    $this->raw = $this->eagerImage();
     // compress
     $this->html = $this->compress_html ? $this->compressHTML() : $this->raw;
     // add comment result of compression
