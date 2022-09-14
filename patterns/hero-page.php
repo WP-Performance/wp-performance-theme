@@ -11,7 +11,7 @@
 <div class="wp-block-group gm-hero-page alignwide">
   <!-- wp:group -->
   <div class="wp-block-group">
-    <!-- wp:post-featured-image /-->
+    <!-- wp:post-featured-image {"className":"nolazy"} /-->
   </div>
   <!-- /wp:group -->
 

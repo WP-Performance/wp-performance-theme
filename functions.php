@@ -9,6 +9,7 @@ if (!defined('WP_ENV')) {
 require_once dirname(__FILE__) . '/inc/assets.php';
 require_once dirname(__FILE__) . '/inc/disable.php';
 require_once dirname(__FILE__) . '/inc/gutenberg/index.php';
+require_once dirname(__FILE__) . '/inc/helpers/parser.classes.php';
 
 /**
  * Theme setup.
@@ -49,3 +50,6 @@ function setup()
 }
 
 add_action('after_setup_theme', __NAMESPACE__ . '\setup');
+
+
+add_action('wp_head', 'PressWind\inc\parser\parsing_start');
