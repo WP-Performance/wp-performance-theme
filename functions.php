@@ -52,4 +52,4 @@ function setup()
 add_action('after_setup_theme', __NAMESPACE__ . '\setup');
 
 
-add_action('wp_head', 'PressWind\inc\parser\parsing_start');
+add_action('init', 'PressWind\inc\parser\parsing_start');
