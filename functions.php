@@ -51,5 +51,5 @@ function setup()
 
 add_action('after_setup_theme', __NAMESPACE__ . '\setup');
 
-
-add_action('init', 'PressWind\inc\parser\parsing_start');
+// use send_header instead get_header, FSE not call get_header apparently
+add_action('send_headers', 'PressWind\inc\parser\parsing_start');
