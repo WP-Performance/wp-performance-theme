@@ -124,7 +124,21 @@ function removeJquery()
   }
 }
 
+function remove_jquery_migrate($scripts)
+{
+
+  if (!is_admin() && isset($scripts->registered['jquery'])) {
+
+    $script = $scripts->registered['jquery'];
+
+    if ($script->deps) {
+      $script->deps = array_diff($script->deps, array('jquery-migrate'));
+    }
+  }
+}
+
 
 // add_action('init', __NAMESPACE__ . '\removeJquery');
+add_action('wp_default_scripts', __NAMESPACE__ . '\remove_jquery_migrate');
 add_action('init', __NAMESPACE__ . '\enqueue_scripts');
 add_action('init', __NAMESPACE__ . '\enqueue_styles');

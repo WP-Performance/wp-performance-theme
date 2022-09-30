@@ -9,7 +9,6 @@ if (!defined('WP_ENV')) {
 require_once dirname(__FILE__) . '/inc/assets.php';
 require_once dirname(__FILE__) . '/inc/disable.php';
 require_once dirname(__FILE__) . '/inc/gutenberg/index.php';
-require_once dirname(__FILE__) . '/inc/helpers/parser.classes.php';
 
 /**
  * Theme setup.
@@ -50,6 +49,3 @@ function setup()
 }
 
 add_action('after_setup_theme', __NAMESPACE__ . '\setup');
-
-// use send_header instead get_header, FSE not call get_header apparently
-add_action('send_headers', 'PressWind\inc\parser\parsing_start');
