@@ -54,8 +54,8 @@ add_action('after_setup_theme', __NAMESPACE__ . '\setup');
 add_Action('wp_head', function () {
   echo "<script>
       partytown = {
-        lib: '/wp-content/themes/wp-performance/~partytown/
-        debug: true,
+        lib: '/wp-content/themes/wp-performance/~partytown/',
+        debug: false,
       };
     </script>";
   echo '<script>!(function(w,p,f,c){c=w[p]=w[p]||{};c[f]=(c[f]||[])})(window,\'partytown\',\'forward\');/* Partytown 0.7.0 - MIT builder.io */
