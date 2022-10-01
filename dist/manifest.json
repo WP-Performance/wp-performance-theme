@@ -1,6 +1,6 @@
 {
   "main-legacy.js": {
-    "file": "assets/main-legacy.ff55f58f.js",
+    "file": "assets/main-legacy.de5a19cc.js",
     "src": "main-legacy.js",
     "isEntry": true
   },
@@ -10,7 +10,7 @@
     "isEntry": true
   },
   "main.js": {
-    "file": "assets/main.abcbade5.js",
+    "file": "assets/main.2049de49.js",
     "src": "main.js",
     "isEntry": true,
     "css": [
