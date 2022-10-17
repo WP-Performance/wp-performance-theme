@@ -303,7 +303,7 @@
       "core/post-title": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--sora)",
-          "fontSize": "var(--wp--custom--typography--font-size--4-xlarge)",
+          "fontSize": "var(--wp--preset--font-size--4-xlarge)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--4-xlarge)"
         },
