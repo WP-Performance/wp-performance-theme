@@ -17,7 +17,7 @@ export default defineConfig({
       // __dirname + '/**/*.twig'
     ]),
     legacy({
-      targets: ['defaults', 'ie >= 11'],
+      // targets: ['defaults', 'ie >= 11'],
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
       polyfills: [],
       modernPolyfills: [],
@@ -33,7 +33,7 @@ export default defineConfig({
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
     manifest: true,
-    target: 'es6',
+    // target: 'es6',
     rollupOptions: {
       input: resolve(__dirname, 'main.js'),
     },

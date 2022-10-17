@@ -5,7 +5,7 @@
     "isEntry": true
   },
   "vite/legacy-polyfills-legacy": {
-    "file": "assets/polyfills-legacy.f3f500a1.js",
+    "file": "assets/polyfills-legacy.cdef225d.js",
     "src": "vite/legacy-polyfills-legacy",
     "isEntry": true
   },
