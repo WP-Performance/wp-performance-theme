@@ -209,28 +209,19 @@
       "fluid": true,
       "fontSizes": [
         {
-          "size": "5rem",
+          "size": "3rem",
           "fluid": {
-            "min": "3rem",
-            "max": "6.25rem"
-          },
-          "slug": "5xlarge",
-          "name": "5Xlarge"
-        },
-        {
-          "size": "3.5rem",
-          "fluid": {
-            "min": "3rem",
-            "max": "4.25rem"
+            "min": "2.6rem",
+            "max": "3.3rem"
           },
           "slug": "4xlarge",
           "name": "4Xlarge"
         },
         {
-          "size": "3rem",
+          "size": "2.2rem",
           "fluid": {
-            "min": "2.75rem",
-            "max": "3.125rem"
+            "min": "2rem",
+            "max": "2.4rem"
           },
           "slug": "3xlarge",
           "name": "3Xlarge"

@@ -3,7 +3,7 @@
 }
 
 .wp-block-group.wpp-simple-bloc > .wp-block-group > * {
-  @apply max-w-[80%] mx-auto;
+  @apply max-w-[90%] mx-auto;
 }
 
 .wp-block-group.wpp-simple-bloc > .wp-block-group {

@@ -916,7 +916,7 @@ footer.wp-block-template-part > div > div:last-child {
 .wp-block-group.wpp-simple-bloc > .wp-block-group > * {
   margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .wp-block-group.wpp-simple-bloc > .wp-block-group {
