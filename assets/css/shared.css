@@ -54,8 +54,3 @@ h5 > a {
 .wp-block-separator {
   border-bottom: 1px solid;
 }
-
-/** prism */
-.wp-block-wp-performance-prism-my-code {
-  @apply max-w-[calc(100vw-2rem)];
-}

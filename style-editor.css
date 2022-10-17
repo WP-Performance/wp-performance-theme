@@ -282,12 +282,6 @@ h5 > a:hover::after {
   border-bottom: 1px solid;
 }
 
-/** prism */
-
-.wp-block-wp-performance-prism-my-code {
-  max-width: calc(100vw - 2rem);
-}
-
 /** parts */
 
 /** header **/
