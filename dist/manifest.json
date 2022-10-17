@@ -1,20 +1,24 @@
 {
   "main-legacy.js": {
-    "file": "assets/main-legacy.ff55f58f.js",
+    "file": "assets/main-legacy.8278f30a.js",
     "src": "main-legacy.js",
     "isEntry": true
   },
-  "-legacy": {
-    "file": "assets/polyfills-legacy.a9f54f36.js",
-    "src": "-legacy",
+  "vite/legacy-polyfills-legacy": {
+    "file": "assets/polyfills-legacy.f3f500a1.js",
+    "src": "vite/legacy-polyfills-legacy",
     "isEntry": true
   },
   "main.js": {
-    "file": "assets/main.abcbade5.js",
+    "file": "assets/main.f2c5ed1b.js",
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main.6ca4e6ad.css"
+      "assets/main.dc6aad77.css"
     ]
+  },
+  "main.css": {
+    "file": "assets/main.dc6aad77.css",
+    "src": "main.css"
   }
 }
