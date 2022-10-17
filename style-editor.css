@@ -800,7 +800,7 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .gm-hero-page > div:first-child {
-    min-height: 40vh;
+    min-height: 45vh;
   }
 }
 
@@ -823,7 +823,7 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .gm-hero-page > div:first-child figure {
-    max-height: 50vh;
+    max-height: 45vh;
   }
 }
 
