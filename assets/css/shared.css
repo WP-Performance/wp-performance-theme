@@ -41,13 +41,18 @@ body {
   @apply after:content-[''] after:block after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-0.5 relative after:transition-all hover:after:w-full after:bg-link-gradient hover:no-underline no-underline;
 }
 
-/** pattern example */
-.pattern-example {
-  @apply px-3 py-10 lg:p-10;
+.wp-block-post-title a,
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a {
+  @apply no-underline after:hidden text-inherit after:content-none hover:after:hidden;
 }
 
-.pattern-example > p {
-  @apply max-w-2xl mx-4 my-8 lg:mx-auto;
+/** core/separator */
+.wp-block-separator {
+  border-bottom: 1px solid;
 }
 
 /** prism */
