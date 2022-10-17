@@ -12,12 +12,8 @@ export function getThemDir() {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    liveReload([
-      __dirname + '/**/*.php',
-      // __dirname + '/**/*.twig'
-    ]),
+    liveReload([__dirname + '/**/*.php']),
     legacy({
-      // targets: ['defaults', 'ie >= 11'],
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
       polyfills: [],
       modernPolyfills: [],
