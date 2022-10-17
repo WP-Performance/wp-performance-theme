@@ -1,6 +1,6 @@
 /** header **/
 .site-header {
-  @apply absolute w-full max-w-full;
+  @apply absolute z-10 w-full max-w-full;
 }
 
 .site-header-wrapper {

@@ -294,6 +294,7 @@ h5 > a:hover::after {
 
 .site-header {
   position: absolute;
+  z-index: 10;
   width: 100%;
   max-width: 100%;
 }
@@ -799,7 +800,7 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .gm-hero-page > div:first-child {
-    min-height: 40vh;
+    min-height: 60vh;
   }
 }
 
@@ -822,7 +823,7 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .gm-hero-page > div:first-child figure {
-    max-height: 40vh;
+    max-height: 60vh;
   }
 }
 
