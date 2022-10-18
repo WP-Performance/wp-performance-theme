@@ -103,8 +103,8 @@
       "wideSize": "100%"
     },
     "spacing": {
-      "padding": false,
-      "margin": false,
+      "padding": true,
+      "margin": true,
       "spacingScale": {
         "steps": 10
       },
