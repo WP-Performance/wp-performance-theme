@@ -73,6 +73,11 @@
           "color": "rgb(190, 24, 93)",
           "name": "Accent",
           "slug": "accent"
+        },
+        {
+          "color": "rgb(250, 254, 203)",
+          "name": "Info",
+          "slug": "info"
         }
       ]
     },
