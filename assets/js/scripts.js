@@ -1,4 +1,4 @@
-import * as Turbo from '@hotwired/turbo'
+// import * as Turbo from '@hotwired/turbo'
 
 function main() {
   console.log('hello Press Wind')
