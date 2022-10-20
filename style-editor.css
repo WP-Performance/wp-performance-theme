@@ -294,6 +294,15 @@ h5 > a:hover::after {
   border-bottom: 1px solid;
 }
 
+/** code **/
+
+p > code {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 /** parts */
 
 /** header **/
@@ -806,7 +815,7 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .gm-hero-page > div:first-child {
-    min-height: 45vh;
+    min-height: 50vh;
   }
 }
 
@@ -842,8 +851,8 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .gm-hero-page > div:first-child figure img {
-    -o-object-position: bottom;
-       object-position: bottom;
+    -o-object-position: center;
+       object-position: center;
   }
 }
 

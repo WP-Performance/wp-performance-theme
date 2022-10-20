@@ -55,3 +55,9 @@ h5 > a {
 .wp-block-separator {
   border-bottom: 1px solid;
 }
+
+/** code **/
+
+p > code {
+  @apply px-1 bg-slate-200;
+}

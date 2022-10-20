@@ -4,7 +4,7 @@
 
 /** image */
 .gm-hero-page > div:first-child {
-  @apply min-h-[30vh] md:min-h-[35vh] lg:min-h-[45vh] bg-gradient-to-r from-slate-300 to-slate-100;
+  @apply min-h-[30vh] md:min-h-[35vh] lg:min-h-[50vh] bg-gradient-to-r from-slate-300 to-slate-100;
 }
 
 .gm-hero-page > div:first-child figure {
@@ -16,7 +16,7 @@
 }
 
 .gm-hero-page > div:first-child figure img {
-  @apply object-cover w-full lg:object-bottom;
+  @apply object-cover w-full lg:object-center;
 }
 /** column right */
 .gm-hero-page > div:last-child {
