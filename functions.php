@@ -21,34 +21,52 @@ function setup()
 
   add_theme_support('post-thumbnails');
 
-  add_theme_support('html5', [
-    'comment-form',
-    'comment-list',
-    'gallery',
-    'caption',
-  ]);
+  // add_theme_support('html5', [
+  //   'comment-form',
+  //   'comment-list',
+  //   'gallery',
+  //   'caption',
+  // ]);
 
-  add_theme_support('post-formats', [
-    'aside',
-    'image',
-    'video',
-    'quote',
-    'link',
-    'gallery',
-    'audio',
-  ]);
+  // add_theme_support('post-formats', [
+  //   'aside',
+  //   'image',
+  //   'video',
+  //   'quote',
+  //   'link',
+  //   'gallery',
+  //   'audio',
+  // ]);
 
   // yes we can use register menu with FSE :)
-  register_nav_menus(array(
-    'primary'   => __('Primary Menu', 'press-wind'),
-    // 'secondary' => __('Secondary Menu', 'press-wind')
-  ));
+  // register_nav_menus(array(
+  //   'primary'   => __('Primary Menu', 'press-wind'),
+  //   // 'secondary' => __('Secondary Menu', 'press-wind')
+  // ));
 
 
   load_theme_textdomain('press-wind', get_template_directory() . '/languages');
 }
 
 add_action('after_setup_theme', __NAMESPACE__ . '\setup');
+
+
+/** limit excerpt */
+function excerpt_length($length)
+{
+  return 40;
+}
+
+add_filter('excerpt_length', __NAMESPACE__ . '\excerpt_length', 999);
+
+
+/** define text for excerpt more */
+function excerpt_more($more)
+{
+  return '...';
+}
+
+add_filter('excerpt_more', __NAMESPACE__ . '\excerpt_more');
 
 
 

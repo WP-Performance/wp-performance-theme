@@ -1,0 +1,34 @@
+.wpp-carousel {
+  @apply px-2;
+}
+
+.wpp-carousel ul {
+  @apply flex items-stretch w-auto overflow-x-scroll max-w-none snap-proximity snap-x scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-200 scrollbar-track-transparent;
+}
+
+.wpp-carousel ul li.wp-block-post {
+  @apply w-[calc(90%-5rem)] min-w-[calc(90%-5rem)] md:w-[calc(42%-5rem)] md:min-w-[calc(42%-5rem)] lg:w-[calc(30%-5rem)] lg:min-w-[calc(30%-5rem)] px-10 m-0 flex flex-col items-stretch flex-shrink flex-1 snap-start pb-10;
+}
+
+.wpp-carousel ul li.wp-block-post > div.wp-block-group {
+  @apply flex-1;
+}
+
+/** content */
+
+.wpp-carousel ul li.wp-block-post .wp-block-post-excerpt {
+  @apply mt-auto justify-self-end;
+}
+/** image */
+
+.wpp-carousel ul li.wp-block-post figure {
+  @apply flex object-cover object-center w-full h-80;
+}
+
+.wpp-carousel ul li.wp-block-post figure a {
+  @apply flex object-cover object-center w-full mx-auto overflow-hidden h-80;
+}
+
+.wpp-carousel ul li.wp-block-post figure img {
+  @apply object-cover;
+}
