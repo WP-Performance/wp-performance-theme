@@ -301,6 +301,8 @@ p > code {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
 }
 
 /** parts */
@@ -838,7 +840,7 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .gm-hero-page > div:first-child figure {
-    max-height: 45vh;
+    max-height: 50vh;
   }
 }
 
