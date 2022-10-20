@@ -38,6 +38,7 @@
     "vite-plugin-live-reload": "^3.0.1"
   },
   "dependencies": {
+    "@hotwired/turbo": "^7.2.2",
     "tailwind-scrollbar": "^2.1.0-preview.0"
   },
   "browserslist": [
