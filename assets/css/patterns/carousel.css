@@ -7,7 +7,7 @@
 }
 
 .wpp-carousel ul li.wp-block-post {
-  @apply w-[calc(90%-5rem)] min-w-[calc(90%-5rem)] md:w-[calc(42%-5rem)] md:min-w-[calc(42%-5rem)] lg:w-[calc(30%-5rem)] lg:min-w-[calc(30%-5rem)] px-10 m-0 flex flex-col items-stretch flex-shrink flex-1 snap-start pb-10;
+  @apply w-[calc(90%-2.5rem)] min-w-[calc(90%-2.5rem)] md:w-[calc(42%-5rem)] md:min-w-[calc(42%-5rem)] lg:w-[calc(30%-5rem)] lg:min-w-[calc(30%-5rem)] px-5 md:px-10 m-0 flex flex-col items-stretch flex-shrink flex-1 snap-start pb-10;
 }
 
 .wpp-carousel ul li.wp-block-post > div.wp-block-group {

@@ -194,13 +194,38 @@ body {
 
 /** width content align */
 
-.wp-block-post-content
-  > :where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
-  max-width: var(--wp--custom--sizes--content);
+body
+  .is-layout-constrained
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
   margin-left: auto;
   margin-right: auto;
+  max-width: 98vw;
+}
+
+@media (min-width: 1024px) {
+
+  body
+  .is-layout-constrained
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: var(--wp--custom--sizes--content);
+  }
+}
+
+.wp-block-post-content
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 98vw;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+
+  .wp-block-post-content
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
+    max-width: var(--wp--custom--sizes--content);
+  }
 }
 
 .wp-block-post-content > .alignleft {
@@ -822,11 +847,23 @@ footer.wp-block-template-part > div > div:last-child {
 }
 
 .gm-hero-page > div:first-child figure {
-  overflow: hidden;
+  position: relative;
   display: flex;
   height: 100%;
   max-height: 30vh;
   width: 83.333333%;
+  overflow: hidden;
+}
+
+.gm-hero-page > div:first-child figure::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgb(255 255 255 / 0.4);
+  --tw-content: '';
+  content: var(--tw-content);
 }
 
 @media (min-width: 768px) {
@@ -853,8 +890,8 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .gm-hero-page > div:first-child figure img {
-    -o-object-position: center;
-       object-position: center;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 
@@ -991,7 +1028,7 @@ footer.wp-block-template-part > div > div:last-child {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-height: 60vh;
+  height: 40vh;
   overflow: hidden;
   border-radius: 1rem;
   -o-object-fit: cover;
@@ -1003,6 +1040,7 @@ footer.wp-block-template-part > div > div:last-child {
 @media (min-width: 1024px) {
 
   .wpp-list-posts > .wp-block-post > .wp-block-group:first-child figure a {
+    height: 60vh;
     max-width: 80%;
   }
 }
@@ -1010,6 +1048,8 @@ footer.wp-block-template-part > div > div:last-child {
 .wpp-list-posts > .wp-block-post > .wp-block-group:first-child figure img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 /** content */
@@ -1109,15 +1149,15 @@ footer.wp-block-template-part > div > div:last-child {
 .wpp-carousel ul li.wp-block-post {
   margin: 0px;
   display: flex;
-  width: calc(90% - 5rem);
-  min-width: calc(90% - 5rem);
+  width: calc(90% - 2.5rem);
+  min-width: calc(90% - 2.5rem);
   flex: 1 1 0%;
   flex-shrink: 1;
   scroll-snap-align: start;
   flex-direction: column;
   align-items: stretch;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   padding-bottom: 2.5rem;
 }
 
@@ -1126,6 +1166,8 @@ footer.wp-block-template-part > div > div:last-child {
   .wpp-carousel ul li.wp-block-post {
     width: calc(42% - 5rem);
     min-width: calc(42% - 5rem);
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 

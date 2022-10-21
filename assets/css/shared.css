@@ -16,10 +16,15 @@ body {
 }
 
 /** width content align */
+body
+  .is-layout-constrained
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  @apply mx-auto max-w-[98vw] lg:max-w-custom-content;
+}
+
 .wp-block-post-content
   > :where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
-  max-width: var(--wp--custom--sizes--content);
-  @apply px-4 mx-auto;
+  @apply px-4 mx-auto max-w-[98vw] lg:max-w-custom-content;
 }
 
 .wp-block-post-content > .alignleft {

@@ -12,11 +12,11 @@
 /** image */
 
 .wpp-list-posts > .wp-block-post > .wp-block-group:first-child figure a {
-  @apply object-cover overflow-hidden object-center max-h-[60vh] flex rounded-2xl mx-auto lg:max-w-[80%];
+  @apply object-cover overflow-hidden object-center h-[40vh] lg:h-[60vh] flex rounded-2xl mx-auto lg:max-w-[80%];
 }
 
 .wpp-list-posts > .wp-block-post > .wp-block-group:first-child figure img {
-  @apply object-cover;
+  @apply object-cover object-top;
 }
 
 /** content */

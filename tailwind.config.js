@@ -15,6 +15,9 @@ module.exports = {
         main: '8rem 1fr 8rem',
         'main-small': '1rem 1fr 1rem',
       },
+      maxWidth: {
+        'custom-content': 'var(--wp--custom--sizes--content)',
+      },
       backgroundImage: (theme) => ({
         'wp-performance': "url('/assets/media/wp-performance.png')",
         'link-gradient': 'linear-gradient(to left,#BE185D,rgb(150,20,90));',
