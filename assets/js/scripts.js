@@ -1,9 +1,11 @@
 // import * as Turbo from '@hotwired/turbo'
 
-function main() {
-  console.log('hello Press Wind')
-}
+import prefetchHover from './prefetch'
+
+// function main() {
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
-  main()
+  // main()
+  prefetchHover(true)
 })
