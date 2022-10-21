@@ -10,6 +10,11 @@ require_once dirname(__FILE__) . '/inc/assets.php';
 require_once dirname(__FILE__) . '/inc/disable.php';
 require_once dirname(__FILE__) . '/inc/gutenberg/index.php';
 
+// pwa icons
+if (file_exists(dirname(__FILE__) . '/inc/pwa_head.php')) {
+  include dirname(__FILE__) . '/inc/pwa_head.php';
+}
+
 /**
  * Theme setup.
  */
@@ -80,3 +85,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NSHVBFH');</script>
 <!-- End Google Tag Manager -->";
 });
+
+
+
+if (file_exists(dirname(__FILE__) . '/dist/sw.js')) {
+  add_action('wp_head', function () {
+    echo
+    "<script>
+    if('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/wp-content/themes/wp-performance/dist/sw.js', { scope: '/' })
+      })
+    }
+  </script>";
+  });
+}

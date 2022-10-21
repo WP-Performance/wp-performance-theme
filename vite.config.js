@@ -1,5 +1,6 @@
 import { resolve, sep } from 'path'
 import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
 import legacy from '@vitejs/plugin-legacy'
 import liveReload from 'vite-plugin-live-reload'
 
@@ -17,6 +18,13 @@ export default defineConfig({
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
       polyfills: [],
       modernPolyfills: [],
+    }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+      },
+      // manifest: require('./pwa/manifest.json'),
     }),
   ],
   base:

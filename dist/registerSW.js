@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/wp-content/themes/wp-performance/dist/sw.js', { scope: '/wp-content/themes/wp-performance/dist/' })})}

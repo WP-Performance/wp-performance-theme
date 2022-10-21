@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "cross-env APP_ENV=development vite",
     "dev:editor": "cross-env APP_ENV=development vite & yarn watch:editor",
-    "build": "APP_ENV=production vite build && yarn build:editor",
+    "build": "APP_ENV=production yarn favicon && vite build && yarn build:editor",
     "watch:editor": "APP_ENV=development IS_EDITOR=true node_modules/.bin/postcss -w --verbose --no-map assets/css/editor.css -o style-editor.css",
     "build:editor": "NODE_ENV=production IS_EDITOR=true node_modules/.bin/postcss assets/css/editor.css -o style-editor.css",
+    "favicon": "node ./pwa/faviconGenerator.mjs",
     "postinstall": "husky install"
   },
   "author": "Faramaz Patrick<info@goodmotion.fr>",
@@ -22,6 +23,7 @@
     "babel-preset-env": "^1.7.0",
     "core-js": "^3.25.5",
     "cross-env": "^7.0.3",
+    "favicons": "^7.0.1",
     "husky": "^8.0.1",
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
@@ -35,7 +37,8 @@
     "tailwindcss": "3.1.8",
     "terser": "^5.15.1",
     "vite": "3.1.8",
-    "vite-plugin-live-reload": "^3.0.1"
+    "vite-plugin-live-reload": "^3.0.1",
+    "vite-plugin-pwa": "^0.13.1"
   },
   "dependencies": {
     "@hotwired/turbo": "^7.2.2",
