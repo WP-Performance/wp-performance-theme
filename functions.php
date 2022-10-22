@@ -88,15 +88,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-if (file_exists(dirname(__FILE__) . '/dist/sw.js')) {
+if (file_exists(dirname(__FILE__) . '/dist/registerSW.js')) {
   add_action('wp_head', function () {
-    echo
-    "<script>
-    if('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/wp-content/themes/wp-performance/dist/sw.js', { scope: '/' })
-      })
-    }
-  </script>";
+    echo '<script>';
+    include(dirname(__FILE__) . '/dist/registerSW.js');
+    echo '</script>';
   });
 }

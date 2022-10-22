@@ -12,6 +12,7 @@ const source = './assets/media/logo-square.svg'
 
 const configuration = {
   path: `/wp-content/themes/${getThemDir()}/pwa/dist`,
+  appId: 'wp-performance',
   appName: 'WP Performance',
   appShortName: 'WP Performance',
   appDescription: 'Améliorer la performance des sites WordPress',
