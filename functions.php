@@ -85,13 +85,3 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NSHVBFH');</script>
 <!-- End Google Tag Manager -->";
 });
-
-
-
-if (file_exists(dirname(__FILE__) . '/dist/registerSW.js')) {
-  add_action('wp_head', function () {
-    echo '<script>';
-    include(dirname(__FILE__) . '/dist/registerSW.js');
-    echo '</script>';
-  });
-}
