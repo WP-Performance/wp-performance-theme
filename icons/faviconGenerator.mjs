@@ -36,7 +36,7 @@ const configuration = {
   preferRelatedApplications: false,
   pixel_art: false,
   loadManifestWithCredentials: false,
-  manifestMaskable: true,
+  manifestMaskable: false,
   icons: {
     coast: false,
     yandex: false,
