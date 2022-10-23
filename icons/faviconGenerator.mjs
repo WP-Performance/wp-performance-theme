@@ -21,7 +21,7 @@ const removeList = [
 ]
 
 const configuration = {
-  path: `/wp-content/themes/${getThemDir()}/pwa/dist`,
+  path: `/wp-content/themes/${getThemDir()}/icons/dist`,
   appName: 'WP Performance 🚀',
   appShortName: 'WP Performance 🚀',
   appDescription: 'Améliorer la performance des sites WordPress',
