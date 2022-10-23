@@ -12,7 +12,7 @@ const source = './assets/media/logo-square.svg'
 // directory for build
 const target = './icons/dist/'
 // php file to include to head
-const phpHead = './icons/pwa_head.php'
+const phpHead = './inc/pwa_head.php'
 // tag filter to remove
 const removeList = [
   'mobile-web-app-capable',
