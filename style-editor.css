@@ -665,11 +665,23 @@ footer.wp-block-template-part > div > div:last-child {
 /** image */
 
 .gm-hero-home > div:first-child figure {
-  overflow: hidden;
+  position: relative;
   display: flex;
   height: 100%;
   max-height: 40vh;
   width: 83.333333%;
+  overflow: hidden;
+}
+
+.gm-hero-home > div:first-child figure::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgb(255 255 255 / 0.3);
+  --tw-content: '';
+  content: var(--tw-content);
 }
 
 @media (min-width: 768px) {
@@ -683,6 +695,7 @@ footer.wp-block-template-part > div > div:last-child {
 
   .gm-hero-home > div:first-child figure {
     max-height: 100vh;
+    min-height: 770px;
   }
 }
 
@@ -722,6 +735,7 @@ footer.wp-block-template-part > div > div:last-child {
 }
 
 .gm-hero-home > div:last-child > div p:first-child {
+  margin-top: 5rem;
   display: flex;
   align-items: center;
   --tw-text-opacity: 1;
