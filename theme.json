@@ -9,6 +9,7 @@
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
+      "custom": true,
       "link": false,
       "duotone": [
         {
@@ -78,6 +79,11 @@
           "color": "rgb(250, 254, 203)",
           "name": "Info",
           "slug": "info"
+        },
+        {
+          "color": "#eee",
+          "name": "Gray",
+          "slug": "gray"
         }
       ]
     },
