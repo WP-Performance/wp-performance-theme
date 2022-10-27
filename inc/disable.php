@@ -61,7 +61,13 @@ add_action('init', function () {
 
 add_filter('feed_links_show_comments_feed', '__return_false');
 
-
+// remove comment admin bar
+function remove_comments()
+{
+  global $wp_admin_bar;
+  $wp_admin_bar->remove_menu('comments');
+}
+add_action('wp_before_admin_bar_render', __NAMESPACE__ . '\remove_comments');
 
 
 // Remove language dropdown on login screen.
