@@ -70,6 +70,10 @@ function addScript()
     }
     foreach ($sc as $key => $value) {
       wp_enqueue_script('press-wind-theme-' . $value['token'], $path . '/dist/' . $value['file'], array(), $value['token'], true);
+      // add prefetch
+      add_action('wp_head', function () use ($path, $value) {
+        echo '<link rel="prefetch" href="' . $path . '/dist/' . $value['file'] . '" as="style" />';
+      });
     }
   } else {
     // development
@@ -126,6 +130,10 @@ function enqueue_styles()
               $token,
               'all'
             );
+            // add prefetch
+            add_action('wp_head', function () use ($path, $file) {
+              echo '<link rel="prefetch" href="' . $path . '/dist/' . $file . '" as="style" />';
+            });
           }
         }
       }
