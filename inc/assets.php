@@ -131,9 +131,9 @@ function enqueue_styles()
               'all'
             );
             // add prefetch
-            add_action('wp_head', function () use ($path, $file) {
-              echo '<link rel="prefetch" href="' . $path . '/dist/' . $file . '" as="style" />';
-            });
+            // add_action('wp_head', function () use ($path, $file) {
+            //   echo '<link rel="prefetch" href="' . $path . '/dist/' . $file . '" as="style" />';
+            // });
           }
         }
       }
