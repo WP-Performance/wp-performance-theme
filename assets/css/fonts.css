@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Adjusted Arial';
+  size-adjust: 115%;
+  src: local(Arial);
+}
+
+@font-face {
+  font-family: 'Adjusted Times New Roman';
+  size-adjust: 117.7%;
+  src: local('Times New Roman');
+}

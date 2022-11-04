@@ -14,11 +14,11 @@
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main.d2e28ff1.css"
+      "assets/main.82e4079d.css"
     ]
   },
   "main.css": {
-    "file": "assets/main.d2e28ff1.css",
+    "file": "assets/main.82e4079d.css",
     "src": "main.css"
   }
 }

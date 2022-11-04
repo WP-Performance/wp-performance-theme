@@ -4,6 +4,8 @@
 
 @import 'tailwindcss/utilities';
 
+@import './fonts.css';
+
 /** GLOBAL */
 @import './shared.css';
 

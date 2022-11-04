@@ -177,7 +177,7 @@
               "src": ["file:./assets/fonts/Sora-VariableFont_wght.woff2"]
             }
           ],
-          "fontFamily": "\"Sora\", sans-serif",
+          "fontFamily": "\"Sora\", Adjusted Arial, sans-serif",
           "name": "Sora",
           "slug": "Sora"
         },
@@ -212,7 +212,7 @@
               "src": ["file:./assets/fonts/Lora-Bold.woff2"]
             }
           ],
-          "fontFamily": "\"Lora\", serif",
+          "fontFamily": "\"Lora\", Adjusted Times New Roman, serif",
           "name": "Lora",
           "slug": "Lora"
         }
