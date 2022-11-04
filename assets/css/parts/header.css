@@ -57,7 +57,7 @@
 
 .main-navigation a.wp-block-navigation-item__content,
 .wp-block-navigation__responsive-container-content a {
-  @apply text-xl font-bold text-gray-500 no-underline hover:text-accent md:text-sm;
+  @apply text-xl font-bold text-gray-500 no-underline hover:text-accent lg:text-sm;
 }
 
 .main-navigation li.current-menu-item a {
@@ -77,4 +77,21 @@
 /** menu mobile */
 .wp-block-navigation__responsive-container.is-menu-open {
   @apply px-0;
+}
+
+/** default is 600px pass to 1024px button open and container */
+@media (max-width: 1024px) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: flex;
+  }
+}
+@media (max-width: 1024px) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
 }
