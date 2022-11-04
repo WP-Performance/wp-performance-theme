@@ -520,7 +520,7 @@ p > code {
   padding-right: 0px;
 }
 
-/** default is 600px pass to 1024px button open and container */
+/** default is 600px pass to 1024px for button open and container */
 
 @media (max-width: 1024px) {
   .wp-block-navigation__responsive-container-open:not(.always-shown) {
