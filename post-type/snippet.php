@@ -41,6 +41,7 @@ function register_custom_post_type()
     'supports' => array(
       'title',
       'editor',
+      'author'
     ),
     'taxonomies' => array(
       'snippet-category'
