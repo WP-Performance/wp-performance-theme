@@ -66,3 +66,7 @@ h5 > a {
 p > code {
   @apply px-1 py-0.5 bg-slate-200;
 }
+
+.is-style-img-dropshadow img {
+  filter: drop-shadow(0 0 0.75rem var(--wp--preset--color--cyan-bluish-gray));
+}

@@ -330,6 +330,10 @@ p > code {
   padding-bottom: 0.125rem;
 }
 
+.is-style-img-dropshadow img {
+  filter: drop-shadow(0 0 0.75rem var(--wp--preset--color--cyan-bluish-gray));
+}
+
 /** parts */
 
 /** header **/

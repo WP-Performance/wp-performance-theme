@@ -55,6 +55,15 @@ function excerpt_more($more)
 add_filter('excerpt_more', __NAMESPACE__ . '\excerpt_more');
 
 
+/** disable caching wp query */
+function disable_caching($wp_query)
+{
+  if (WP_ENV === 'development') {
+    $wp_query->query_vars['cache_results'] = false;
+  }
+}
+add_action('parse_query', __NAMESPACE__ . '\disable_caching');
+
 
 
 add_action('wp_head', function () {
@@ -66,3 +75,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NSHVBFH');</script>
 <!-- End Google Tag Manager -->";
 });
+
+
+register_block_style(
+  'core/image',
+  array(
+    'name'         => 'img-dropshadow',
+    'label'        => __('Drop Shadow', 'press-wind'),
+  )
+);
