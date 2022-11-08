@@ -87,6 +87,11 @@ p > code {
   filter: drop-shadow(0 0 0.75rem var(--wp--preset--color--cyan-bluish-gray));
 }
 
+.is-style-img-dropshadow-rounded img {
+  @apply rounded-xl;
+  filter: drop-shadow(0 0 0.75rem var(--wp--preset--color--cyan-bluish-gray));
+}
+
 .is-style-text-gradient {
   @apply text-transparent bg-gradient-to-r bg-clip-text from-indigo-500 via-accent to-primary animate-text-gradient;
 }

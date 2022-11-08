@@ -222,8 +222,8 @@
         {
           "size": "5rem",
           "fluid": {
-            "min": "4rem",
-            "max": "5.4rem"
+            "min": "3.8rem",
+            "max": "5.2rem"
           },
           "slug": "huge",
           "name": "Huge"

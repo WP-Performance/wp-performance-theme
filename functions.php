@@ -86,6 +86,14 @@ register_block_style(
 );
 
 register_block_style(
+  'core/image',
+  array(
+    'name'         => 'img-dropshadow-rounded',
+    'label'        => __('Drop Shadow Rounded', 'press-wind'),
+  )
+);
+
+register_block_style(
   'core/heading',
   array(
     'name'         => 'text-gradient',

@@ -53,11 +53,6 @@ Launch dev mode
 yarn dev
 ```
 
-Launch dev mode with editor file for admin
-```
-yarn dev:editor
-```
-
 Build the assets
 ```
 yarn build

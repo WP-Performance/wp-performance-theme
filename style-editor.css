@@ -359,6 +359,11 @@ p > code {
   filter: drop-shadow(0 0 0.75rem var(--wp--preset--color--cyan-bluish-gray));
 }
 
+.is-style-img-dropshadow-rounded img {
+  border-radius: 0.75rem;
+  filter: drop-shadow(0 0 0.75rem var(--wp--preset--color--cyan-bluish-gray));
+}
+
 .is-style-text-gradient {
   animation: tgradient-text 5s ease infinite;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
