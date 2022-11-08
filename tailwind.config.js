@@ -27,6 +27,21 @@ module.exports = {
         primary: 'var(--wp--preset--color--primary)',
         accent: 'var(--wp--preset--color--accent)',
       },
+      animation: {
+        'text-gradient': 'tgradient-text 5s ease infinite',
+      },
+      keyframes: {
+        'text-gradient': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
+      },
     },
   },
   variants: {

@@ -220,6 +220,15 @@
       "fluid": true,
       "fontSizes": [
         {
+          "size": "5rem",
+          "fluid": {
+            "min": "4.4rem",
+            "max": "5.4rem"
+          },
+          "slug": "huge",
+          "name": "Huge"
+        },
+        {
           "size": "3rem",
           "fluid": {
             "min": "2.6rem",

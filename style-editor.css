@@ -238,6 +238,29 @@ body
   margin-left: auto;
 }
 
+.wp-block-post-content ul {
+  margin-left: 1.5rem;
+}
+
+/** template */
+
+.no-hero {
+  padding-top: 12rem;
+}
+
+.no-hero > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 98vw;
+}
+
+@media (min-width: 1024px) {
+
+  .no-hero > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: var(--wp--custom--sizes--content);
+  }
+}
+
 /** text selection color */
 
 ::selection {
@@ -330,8 +353,24 @@ p > code {
   padding-bottom: 0.125rem;
 }
 
+/** block style */
+
 .is-style-img-dropshadow img {
   filter: drop-shadow(0 0 0.75rem var(--wp--preset--color--cyan-bluish-gray));
+}
+
+.is-style-text-gradient {
+  animation: tgradient-text 5s ease infinite;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #6366f1;
+  --tw-gradient-to: rgb(99 102 241 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--wp--preset--color--accent), var(--tw-gradient-to);
+  --tw-gradient-to: var(--wp--preset--color--primary);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 
 /** parts */

@@ -84,3 +84,11 @@ register_block_style(
     'label'        => __('Drop Shadow', 'press-wind'),
   )
 );
+
+register_block_style(
+  'core/heading',
+  array(
+    'name'         => 'text-gradient',
+    'label'        => __('Text Gradient', 'press-wind'),
+  )
+);

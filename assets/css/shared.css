@@ -35,6 +35,20 @@ body
   @apply float-none ml-auto;
 }
 
+.wp-block-post-content ul {
+  @apply ml-6;
+}
+
+/** template */
+
+.no-hero {
+  @apply pt-48;
+}
+
+.no-hero > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  @apply mx-auto max-w-[98vw] lg:max-w-custom-content;
+}
+
 /** text selection color */
 
 ::selection {
@@ -67,6 +81,12 @@ p > code {
   @apply px-1 py-0.5 bg-slate-200;
 }
 
+/** block style */
+
 .is-style-img-dropshadow img {
   filter: drop-shadow(0 0 0.75rem var(--wp--preset--color--cyan-bluish-gray));
+}
+
+.is-style-text-gradient {
+  @apply text-transparent bg-gradient-to-r bg-clip-text from-indigo-500 via-accent to-primary animate-text-gradient;
 }
