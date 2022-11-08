@@ -242,50 +242,6 @@ body
   margin-left: 1.5rem;
 }
 
-/** button */
-
-.button-with-icon {
-  position: relative;
-  border-radius: 1.5rem;
-}
-
-.button-with-icon:hover {
-  background-color: var(--wp--preset--color--accent);
-}
-
-.button-with-icon > p > a {
-  position: static;
-}
-
-.button-with-icon > p > a::before {
-  position: absolute;
-  top: 0.125rem;
-  right: 0.125rem;
-  bottom: 0.125rem;
-  left: 0.125rem;
-  display: block;
-  border-radius: 1.5rem;
-  border-width: 1px;
-  border-color: transparent;
-  background-color: transparent;
-  --tw-content: '';
-  content: var(--tw-content);
-}
-
-.button-with-icon > p > a:hover::before {
-  content: var(--tw-content);
-  background-color: rgb(255 255 255 / 0.25);
-}
-
-.button-with-icon > p > a:hover::after {
-  content: var(--tw-content);
-  display: none;
-}
-
-.button-with-icon .wp-block-social-links {
-  margin-left: 0.75rem;
-}
-
 /** template */
 
 .no-hero {
@@ -430,6 +386,76 @@ p > code {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+}
+
+/** button icon presswind */
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.button-with-icon {
+  --borderWidth: 3px;
+  position: relative;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.button-with-icon:after {
+  position: absolute;
+  z-index: -1;
+  border-radius: 9999px;
+  --tw-content: '';
+  content: var(--tw-content);
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab);
+  animation: animatedgradient 2s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+.button-with-icon > p > a {
+  position: static;
+}
+
+.button-with-icon > p > a::before {
+  position: absolute;
+  top: 0.125rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  left: 0.125rem;
+  display: block;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: transparent;
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.button-with-icon > p > a:hover::before {
+  content: var(--tw-content);
+  background-color: rgb(255 255 255 / 0.25);
+}
+
+.button-with-icon > p > a:hover::after {
+  content: var(--tw-content);
+  display: none;
+}
+
+.button-with-icon .wp-block-social-links {
+  margin-left: 0.75rem;
 }
 
 /** parts */

@@ -39,19 +39,6 @@ body
   @apply ml-6;
 }
 
-/** button */
-.button-with-icon {
-  @apply relative hover:bg-accent rounded-3xl;
-}
-
-.button-with-icon > p > a {
-  @apply static hover:after:hidden before:content-[''] before:absolute before:inset-0.5 before:bg-transparent before:rounded-3xl before:hover:bg-white/25 before:border before:border-transparent before:block;
-}
-
-.button-with-icon .wp-block-social-links {
-  @apply ml-3;
-}
-
 /** template */
 
 .no-hero {
@@ -111,4 +98,41 @@ p > code {
 
 .presswind-link a span {
   @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient;
+}
+
+/** button icon presswind */
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.button-with-icon {
+  --borderWidth: 3px;
+  @apply relative bg-black rounded-3xl;
+}
+.button-with-icon:after {
+  @apply content-[''] absolute rounded-full z-[-1];
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab);
+  animation: animatedgradient 2s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+.button-with-icon > p > a {
+  @apply static hover:after:hidden before:content-[''] before:absolute before:inset-0.5 before:bg-transparent before:rounded-3xl before:hover:bg-white/25 before:border before:border-transparent before:block;
+}
+
+.button-with-icon .wp-block-social-links {
+  @apply ml-3;
 }
