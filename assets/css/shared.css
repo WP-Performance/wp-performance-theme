@@ -115,7 +115,7 @@ p > code {
 }
 
 .button-with-icon {
-  --borderWidth: 3px;
+  --borderWidth: 2px;
   @apply relative bg-black rounded-3xl;
 }
 .button-with-icon:after {

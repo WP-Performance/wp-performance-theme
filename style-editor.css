@@ -403,7 +403,7 @@ p > code {
 }
 
 .button-with-icon {
-  --borderWidth: 3px;
+  --borderWidth: 2px;
   position: relative;
   border-radius: 1.5rem;
   --tw-bg-opacity: 1;
