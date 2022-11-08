@@ -242,6 +242,50 @@ body
   margin-left: 1.5rem;
 }
 
+/** button */
+
+.button-with-icon {
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.button-with-icon:hover {
+  background-color: var(--wp--preset--color--accent);
+}
+
+.button-with-icon > p > a {
+  position: static;
+}
+
+.button-with-icon > p > a::before {
+  position: absolute;
+  top: 0.125rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  left: 0.125rem;
+  display: block;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: transparent;
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.button-with-icon > p > a:hover::before {
+  content: var(--tw-content);
+  background-color: rgb(255 255 255 / 0.25);
+}
+
+.button-with-icon > p > a:hover::after {
+  content: var(--tw-content);
+  display: none;
+}
+
+.button-with-icon .wp-block-social-links {
+  margin-left: 0.75rem;
+}
+
 /** template */
 
 .no-hero {
@@ -367,12 +411,22 @@ p > code {
 .is-style-text-gradient {
   animation: tgradient-text 5s ease infinite;
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #6366f1;
-  --tw-gradient-to: rgb(99 102 241 / 0);
+  --tw-gradient-from: #bd34fe;
+  --tw-gradient-to: rgb(189 52 254 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: rgb(255 255 255 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--wp--preset--color--accent), var(--tw-gradient-to);
-  --tw-gradient-to: var(--wp--preset--color--primary);
+  --tw-gradient-to: #41d1ff;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.presswind-link a span {
+  animation: tgradient-text 5s ease infinite;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #bd34fe;
+  --tw-gradient-to: rgb(189 52 254 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #41d1ff;
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;

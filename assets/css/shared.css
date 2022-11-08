@@ -39,6 +39,19 @@ body
   @apply ml-6;
 }
 
+/** button */
+.button-with-icon {
+  @apply relative hover:bg-accent rounded-3xl;
+}
+
+.button-with-icon > p > a {
+  @apply static hover:after:hidden before:content-[''] before:absolute before:inset-0.5 before:bg-transparent before:rounded-3xl before:hover:bg-white/25 before:border before:border-transparent before:block;
+}
+
+.button-with-icon .wp-block-social-links {
+  @apply ml-3;
+}
+
 /** template */
 
 .no-hero {
@@ -93,5 +106,9 @@ p > code {
 }
 
 .is-style-text-gradient {
-  @apply text-transparent bg-gradient-to-r bg-clip-text from-indigo-500 via-accent to-primary animate-text-gradient;
+  @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient;
+}
+
+.presswind-link a span {
+  @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient;
 }
