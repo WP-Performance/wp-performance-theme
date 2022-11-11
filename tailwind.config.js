@@ -20,6 +20,8 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         'wp-performance': "url('/assets/media/wp-performance.png')",
+        star: "url('/assets/media/star.svg')",
+        zip: "url('/assets/media/zip.svg')",
         'link-gradient': 'linear-gradient(to left,#BE185D,rgb(150,20,90));',
       }),
       colors: {

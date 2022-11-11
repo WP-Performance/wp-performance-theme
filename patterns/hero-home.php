@@ -12,7 +12,7 @@
   <!-- wp:group -->
   <div class="wp-block-group">
     <!-- wp:image {"id":74,"sizeSlug":"large","linkDestination":"none","className":"nolazy"} -->
-    <figure class="wp-block-image size-large nolazy"><img src="http://wpperformance.localhost/wp-content/uploads/2022/09/wasa-crispbread-IgYBpcquAg4-unsplash-1024x775.jpg" alt="" class="wp-image-74" /></figure>
+    <figure class="wp-block-image size-large nolazy"><img src="/wp-content/uploads/2022/09/wasa-crispbread-IgYBpcquAg4-unsplash-1024x775.jpg" alt="" class="wp-image-74" /></figure>
     <!-- /wp:image -->
   </div>
   <!-- /wp:group -->
@@ -34,7 +34,7 @@
       <!-- /wp:paragraph -->
 
       <!-- wp:paragraph -->
-      <p><a href="http://wpperformance.localhost/hello-world/" data-type="post" data-id="1">Voir les derniers articles</a></p>
+      <p><a href="/hello-world/" data-type="post" data-id="1">Voir les derniers articles</a></p>
       <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->

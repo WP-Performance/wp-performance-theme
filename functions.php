@@ -100,3 +100,11 @@ register_block_style(
     'label'        => __('Text Gradient', 'press-wind'),
   )
 );
+
+register_block_style(
+  'core/heading',
+  array(
+    'name'         => 'text-effect',
+    'label'        => __('Text Effect', 'press-wind'),
+  )
+);

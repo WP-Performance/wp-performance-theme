@@ -1,11 +1,9 @@
 // import * as Turbo from '@hotwired/turbo'
 
+import initGithubInfos from './githubInfos'
 import prefetchHover from './prefetch'
 
-// function main() {
-// }
-
 document.addEventListener('DOMContentLoaded', () => {
-  // main()
+  initGithubInfos()
   prefetchHover(true)
 })

@@ -1,0 +1,18 @@
+.gm-github-infos {
+  @apply inline-block font-display;
+}
+.gm-github-infos a {
+  @apply px-3 py-2 mx-1 text-gray-500 bg-[.3rem_center] pl-11 bg-no-repeat bg-gray-100 border border-gray-300 border-solid rounded-md;
+}
+
+.gm-github-infos a:hover {
+  @apply bg-gray-200 after:hidden;
+}
+
+.gm-github-infos a.gm-star {
+  @apply bg-star;
+}
+
+.gm-github-infos a.gm-zip {
+  @apply bg-zip;
+}

@@ -96,6 +96,13 @@ p > code {
   @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient;
 }
 
+.is-style-text-effect {
+  @apply font-extrabold transition-all text-accent;
+  text-shadow: 4px 4px 0px var(--wp--preset--color--primary),
+    8px 8px 0px var(--wp--preset--color--secondary),
+    12px 12px 0px var(--wp--preset--color--cyan-bluish-gray);
+}
+
 .presswind-link a span {
   @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient;
 }
