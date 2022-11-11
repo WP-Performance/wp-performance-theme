@@ -1397,6 +1397,7 @@ footer.wp-block-template-part > div > div:last-child {
 .gm-github-infos p {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gm-github-infos a {
