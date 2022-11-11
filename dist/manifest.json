@@ -22,7 +22,7 @@
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main.232edce4.css"
+      "assets/main.10b9e1a4.css"
     ],
     "assets": [
       "assets/star.94ce2444.svg",
@@ -30,7 +30,7 @@
     ]
   },
   "main.css": {
-    "file": "assets/main.232edce4.css",
+    "file": "assets/main.10b9e1a4.css",
     "src": "main.css"
   }
 }
