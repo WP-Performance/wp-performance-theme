@@ -7,7 +7,7 @@
 }
 
 .gm-github-infos a {
-  @apply px-3 py-2 mx-1 text-gray-500 bg-[.3rem_center] pl-11 bg-no-repeat bg-gray-100 border border-gray-300 border-solid rounded-md whitespace-nowrap;
+  @apply px-3 py-2 m-1 text-gray-500 bg-[.3rem_center] pl-11 bg-no-repeat bg-gray-100 border border-gray-300 border-solid rounded-md whitespace-nowrap;
 }
 
 .gm-github-infos a:hover {

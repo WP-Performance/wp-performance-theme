@@ -1401,8 +1401,7 @@ footer.wp-block-template-part > div > div:last-child {
 }
 
 .gm-github-infos a {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+  margin: 0.25rem;
   white-space: nowrap;
   border-radius: 0.375rem;
   border-width: 1px;
