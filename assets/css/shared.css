@@ -36,7 +36,7 @@ body
 }
 
 .wp-block-post-content ul {
-  @apply pl-6;
+  @apply pl-9;
 }
 
 /** template */

@@ -9,20 +9,20 @@
     "src": "vite/legacy-polyfills-legacy",
     "isEntry": true
   },
-  "assets/media/star.svg": {
-    "file": "assets/star.94ce2444.svg",
-    "src": "assets/media/star.svg"
-  },
   "assets/media/zip.svg": {
     "file": "assets/zip.1bf12859.svg",
     "src": "assets/media/zip.svg"
+  },
+  "assets/media/star.svg": {
+    "file": "assets/star.94ce2444.svg",
+    "src": "assets/media/star.svg"
   },
   "main.js": {
     "file": "assets/main.204f80c7.js",
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main.4c12ed23.css"
+      "assets/main.aeaee80f.css"
     ],
     "assets": [
       "assets/star.94ce2444.svg",
@@ -30,7 +30,7 @@
     ]
   },
   "main.css": {
-    "file": "assets/main.4c12ed23.css",
+    "file": "assets/main.aeaee80f.css",
     "src": "main.css"
   }
 }
