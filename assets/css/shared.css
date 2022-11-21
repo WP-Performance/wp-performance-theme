@@ -39,8 +39,8 @@ body
   @apply pl-9;
 }
 
-.wp-block-social-links,
-wpp-list-posts {
+.entry-content ul.wp-block-social-links,
+.entry-content ul.wpp-list-posts {
   @apply pl-0;
 }
 

@@ -242,8 +242,8 @@ body
   padding-left: 2.25rem;
 }
 
-.wp-block-social-links, 
-wpp-list-posts {
+.entry-content ul.wp-block-social-links, 
+.entry-content ul.wpp-list-posts {
   padding-left: 0px;
 }
 
