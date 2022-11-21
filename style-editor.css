@@ -238,8 +238,13 @@ body
   margin-left: auto;
 }
 
-.wp-block-post-content ul {
+.entry-content ul {
   padding-left: 2.25rem;
+}
+
+.wp-block-social-links, 
+wpp-list-posts {
+  padding-left: 0px;
 }
 
 /** template */

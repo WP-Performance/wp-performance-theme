@@ -35,8 +35,13 @@ body
   @apply float-none ml-auto;
 }
 
-.wp-block-post-content ul {
+.entry-content ul {
   @apply pl-9;
+}
+
+.wp-block-social-links,
+wpp-list-posts {
+  @apply pl-0;
 }
 
 /** template */
