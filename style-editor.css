@@ -474,6 +474,10 @@ p > code {
   margin-left: 0.75rem;
 }
 
+.wp-search-algolia {
+  min-height: 500px;
+}
+
 /** parts */
 
 /** header **/

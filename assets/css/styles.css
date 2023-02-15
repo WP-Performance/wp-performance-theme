@@ -14,3 +14,5 @@
 
 /** patterns */
 @import './patterns/index.css';
+
+@import 'instantsearch.css/themes/satellite-min.css';

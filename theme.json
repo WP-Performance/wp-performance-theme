@@ -13,32 +13,50 @@
       "link": false,
       "duotone": [
         {
-          "colors": ["#000000", "#ffffff"],
+          "colors": [
+            "#000000",
+            "#ffffff"
+          ],
           "name": "Foreground and background",
           "slug": "foreground-and-background"
         },
         {
-          "colors": ["#000000", "#707C84"],
+          "colors": [
+            "#000000",
+            "#707C84"
+          ],
           "name": "Foreground and secondary",
           "slug": "foreground-and-secondary"
         },
         {
-          "colors": ["#000000", "rgb(190, 24, 93)"],
+          "colors": [
+            "#000000",
+            "rgb(190, 24, 93)"
+          ],
           "name": "Foreground and accent",
           "slug": "foreground-and-accent"
         },
         {
-          "colors": ["#261578", "#ffffff"],
+          "colors": [
+            "#261578",
+            "#ffffff"
+          ],
           "name": "Primary and background",
           "slug": "primary-and-background"
         },
         {
-          "colors": ["#261578", "#707C84"],
+          "colors": [
+            "#261578",
+            "#707C84"
+          ],
           "name": "Primary and secondary",
           "slug": "primary-and-secondary"
         },
         {
-          "colors": ["#261578", "rgb(190, 24, 93)"],
+          "colors": [
+            "#261578",
+            "rgb(190, 24, 93)"
+          ],
           "name": "Primary and accent",
           "slug": "primary-and-accent"
         }
@@ -151,7 +169,12 @@
           "name": "60"
         }
       ],
-      "units": ["%", "rem", "vh", "vw"]
+      "units": [
+        "%",
+        "rem",
+        "vh",
+        "vw"
+      ]
     },
     "typography": {
       "customFontSize": false,
@@ -174,10 +197,12 @@
               "fontWeight": "100 800",
               "fontStyle": "oblique 0deg 10deg",
               "unicodeRange": "U+000-5FF;",
-              "src": ["file:./assets/fonts/Sora-VariableFont_wght.woff2"]
+              "src": [
+                "file:./assets/fonts/Sora-VariableFont_wght.woff2"
+              ]
             }
           ],
-          "fontFamily": "\"Sora\", Adjusted Arial, sans-serif",
+          "fontFamily": "\"Sora\", Arial, sans-serif",
           "name": "Sora",
           "slug": "Sora"
         },
@@ -188,28 +213,36 @@
               "fontStretch": "normal",
               "fontStyle": "normal",
               "fontWeight": "400",
-              "src": ["file:./assets/fonts/Lora-Regular.woff2"]
+              "src": [
+                "file:./assets/fonts/Lora-Regular.woff2"
+              ]
             },
             {
               "fontFamily": "Lora",
               "fontStretch": "normal",
               "fontStyle": "italic",
               "fontWeight": "400",
-              "src": ["file:./assets/fonts/Lora-Italic.woff2"]
+              "src": [
+                "file:./assets/fonts/Lora-Italic.woff2"
+              ]
             },
             {
               "fontFamily": "Lora",
               "fontStretch": "normal",
               "fontStyle": "italic",
               "fontWeight": "700",
-              "src": ["file:./assets/fonts/Lora-BoldItalic.woff2"]
+              "src": [
+                "file:./assets/fonts/Lora-BoldItalic.woff2"
+              ]
             },
             {
               "fontFamily": "Lora",
               "fontStretch": "normal",
               "fontStyle": "normal",
               "fontWeight": "700",
-              "src": ["file:./assets/fonts/Lora-Bold.woff2"]
+              "src": [
+                "file:./assets/fonts/Lora-Bold.woff2"
+              ]
             }
           ],
           "fontFamily": "\"Lora\", Adjusted Times New Roman, serif",
@@ -306,7 +339,9 @@
   "styles": {
     "blocks": {
       "core/separator": {
-        "color": { "text": "var(--wp--preset--color--primary)" }
+        "color": {
+          "text": "var(--wp--preset--color--primary)"
+        }
       },
       "core/button": {
         "border": {
@@ -327,7 +362,9 @@
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--4-xlarge)"
         },
-        "color": { "text": "var(--wp--preset--color--accent)" }
+        "color": {
+          "text": "var(--wp--preset--color--accent)"
+        }
       },
       "core/quote": {
         "border": {
@@ -365,7 +402,9 @@
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--4-xlarge)"
         },
-        "color": { "text": "var(--wp--preset--color--black)" },
+        "color": {
+          "text": "var(--wp--preset--color--black)"
+        },
         "spacing": {
           "padding": {
             "top": "var(--wp--preset--spacing--10)",
@@ -380,7 +419,9 @@
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--2-xlarge)"
         },
-        "color": { "text": "var(--wp--preset--color--black)" },
+        "color": {
+          "text": "var(--wp--preset--color--black)"
+        },
         "spacing": {
           "padding": {
             "top": "var(--wp--preset--spacing--10)",
@@ -395,7 +436,9 @@
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--1-xlarge)"
         },
-        "color": { "text": "var(--wp--preset--color--black)" }
+        "color": {
+          "text": "var(--wp--preset--color--black)"
+        }
       },
       "h5": {
         "typography": {
@@ -404,7 +447,9 @@
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--large)"
         },
-        "color": { "text": "var(--wp--preset--color--black)" }
+        "color": {
+          "text": "var(--wp--preset--color--black)"
+        }
       },
       "h6": {
         "typography": {
@@ -413,7 +458,9 @@
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--large)"
         },
-        "color": { "text": "var(--wp--preset--color--black)" }
+        "color": {
+          "text": "var(--wp--preset--color--black)"
+        }
       },
       "link": {
         "color": {

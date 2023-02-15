@@ -1,28 +1,28 @@
 {
   "main-legacy.js": {
-    "file": "assets/main-legacy.64f44bed.js",
+    "file": "assets/main-legacy.02ca98fa.js",
     "src": "main-legacy.js",
     "isEntry": true
   },
   "vite/legacy-polyfills-legacy": {
-    "file": "assets/polyfills-legacy.cdef225d.js",
+    "file": "assets/polyfills-legacy.fd4a97db.js",
     "src": "vite/legacy-polyfills-legacy",
     "isEntry": true
-  },
-  "assets/media/star.svg": {
-    "file": "assets/star.94ce2444.svg",
-    "src": "assets/media/star.svg"
   },
   "assets/media/zip.svg": {
     "file": "assets/zip.1bf12859.svg",
     "src": "assets/media/zip.svg"
   },
+  "assets/media/star.svg": {
+    "file": "assets/star.94ce2444.svg",
+    "src": "assets/media/star.svg"
+  },
   "main.js": {
-    "file": "assets/main.204f80c7.js",
+    "file": "assets/main.29cb560e.js",
     "src": "main.js",
     "isEntry": true,
     "css": [
-      "assets/main.d34a929d.css"
+      "assets/main.4240fdf3.css"
     ],
     "assets": [
       "assets/star.94ce2444.svg",
@@ -30,7 +30,7 @@
     ]
   },
   "main.css": {
-    "file": "assets/main.d34a929d.css",
+    "file": "assets/main.4240fdf3.css",
     "src": "main.css"
   }
 }

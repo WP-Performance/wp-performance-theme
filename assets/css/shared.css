@@ -148,3 +148,7 @@ p > code {
 .button-with-icon .wp-block-social-links {
   @apply ml-3;
 }
+
+.wp-search-algolia {
+  @apply min-h-[500px];
+}
