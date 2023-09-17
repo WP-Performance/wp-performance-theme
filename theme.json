@@ -1,16 +1,19 @@
 {
-  "$schema": "https://schemas.wp.org/wp/6.1/theme.json",
+  "$schema": "https://schemas.wp.org/wp/6.3/theme.json",
   "customTemplates": [],
   "settings": {
+    "useRootPaddingAwareAlignments": true,
     "appearanceTools": true,
     "color": {
+      "custom": false,
       "customDuotone": false,
       "customGradient": false,
-      "defaultDuotone": false,
+      "link": true,
+      "text": true,
+      "background": true,
       "defaultGradients": false,
       "defaultPalette": false,
-      "custom": true,
-      "link": false,
+      "gradients": [],
       "duotone": [
         {
           "colors": [
@@ -61,7 +64,6 @@
           "slug": "primary-and-accent"
         }
       ],
-      "gradients": [],
       "palette": [
         {
           "color": "#000000",
@@ -100,15 +102,12 @@
         },
         {
           "color": "#eee",
-          "name": "Gray",
-          "slug": "gray"
+          "name": "Clear Gray",
+          "slug": "clear-gray"
         }
       ]
     },
     "custom": {
-      "sizes": {
-        "content": "1024px"
-      },
       "colors": {
         "body": "#f4f5f6"
       },
@@ -128,8 +127,11 @@
       }
     },
     "layout": {
-      "contentSize": "var(--wp--custom--sizes--content)",
-      "wideSize": "100%"
+      "contentSize": "1024px",
+      "wideSize": "1370px"
+    },
+    "dimensions": {
+      "minHeight": true
     },
     "spacing": {
       "padding": true,
@@ -177,12 +179,15 @@
       ]
     },
     "typography": {
-      "customFontSize": false,
-      "textDecoration": false,
-      "lineHeight": false,
-      "letterSpacing": false,
-      "fontWeight": false,
-      "dropCap": false,
+      "fluid": true,
+      "textTransform": true,
+      "fontStyle": true,
+      "customFontSize": true,
+      "textDecoration": true,
+      "lineHeight": true,
+      "letterSpacing": true,
+      "fontWeight": true,
+      "dropCap": true,
       "fontFamilies": [
         {
           "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
@@ -250,7 +255,6 @@
           "slug": "Lora"
         }
       ],
-      "fluid": true,
       "fontSizes": [
         {
           "size": "5rem",

@@ -17,9 +17,6 @@ module.exports = {
         main: '8rem 1fr 8rem',
         'main-small': '1rem 1fr 1rem',
       },
-      maxWidth: {
-        'custom-content': 'var(--wp--custom--sizes--content)',
-      },
       backgroundImage: (theme) => ({
         'wp-performance': "url('/assets/media/wp-performance.png')",
         star: "url('/assets/media/star.svg')",
@@ -51,5 +48,7 @@ module.exports = {
   variants: {
     scrollbar: ['rounded'],
   },
-  plugins: [require('tailwind-scrollbar')({ nocompatible: true })],
+  plugins: [
+    require('@_tw/themejson')(require('./theme.json')),
+    require('tailwind-scrollbar')({ nocompatible: true })],
 }

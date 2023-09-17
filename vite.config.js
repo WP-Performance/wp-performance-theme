@@ -31,13 +31,12 @@ export const viteConfig = {
   //   transformer: 'lightningcss',
   // },
   build: {
+    cssCodeSplit: false,
     cssMinify: 'lightningcss',
     // output dir for production build
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
     manifest: true,
-    // override by legacy plugin
-    // target: 'es6',
     rollupOptions: {
       input: resolve(__dirname, 'main.js'),
     },

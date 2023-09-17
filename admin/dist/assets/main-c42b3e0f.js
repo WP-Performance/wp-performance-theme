@@ -1,1 +1,0 @@
-function o(){import.meta.url,import("_").catch(()=>1);async function*e(){}}wp.domReady(()=>{window._wpLoadBlockEditor.then(()=>{console.log("Gutenberg ready !"),wp.blocks.unregisterBlockStyle("core/image",["default","rounded"])})});export{o as __vite_legacy_guard};

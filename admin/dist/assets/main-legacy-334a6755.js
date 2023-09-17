@@ -1,1 +1,0 @@
-System.register([],(function(e,t){"use strict";return{execute:function(){var e=document.createElement("style");e.textContent="",document.head.appendChild(e),wp.domReady((()=>{window._wpLoadBlockEditor.then((()=>{console.log("Gutenberg ready !"),wp.blocks.unregisterBlockStyle("core/image",["default","rounded"])}))}))}}}));

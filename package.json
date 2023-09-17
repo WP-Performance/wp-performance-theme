@@ -8,12 +8,11 @@
     "build": "APP_ENV=production bunx vite build && bun run build:editor && bun run build:admin",
     "dev:admin": "cross-env APP_ENV=development bunx vite --config admin/vite.config.js",
     "build:admin": "APP_ENV=production bunx vite build --config admin/vite.config.js",
-    "watch:editor": "APP_ENV=development IS_EDITOR=true node_modules/.bin/tailwindcss  --watch --verbose --no-map -i assets/css/styles.css -o style-editor.css --postcss -p",
-    "build:editor": "NODE_ENV=production IS_EDITOR=true node_modules/.bin/tailwindcss  -i assets/css/styles.css -o style-editor.css --postcss -m",
+    "watch:editor": "APP_ENV=development IS_EDITOR=true node_modules/.bin/tailwindcss  --watch --verbose --no-map -i assets/css/editor.css -o style-editor.css --postcss -p",
+    "build:editor": "NODE_ENV=production IS_EDITOR=true node_modules/.bin/tailwindcss  -i assets/css/editor.css -o style-editor.css --postcss -m",
     "favicon": "cd node_modules/sharp && bun install && cd ../../ && bun ./inc/core/faviconGenerator.mjs",
     "php:lint": "./vendor/bin/duster lint",
-    "php:fix": "./vendor/bin/duster fix",
-    "postinstall": "husky install"
+    "php:fix": "./vendor/bin/duster fix"
   },
   "author": "Faramaz Patrick<info@goodmotion.fr>",
   "license": "ISC",
@@ -21,8 +20,6 @@
     "sharp"
   ],
   "devDependencies": {
-
-    "husky": "^8.0.1",
     "@_tw/themejson": "^0.1.2",
     "@babel/plugin-transform-arrow-functions": "^7.22.5",
     "@tailwindcss/forms": "^0.5.6",
@@ -66,8 +63,8 @@
   "dependencies": {
     "instantsearch.css": "^8.0.0",
     "@meilisearch/instant-meilisearch": "^0.12.0",
-    "algoliasearch": "^4.14.3",
-    "instantsearch.js": "^4.51.0",
+    "algoliasearch": "^4.20.0",
+    "instantsearch.js": "^4.56.11",
     "tailwind-scrollbar": "^2.1.0-preview.0"
   },
   "browserslist": [
