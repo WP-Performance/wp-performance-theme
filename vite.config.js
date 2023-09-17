@@ -1,34 +1,42 @@
-import { resolve, sep } from 'path'
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import legacy from '@vitejs/plugin-legacy'
+import basicSsl from '@vitejs/plugin-basic-ssl'
 import liveReload from 'vite-plugin-live-reload'
-
-// find theme dir name
-export function getThemDir() {
-  const _path = process.cwd().split(sep)
-  return _path[_path.length - 1]
-}
+import getThemeDir from './inc/js-helpers/getThemeDir.js'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export const viteConfig = {
+  cacheDir: './node_modules/.vite/press-wind',
   plugins: [
-    liveReload([__dirname + '/**/*.php']),
+    basicSsl(),
+    liveReload([
+      __dirname + '/**/*.php',
+      // __dirname + '/**/*.twig'
+    ]),
     legacy({
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
-      polyfills: [],
-      modernPolyfills: [],
+      // target is default
+      // targets: ['last 1 version'],
+      // additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
+      // polyfills: [],
+      // modernPolyfills: [],
     }),
   ],
   base:
     process.env.APP_ENV === 'development'
-      ? `/wp-content/themes/${getThemDir()}/`
-      : `/wp-content/themes/${getThemDir()}/dist/`,
+      ? `/wp-content/themes/${getThemeDir()}/`
+      : `/wp-content/themes/${getThemeDir()}/dist/`,
   root: '',
+  // css: {
+  //   transformer: 'lightningcss',
+  // },
   build: {
+    cssMinify: 'lightningcss',
     // output dir for production build
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
     manifest: true,
+    // override by legacy plugin
     // target: 'es6',
     rollupOptions: {
       input: resolve(__dirname, 'main.js'),
@@ -38,11 +46,13 @@ export default defineConfig({
     cors: true,
     strictPort: true,
     port: 3000,
-    https: false,
+    https: true,
     hmr: {
-      protocol: 'ws',
+      protocol: 'wss',
       port: 3000,
       // host: 'localhost',
     },
   },
-})
+}
+
+export default defineConfig(viteConfig)

@@ -1,0 +1,45 @@
+body {
+  background: #fefefe;
+}
+
+/* Logo */
+#login h1 a,
+.login h1 a {
+  width: 100%;
+  background-image: url('../media/logo.svg');
+  background-size: contain;
+}
+
+#login form,
+.login form {
+  background-color: #f9f9f9;
+}
+
+#login form label,
+.login form label {
+  color: #737373;
+}
+
+/* Bouton */
+.wp-core-ui .button-primary {
+  background: rgb(190, 24, 93);
+  border-color: rgb(190, 24, 93);
+}
+
+.wp-core-ui .button-primary:hover {
+  background: rgb(140, 24, 93);
+  border-color: rgb(140, 24, 93);
+}
+
+/* Liens */
+.login #backtoblog a,
+.login #nav a,
+.privacy-policy-page-link a {
+  color: rgb(190, 24, 93);
+}
+
+.login #backtoblog a:hover,
+.login #nav a:hover,
+.privacy-policy-page-link a:hover {
+  color: rgb(140, 24, 93);
+}

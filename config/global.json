@@ -1,0 +1,35 @@
+{
+  "iconsDir": "public",
+  "source": ".\/assets\/media\/icon.svg",
+  "manifest": {
+    "appName": "Trio",
+    "appShortName": "Trio",
+    "appDescription": "Doyenne des agences de communication en Suisse",
+    "background": "#fff",
+    "theme_color": "#C31622",
+    "lang": "fr-CH",
+    "preferRelatedApplications": false,
+    "pixel_art": false,
+    "loadManifestWithCredentials": false,
+    "manifestMaskable": false,
+    "icons": {
+      "favicons": true,
+      "android": true,
+      "appleIcon": true,
+      "appleStartup": false,
+      "coast": false,
+      "yandex": false,
+      "windows": false
+    }
+  },
+  "disable": {
+    "rss": true,
+    "comment": true,
+    "emoji": true,
+    "media": true,
+    "oembed": true,
+    "xmlrpc": true,
+    "rest_user": true,
+    "jquery": true
+  }
+}

@@ -2,14 +2,18 @@
 
 namespace  PressWind;
 
+use function PressWind\Inc\Core\load_assets;
+
 if (!defined('WP_ENV')) {
   define('WP_ENV', 'development');
 }
 
-// settings global
-require_once dirname(__FILE__) . '/inc/assets.php';
+// include core files (don't touch this files !)
+require_once dirname(__FILE__) . '/inc/core/core.php';
+
+// inc, you can modify this files like you want
 require_once dirname(__FILE__) . '/inc/disable.php';
-require_once dirname(__FILE__) . '/inc/gutenberg/index.php';
+require_once dirname(__FILE__) . '/inc/gutenberg.php';
 
 // post type
 require_once dirname(__FILE__) . '/post-type/snippet.php';
@@ -30,11 +34,19 @@ function setup()
 
   add_theme_support('post-thumbnails');
 
-
   load_theme_textdomain('press-wind', get_template_directory() . '/languages');
 }
 
 add_action('after_setup_theme', __NAMESPACE__ . '\setup');
+
+/**
+ * init assets front
+ */
+load_assets('press-wind', dirname(__FILE__) . '', '3000');
+/**
+ * init assets admin
+ */
+load_assets('press-wind-admin', dirname(__FILE__) . '/admin', '4444', true);
 
 
 /** limit excerpt */
@@ -66,15 +78,15 @@ add_action('parse_query', __NAMESPACE__ . '\disable_caching');
 
 
 
-add_action('wp_head', function () {
-  echo "<!-- Google Tag Manager -->
-<script type=\"text/partytown\">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NSHVBFH');</script>
-<!-- End Google Tag Manager -->";
-});
+//add_action('wp_head', function () {
+//  echo "<!-- Google Tag Manager -->
+//<script type=\"text/partytown\">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+//new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+//j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+//'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+//})(window,document,'script','dataLayer','GTM-NSHVBFH');</script>
+//<!-- End Google Tag Manager -->";
+//});
 
 
 register_block_style(
