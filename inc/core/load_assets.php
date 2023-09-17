@@ -39,12 +39,15 @@ function get_wp_path($path)
 function add_script($slug, $path, $port, $is_admin, $is_ts = false)
 {
   // for theme
+  $root_path = get_template_directory();
   $public_path = get_template_directory_uri();
-  $dirPath = get_last_path($path);
+
+  $endOfPath = str_replace($root_path, '', $path);
 
   if (WP_ENV !== 'development') {
     // get files name list from manifest
-    $config = Helpers\get_manifest(substr($dirPath, 1) . '/dist/manifest.json');
+    // $config = Helpers\get_manifest(substr($dirPath, 1) . '/dist/manifest.json');
+    $config = Helpers\get_manifest($path . '/dist/manifest.json');
 
     if (!$config) {
       return;
@@ -56,7 +59,8 @@ function add_script($slug, $path, $port, $is_admin, $is_ts = false)
 
     // loop for enqueue script
     foreach ($ordered as $key => $value) {
-      wp_enqueue_script($slug . '-' . $key, $public_path . $dirPath . '/dist/' . $value->file, [], $key, true);
+      if (property_exists($value, 'css') === true || strpos($value->src, '.css') !== false) continue;
+      wp_enqueue_script($slug . '-' . $key, $public_path . $endOfPath . '/dist/' . $value->file, [], $key, true);
     }
   } else {
     // development
@@ -93,36 +97,47 @@ function enqueue_styles($slug, $path, $is_admin)
   if (!file_exists($path . '/dist/manifest.json')) {
     return;
   }
+
   add_action(
     ($is_admin ? 'admin' : 'wp') . '_enqueue_scripts',
     function () use ($slug, $path) {
       // theme path
+      $root_path = get_template_directory();
       $public_path = get_template_directory_uri();
-      $dirPath = get_last_path($path);
+
+      $endOfPath = str_replace($root_path, '', $path);
 
       if (WP_ENV !== 'development') {
         // get file name from manifest
-        $config = Helpers\get_manifest(substr($dirPath, 1) . '/dist/manifest.json');
+        $config = Helpers\get_manifest($path . '/dist/manifest.json');
+
         if (!$config) {
           return;
         }
+
         $files = get_object_vars($config);
         // order files
         $ordered = Helpers\order_manifest($files);
+        if (!$ordered) {
+          return;
+        }
         // search css key
         foreach ($ordered as $key => $value) {
           // only entry and css
-          if (property_exists($value, 'css') === false) {
-            continue;
+          // # todo add to press-wind base theme
+          if (property_exists($value, 'css') === false && strpos($value->src, '.css') === false) continue;
+          if (strpos($value->src, '.css') > 0) {
+            $css = [$value->file];
+          } else {
+            $css = $value->css;
           }
-          $css = $value->css;
           // $css is array
           foreach ($css as $file) {
             // get token file
             $token = Helpers\get_token_name($file);
             wp_enqueue_style(
               $slug . '-' . $key,
-              $public_path . $dirPath . '/dist/' . $file,
+              $public_path . $endOfPath . '/dist/' . $file,
               [],
               $key,
               'all'

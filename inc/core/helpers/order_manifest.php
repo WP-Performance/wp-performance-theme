@@ -15,7 +15,7 @@ function order_manifest($manifest)
   $orderedWithToken = [];
   // add token
   foreach ($ordered['ordered'] as $key => $value) {
-    if (!$value) continue;
+    if (!$value) return;
     $orderedWithToken[get_token_name($value->file)] = $value;
   }
 
@@ -58,6 +58,11 @@ function keepEntries($manifest)
 {
   $clean = [];
   foreach ($manifest as $key => $value) {
+    // # todo add to press-wind base theme
+    // keep css file entry
+    if (strpos($key, '.css') > 0) {
+      $clean[] = $value;
+    };
     if (property_exists($value, 'isEntry') === true) {
       $clean[] = $value;
     }
