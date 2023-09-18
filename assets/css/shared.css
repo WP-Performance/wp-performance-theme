@@ -104,8 +104,9 @@ p > code {
 
 .button-with-icon {
   --borderWidth: 2px;
-  @apply relative bg-black rounded-3xl;
+  @apply relative bg-white rounded-3xl;
 }
+
 .button-with-icon:after {
   @apply content-[''] absolute rounded-full z-[-1];
   top: calc(-1 * var(--borderWidth));

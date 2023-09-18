@@ -5,7 +5,7 @@ module.exports = {
   corePlugins: {
     preflight: process.env.IS_EDITOR ? false : usePreflightFront,
   },
-  content: ['./**/*.{php,html}', './assets/*.{js,jsx,ts,tsx,vue}'],
+  content: ['./**/*.{php,html}'],
   theme: {
     extend: {
       gridTemplateColumns: {
