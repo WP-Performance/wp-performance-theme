@@ -8,8 +8,8 @@
     "build": "APP_ENV=production bunx vite build && bun run build:editor && bun run build:admin",
     "dev:admin": "cross-env APP_ENV=development bunx vite --config admin/vite.config.js",
     "build:admin": "APP_ENV=production bunx vite build --config admin/vite.config.js",
-    "watch:editor": "APP_ENV=development IS_EDITOR=true node_modules/.bin/tailwindcss  --watch --verbose --no-map -i assets/css/editor.css -o style-editor.css --postcss -p",
-    "build:editor": "NODE_ENV=production IS_EDITOR=true node_modules/.bin/tailwindcss  -i assets/css/editor.css -o style-editor.css --postcss -m",
+    "watch:editor": "APP_ENV=development IS_EDITOR=true node_modules/.bin/tailwindcss  --watch --verbose --no-map -i assets/css/styles.css -o style-editor.css --postcss -p",
+    "build:editor": "NODE_ENV=production IS_EDITOR=true node_modules/.bin/tailwindcss  -i assets/css/styles.css -o style-editor.css --postcss -m",
     "favicon": "cd node_modules/sharp && bun install && cd ../../ && bun ./inc/core/faviconGenerator.mjs",
     "php:lint": "./vendor/bin/duster lint",
     "php:fix": "./vendor/bin/duster fix"

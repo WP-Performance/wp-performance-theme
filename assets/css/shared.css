@@ -16,25 +16,6 @@ body {
 }
 
 /** width content align */
-body
-  .is-layout-constrained
-  > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-  @apply mx-auto max-w-[98vw] lg:max-w-content;
-}
-
-.wp-block-post-content
-  > :where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
-  @apply px-4 mx-auto max-w-[98vw] lg:max-w-content;
-}
-
-.wp-block-post-content > .alignleft {
-  @apply float-none mr-auto;
-}
-
-.wp-block-post-content > .alignright {
-  @apply float-none ml-auto;
-}
-
 .entry-content ul {
   @apply pl-9;
 }
@@ -45,13 +26,8 @@ body
 }
 
 /** template */
-
 .no-hero {
   @apply pt-48;
-}
-
-.no-hero > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-  @apply mx-auto max-w-[98vw] lg:max-w-content;
 }
 
 /** text selection color */

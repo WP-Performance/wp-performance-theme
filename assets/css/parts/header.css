@@ -29,7 +29,7 @@
 
 /** navigation **/
 .main-navigation {
-  @apply max-w-full my-3 ml-6 mr-2 md:mx-10 font-display;
+  @apply max-w-full my-3 ml-6 mr-2 md:mx-10;
 }
 
 .main-navigation > ul,

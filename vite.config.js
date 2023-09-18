@@ -12,15 +12,8 @@ export const viteConfig = {
     basicSsl(),
     liveReload([
       __dirname + '/**/*.php',
-      // __dirname + '/**/*.twig'
     ]),
-    legacy({
-      // target is default
-      // targets: ['last 1 version'],
-      // additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
-      // polyfills: [],
-      // modernPolyfills: [],
-    }),
+    legacy({}),
   ],
   base:
     process.env.APP_ENV === 'development'

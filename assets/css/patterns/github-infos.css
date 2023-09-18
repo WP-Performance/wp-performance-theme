@@ -1,5 +1,5 @@
 .gm-github-infos {
-  @apply inline-block font-display;
+  @apply inline-block;
 }
 
 .gm-github-infos p {

@@ -5,13 +5,8 @@ module.exports = {
   corePlugins: {
     preflight: process.env.IS_EDITOR ? false : usePreflightFront,
   },
-  content: ['./**/*.{php,twig,html}', './assets/*.{js,jsx,ts,tsx,vue}'],
-  safelist: [],
+  content: ['./**/*.{php,html}', './assets/*.{js,jsx,ts,tsx,vue}'],
   theme: {
-    fontFamily: {
-      display: ['var(--wp--preset--font-family--sora)'],
-      body: ['var(--wp--preset--font-family--lora)'],
-    },
     extend: {
       gridTemplateColumns: {
         main: '8rem 1fr 8rem',
@@ -29,7 +24,7 @@ module.exports = {
         accent: 'var(--wp--preset--color--accent)',
       },
       animation: {
-        'text-gradient': 'tgradient-text 5s ease infinite',
+        'text-gradient': 'gradient-text 5s ease infinite',
       },
       keyframes: {
         'text-gradient': {

@@ -34,7 +34,7 @@
 }
 
 .gm-hero-home > div:last-child > div p a {
-  @apply text-base font-bold no-underline text-accent font-display;
+  @apply text-base font-bold no-underline text-accent;
 }
 
 /** social */
