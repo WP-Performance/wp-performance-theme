@@ -9,7 +9,7 @@
 }
 
 .gm-hero-home > div:first-child figure img {
-  @apply object-cover w-full;
+  @apply object-cover w-full min-w-full;
 }
 /** column right */
 .gm-hero-home > div:last-child {

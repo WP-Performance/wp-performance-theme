@@ -58,6 +58,7 @@
 .main-navigation a.wp-block-navigation-item__content,
 .wp-block-navigation__responsive-container-content a {
   @apply text-xl font-bold text-gray-500 no-underline hover:text-accent lg:text-sm;
+  font-family: var(--wp--preset--font-family--sora);
 }
 
 .main-navigation li.current-menu-item a {

@@ -880,6 +880,11 @@ p > code {
   }
 }
 
+.main-navigation a.wp-block-navigation-item__content,
+.wp-block-navigation__responsive-container-content a {
+  font-family: var(--wp--preset--font-family--sora);
+}
+
 .main-navigation li.current-menu-item a {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -1091,6 +1096,7 @@ footer.wp-block-template-part > div > div:last-child {
 
 .gm-hero-home > div:first-child figure img {
   width: 100%;
+  min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
