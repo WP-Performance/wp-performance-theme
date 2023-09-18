@@ -8,9 +8,11 @@
   @apply flex w-5/6 h-full md:w-full max-h-[40vh] lg:max-h-[100vh] lg:min-h-[770px] overflow-hidden after:content-[''] after:bg-white/30 after:inset-0 after:absolute relative;
 }
 
-.gm-hero-home > div:first-child figure img {
-  @apply object-cover w-full min-w-full;
+.gm-hero-home > div:first-child figure img,
+.gm-hero-home > div:first-child figure picture {
+  @apply object-cover w-full;
 }
+
 /** column right */
 .gm-hero-home > div:last-child {
   @apply flex flex-col items-start justify-between px-10 lg:px-20;
