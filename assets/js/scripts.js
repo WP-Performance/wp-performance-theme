@@ -1,4 +1,4 @@
-import './meiliSearch'
+// import './meiliSearch'
 import initGithubInfos from './githubInfos'
 import prefetchHover from './prefetch'
 
