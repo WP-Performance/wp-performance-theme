@@ -10,7 +10,7 @@ footer.wp-block-template-part > div > div > a {
   @apply p-2 lg:pl-9;
 }
 
-footer.wp-block-template-part > div > div a svg {
+footer.wp-block-template-part > div > div:first-child a svg {
   @apply w-64;
 }
 
@@ -48,4 +48,13 @@ footer.wp-block-template-part .wp-block-social-links .wp-social-link svg {
 /** text */
 footer.wp-block-template-part > div > div:last-child {
   @apply flex items-center justify-center py-6 mx-auto text-xs text-gray-500 border-t border-gray-100 border-solid max-w-none;
+}
+
+/** grade */
+footer.wp-block-template-part .wpp-links-credit {
+  @apply flex flex-wrap gap-2 justify-center items-center;
+  font-family: var(--wp--preset--font-family--sora);
+}
+footer.wp-block-template-part .wpp-links-credit svg {
+  @apply w-auto;
 }

@@ -14,6 +14,7 @@ require_once dirname(__FILE__) . '/inc/core/core.php';
 // inc, you can modify this files like you want
 require_once dirname(__FILE__) . '/inc/disable.php';
 require_once dirname(__FILE__) . '/inc/gutenberg.php';
+require_once dirname(__FILE__) . '/inc/blocks.php';
 
 // post type
 require_once dirname(__FILE__) . '/post-type/snippet.php';
