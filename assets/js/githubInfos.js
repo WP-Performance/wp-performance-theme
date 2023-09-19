@@ -20,7 +20,7 @@ const createAnchor = ({ href, text, className = [] }) => {
 
 const initGithubInfos = async () => {
   const gitHubInfos = document.querySelectorAll('.gm-github-infos')
-  if (gitHubInfos) {
+  if (gitHubInfos.length > 0) {
     const data = await $fetch(
       'https://api.github.com/repos/WP-Performance/press-wind',
     )
