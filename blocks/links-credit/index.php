@@ -8,8 +8,7 @@
       </svg>Code source du site sur Github
     </a>
     <a class="flex items-center no-underline" target="_blank" rel="noopener noreferrer" href="https://www.websitecarbon.com/website/wp-performance-com/">
-      <img src="/wp-content/themes/wp-performance-theme/assets/media
-      /WebsiteCarbon.png" alt="WebsiteCarbon" class="w-8 h-8 mr-2" /> Website Carbon <span class="bg-green-300/60 text-dark-gray py-0.5 px-1 flex ml-2 rounded-lg">0.13g of CO2</span>
+      <img src="/wp-content/themes/wp-performance-theme/assets/media/WebsiteCarbon.png" alt="WebsiteCarbon" class="w-8 h-8 mr-2" /> Website Carbon <span class="bg-green-300/60 text-dark-gray py-0.5 px-1 flex ml-2 rounded-lg">0.13g of CO2</span>
     </a>
     <a class="flex items-center no-underline" target="_blank" rel="noopener
     noreferrer" href="https://www.ecoindex.fr/resultat/?id=605e8441-252f-443f-953d-cf5a0e1c94d9"><span class="flex items-center justify-center w-8 h-8 mr-2 text-base font-semibold text-white no-underline bg-green-600 rounded-full">A</span>Eco Index</a>
