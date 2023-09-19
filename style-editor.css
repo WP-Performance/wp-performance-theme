@@ -671,7 +671,7 @@ p > code {
   position: relative;
   border-radius: 1.5rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .button-with-icon:after {
@@ -1094,9 +1094,9 @@ footer.wp-block-template-part > div > div:last-child {
   }
 }
 
-.gm-hero-home > div:first-child figure img {
+.gm-hero-home > div:first-child figure img,
+.gm-hero-home > div:first-child figure picture {
   width: 100%;
-  min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1154,7 +1154,7 @@ footer.wp-block-template-part > div > div:last-child {
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .gm-hero-home > div:last-child > div p a {
@@ -1181,7 +1181,7 @@ footer.wp-block-template-part > div > div:last-child {
   line-height: 1.75rem;
   font-weight: 500;
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .gm-hero-home > div:last-child > div:last-child > div h4 {
