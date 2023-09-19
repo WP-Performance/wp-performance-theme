@@ -14,6 +14,8 @@
     noreferrer" href="https://www.ecoindex.fr/resultat/?id=605e8441-252f-443f-953d-cf5a0e1c94d9"><span class="flex items-center justify-center w-8 h-8 mr-2 text-base font-semibold text-white no-underline bg-green-600 rounded-full">A</span>Eco Index</a>
     <a class="flex items-center no-underline" target="_blank" rel="noopener
     noreferrer" href="https://pagespeed.web.dev/analysis/https-wp-performance-com/pofejd1pwn?form_factor=mobile
-"><span class="flex items-center justify-center w-8 h-8 mr-2 text-base font-semibold text-green-500 border-2 border-green-500 rounded-full bg-green-50">100</span>PageSpeed Insights</a>
+"><span class="flex items-center justify-center w-8 h-8 mr-2 p-1 text-base
+font-semibold text-green-700 border-2 border-green-500 rounded-full
+bg-green-50 border-solid">100</span>PageSpeed Insights</a>
   </p>
 </div>
