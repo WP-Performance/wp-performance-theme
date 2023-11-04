@@ -5,7 +5,11 @@ module.exports = {
   corePlugins: {
     preflight: process.env.IS_EDITOR ? false : usePreflightFront,
   },
-  content: ['./**/*.{php,html}'],
+  content: [
+    // './**/*.{php,html}',
+    './blocks/**/*.php',
+    // './assets/*.{js,jsx,ts,tsx,vue}',
+  ],
   theme: {
     extend: {
       gridTemplateColumns: {

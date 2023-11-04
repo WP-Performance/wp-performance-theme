@@ -2,12 +2,16 @@
 
 namespace  PressWind;
 
+
+use PressWind\Src\Helpers\PwAsset;
+
+use PressWind\Src\Helpers\PwConfig;
 use function PressWind\Inc\Core\load_assets;
 
 if (!defined('WP_ENV')) {
   define('WP_ENV', 'development');
 }
-
+require_once dirname(__FILE__) . '/src/autoload.php';
 // include core files (don't touch this files !)
 require_once dirname(__FILE__) . '/inc/core/core.php';
 
@@ -23,6 +27,15 @@ require_once dirname(__FILE__) . '/post-type/snippet.php';
 if (file_exists(dirname(__FILE__) . '/inc/pwa_head.php')) {
   include dirname(__FILE__) . '/inc/pwa_head.php';
 }
+
+
+PwAsset::add('test-hello', get_template_directory_uri() . '/assets/test.js')
+->defer()->inFooter()->module()->toFront();
+PwAsset::add('test-css', get_template_directory_uri() . '/assets/test.css')
+  ->toFront();
+
+PwConfig::get('disable.rss');
+
 
 /**
  * Theme setup.
