@@ -9,9 +9,9 @@
 function get_config()
 {
     // default values
-    $default = file_get_contents(dirname(__FILE__) . '/default.json');
+    $default = file_get_contents(dirname(__FILE__).'/default.json');
     // theme values
-    $global = file_get_contents(dirname(__FILE__) . '/../../config/global.json');
+    $global = file_get_contents(dirname(__FILE__).'/../../config/global.json');
 
     // convert to array
     $default = json_decode($default, true);

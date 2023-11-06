@@ -1,6 +1,6 @@
 <?php
 
-namespace PressWind\Inc;
+namespace WP_Performance\Inc;
 
 /*
  * Source from https://github.com/vinkla/headache

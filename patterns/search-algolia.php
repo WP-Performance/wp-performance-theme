@@ -5,7 +5,6 @@
  * Slug: press-wind/search-algolia
  * Categories: press-wind/press-wind-patterns
  */
-
 ?>
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"anchor":"searchbox","layout":{"type":"constrained","className": "wp-search-algolia"}} -->

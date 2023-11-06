@@ -1,8 +1,8 @@
 <?php
 
-namespace PressWind\Inc\Core\Disable;
+namespace WP_Performance\Inc\Core\Disable;
 
-require_once dirname(__FILE__) . '/../index.php';
+require_once dirname(__FILE__).'/../index.php';
 
 function init_disable_comment()
 {
@@ -43,7 +43,7 @@ function init_disable_comment()
         // Remove comments links from admin bar
         add_action('init', function () {
             if (is_admin_bar_showing()) {
-                remove_action('admin_bar_menu', __NAMESPACE__ . '\wp_admin_bar_comments_menu', 60);
+                remove_action('admin_bar_menu', __NAMESPACE__.'\wp_admin_bar_comments_menu', 60);
             }
         });
 
@@ -53,7 +53,7 @@ function init_disable_comment()
             global $wp_admin_bar;
             $wp_admin_bar->remove_menu('comments');
         }
-        add_action('wp_before_admin_bar_render', __NAMESPACE__ . '\remove_comments');
+        add_action('wp_before_admin_bar_render', __NAMESPACE__.'\remove_comments');
 
         // remove settings menu discussion
         add_action(
@@ -66,8 +66,8 @@ function init_disable_comment()
 
         // Disables comments feeds.
         add_filter('feed_links_show_comments_feed', '__return_false');
-        add_action('do_feed_rss2_comments', __NAMESPACE__ . '\disable_feeds_rss', 1);
-        add_action('do_feed_atom_comments', __NAMESPACE__ . '\disable_feeds_rss', 1);
+        add_action('do_feed_rss2_comments', __NAMESPACE__.'\disable_feeds_rss', 1);
+        add_action('do_feed_atom_comments', __NAMESPACE__.'\disable_feeds_rss', 1);
     }
 }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace PressWind\Inc\Core\Disable;
+namespace WP_Performance\Inc\Core\Disable;
 
-require_once dirname(__FILE__) . '/../index.php';
+require_once dirname(__FILE__).'/../index.php';
 
 /**
  * Completely Remove jQuery From WordPress if not admin and is not connected
@@ -30,8 +30,8 @@ function init_disable_jquery()
 {
     $config = get_config();
     if ($config['disable']['jquery'] === true) {
-        add_action('init', __NAMESPACE__ . '\removeJquery');
-        add_action('wp_default_scripts', __NAMESPACE__ . '\remove_jquery_migrate');
+        add_action('init', __NAMESPACE__.'\removeJquery');
+        add_action('wp_default_scripts', __NAMESPACE__.'\remove_jquery_migrate');
     }
 }
 

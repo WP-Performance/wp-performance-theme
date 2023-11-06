@@ -1,6 +1,6 @@
 <?php
 
-namespace PressWind\Inc\Core;
+namespace WP_Performance\Inc\Core;
 
 /**
  * default value for settings
@@ -11,8 +11,8 @@ return [
     // logo source for generate icons
     'source' => './assets/media/icon.svg',
     'manifest' => [
-        'appName' => 'PressWind',
-        'appShortName' => 'PressWind',
+        'appName' => 'WP_Performance',
+        'appShortName' => 'WP_Performance',
         'appDescription' => 'Starter theme WordPress, Tailwind, ViteJS',
         'background' => '#fff',
         'theme_color' => 'rgb(190, 24, 93)',

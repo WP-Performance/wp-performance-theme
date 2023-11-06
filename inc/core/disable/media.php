@@ -1,8 +1,8 @@
 <?php
 
-namespace PressWind\Inc\Core\Disable;
+namespace WP_Performance\Inc\Core\Disable;
 
-require_once dirname(__FILE__) . '/../index.php';
+require_once dirname(__FILE__).'/../index.php';
 
 function init_disable_media()
 {
@@ -18,8 +18,8 @@ function init_disable_media()
             }
         }
 
-        add_filter('template_redirect', __NAMESPACE__ . '\disable_media_pages');
-        add_filter('redirect_canonical', __NAMESPACE__ . '\disable_media_pages', 0);
+        add_filter('template_redirect', __NAMESPACE__.'\disable_media_pages');
+        add_filter('redirect_canonical', __NAMESPACE__.'\disable_media_pages', 0);
 
         // Disabled attachment media page links.
         function attachment_link(string $url, int $id): string
@@ -31,7 +31,7 @@ function init_disable_media()
             return $url;
         }
 
-        add_filter('attachment_link', __NAMESPACE__ . '\attachment_link', 10, 2);
+        add_filter('attachment_link', __NAMESPACE__.'\attachment_link', 10, 2);
     }
 }
 
