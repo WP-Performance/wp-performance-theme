@@ -9,9 +9,19 @@ class CSSAsset extends Asset
      */
     private string $media = 'all';
 
+    private bool $onload = false;
+
     public function media(string $media): CSSAsset
     {
         $this->media = $media;
+
+        return $this;
+    }
+
+    public function setOnLoad(): CSSAsset
+    {
+        $this->onload = true;
+        $this->media = 'print';
 
         return $this;
     }
@@ -35,5 +45,20 @@ class CSSAsset extends Asset
             $ver,
             $media
         );
+
+        $this->addAttributes();
+    }
+
+    private function addAttributes(): void
+    {
+        $handle = $this->handle;
+        add_filter('style_loader_tag', function ($tag, $_handle) use ($handle) {
+            if (! str_contains($_handle, $handle) || ! $this->onload) {
+                return $tag;
+            }
+
+            return str_replace(' media=', ' onload="this.media=\'all\'" media=',
+                $tag);
+        }, 10, 3);
     }
 }

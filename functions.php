@@ -2,10 +2,7 @@
 
 namespace WP_Performance;
 
-use PressWind\Src\Helpers\PWAsset;
-use PressWind\Src\Helpers\PwConfig;
-
-use function WP_Performance\Inc\Core\load_assets;
+use PressWind\src\helpers\PWVite;
 
 if (! defined('WP_ENV')) {
     define('WP_ENV', 'development');
@@ -29,11 +26,8 @@ if (file_exists(dirname(__FILE__).'/inc/pwa_head.php')) {
     include dirname(__FILE__).'/inc/pwa_head.php';
 }
 
-//PWAsset::add('test-hello', get_template_directory_uri().'/assets/test.js')
-//    ->defer()->inFooter()->module()->toFront();
-//PWAsset::add('test-css', get_template_directory_uri().'/assets/test.css')->toFront();
-
-//PwConfig::get('disable.rss');
+PWVite::init(3000, '');
+PWVite::init(4444, 'admin/', true);
 
 /**
  * Theme setup.
@@ -54,11 +48,11 @@ add_action('after_setup_theme', __NAMESPACE__.'\setup');
 /**
  * init assets front
  */
-load_assets('press-wind', dirname(__FILE__).'', '3000');
+//load_assets('press-wind', dirname(__FILE__).'', '3000');
 /**
  * init assets admin
  */
-load_assets('press-wind-admin', dirname(__FILE__).'/admin', '4444', true);
+//load_assets('press-wind-admin', dirname(__FILE__).'/admin', '4444', true);
 
 /** disable caching wp query */
 function disable_caching($wp_query)

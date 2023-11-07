@@ -27,14 +27,12 @@ class Asset
     /**
      * @throws \Exception
      */
-    public function __construct($handle, $src)
+    public function __construct($handle, $src = '')
     {
         if (! is_string($handle)) {
             throw new \Exception('handle must be a string');
         }
-        if (! is_string($src)) {
-            throw new \Exception('src must be a string');
-        }
+
         $this->handle = $handle;
         $this->src = $src;
     }
@@ -76,8 +74,19 @@ class Asset
         $path = str_replace(get_template_directory_uri(), '', $this->src);
         // get file path
         $file = $dir.$path;
+        // if is dev localhost return time
+        if (str_contains($file, 'localhost')) {
+            return strtotime('now');
+        }
 
         return $this->ver ?? filemtime($file);
+    }
+
+    public function inline($script, $position = 'after'): void
+    {
+        add_action('wp_enqueue_scripts', function () use ($script, $position) {
+            wp_add_inline_script($this->handle, $script, $position);
+        });
     }
 
     /**

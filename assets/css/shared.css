@@ -37,7 +37,7 @@ body {
 }
 
 .wp-block-post-content
-  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)) {
+a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)) {
   @apply after:content-[''] after:block after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-0.5 relative after:transition-all hover:after:w-full after:bg-link-gradient hover:no-underline no-underline;
 }
 
@@ -80,8 +80,8 @@ p > code {
 .is-style-text-effect {
   @apply font-extrabold transition-all text-accent;
   text-shadow: 4px 4px 0px var(--wp--preset--color--primary),
-    8px 8px 0px var(--wp--preset--color--secondary),
-    12px 12px 0px var(--wp--preset--color--cyan-bluish-gray);
+  8px 8px 0px var(--wp--preset--color--secondary),
+  12px 12px 0px var(--wp--preset--color--cyan-bluish-gray);
 }
 
 .presswind-link a span {

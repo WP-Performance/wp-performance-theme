@@ -287,13 +287,13 @@ body {
 }
 
 .wp-block-post-content
-  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)) {
+a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)) {
   position: relative;
   text-decoration-line: none;
 }
 
 .wp-block-post-content
-  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor))::after {
+a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor))::after {
   position: absolute;
   bottom: -0.125rem;
   left: 0px;
@@ -309,12 +309,12 @@ body {
 }
 
 .wp-block-post-content
-  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)):hover {
+a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)):hover {
   text-decoration-line: none;
 }
 
 .wp-block-post-content
-  a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)):hover::after {
+a:where(:not(.wp-block-button__link):not(.wp-block-social-link-anchor)):hover::after {
   content: var(--tw-content);
   width: 100%;
 }
@@ -400,8 +400,8 @@ p > code {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   text-shadow: 4px 4px 0px var(--wp--preset--color--primary),
-    8px 8px 0px var(--wp--preset--color--secondary),
-    12px 12px 0px var(--wp--preset--color--cyan-bluish-gray);
+  8px 8px 0px var(--wp--preset--color--secondary),
+  12px 12px 0px var(--wp--preset--color--cyan-bluish-gray);
 }
 
 .presswind-link a span {
