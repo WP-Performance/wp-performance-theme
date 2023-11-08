@@ -2,6 +2,9 @@
 
 namespace PressWind\src\helpers;
 
+use PressWind\src\helpers\base\CSSAsset;
+use PressWind\src\helpers\base\JSAsset;
+
 class PWVite
 {
     private int $port = 3000;
@@ -10,29 +13,45 @@ class PWVite
 
     private string $path = '';
 
-    private $is_ts = false;
+    private bool $is_ts = false;
 
-    private static $dist_path = '/dist/';
+    /**
+     * @var string front|admin|editor
+     */
+    private string $position = 'front';
 
-    private function __construct(int $port, string $path, bool $is_admin =
-    false, bool $is_ts = false)
+    private static string $dist_path = 'dist/';
+
+    /**
+     * PWVite constructor.
+     *
+     * @param  string  $position - front|admin|editor
+     */
+    private function __construct(int $port, string $path, string $position =
+    'front', bool $is_ts = false)
     {
         $this->port = $port;
         $this->path = $path;
         $this->is_ts = $is_ts;
-        if ($is_admin) {
-            $this->set_script_admin();
-        } else {
-            $this->set_script_front();
-        }
+        $this->position = $position;
+
+        $this->set_script();
     }
 
-    public static function init($port = 3000, $path = '')
+    /**
+     * init vite asset
+     *
+     * @param  int  $port
+     * @param  string  $path
+     * @param  string  $position - front|admin|editor
+     * @param  bool  $is_ts
+     */
+    public static function init($port = 3000, $path = '', $position = 'front', $is_ts = false)
     {
-        return new self($port, $path);
+        return new self($port, $path, $position, $is_ts);
     }
 
-    private function set_script_front()
+    private function set_script(): void
     {
         if (PWApp::isDev()) {
             $this->set_script_dev();
@@ -41,7 +60,7 @@ class PWVite
         }
     }
 
-    private function set_script_dev()
+    private function set_script_dev(): void
     {
         PWAsset::add('presswind-script-dev', 'https://localhost:'.$this->port
                                              .'/'
@@ -49,7 +68,32 @@ class PWVite
             ->inFooter()->module()->toFront();
     }
 
-    private function set_script_prod()
+    /**
+     * set position for asset
+     */
+    private function setPosition(JSAsset|CSSAsset $asset): JSAsset|CSSAsset
+    {
+        if ($this->position === 'admin') {
+            $asset->toBack();
+        } elseif ($this->position === 'editor') {
+            $asset->toBlock();
+        } else {
+            $asset->toFront();
+        }
+
+        return $asset;
+    }
+
+    private function getPath(): string
+    {
+        // add slash start if not exist
+        $_path = str_starts_with($this->path, '/') ? $this->path : '/'.$this->path;
+        $_path = str_ends_with($_path, '/') ? $_path : $_path.'/';
+
+        return get_template_directory_uri().$_path.self::$dist_path;
+    }
+
+    private function set_script_prod(): void
     {
         // get manifest files list by order
         $ordered = PWManifest::get($this->path);
@@ -61,22 +105,20 @@ class PWVite
                 } else {
                     $css = $value->css;
                 }
-                PWAsset::add($this->slug.'-'.$key, get_template_directory_uri().self::$dist_path.$value->file)
+                $asset = PWAsset::add($this->slug.'-'.$key, $this->getPath().$css[0])
                     ->version($key)
-                    ->setOnLoad()
-                    ->toFront();
+                    ->setOnLoad();
+                $this->setPosition($asset);
 
                 // if is js
             } else {
                 if (str_contains($value->file, 'polyfills-legacy')) {
                     // Legacy nomodule polyfills for dynamic imports for older browsers
-                    PWAsset::add($this->slug.'-'.$key, get_template_directory_uri().self::$dist_path.$value->file)
+                    $asset = PWAsset::add($this->slug.'-'.$key, $this->getPath().$value->file)
                         ->version($key)
-                        ->inFooter()
-                        ->nomodule()->toFront();
-
-                    // Safari 10.1 nomodule fix script
-                    PWAsset::add($this->slug.'-'.$key, '')->inline('
+                        ->inFooter()->nomodule();
+                    $asset = $this->setPosition($asset);
+                    $asset->withInline('
                       !function () {
                           var e = document, t = e.createElement("script");
                           if (!("noModule" in t) && "onbeforeload" in t) {
@@ -90,17 +132,20 @@ class PWVite
 
                 } elseif (str_contains($value->file, 'legacy')) {
                     // Legacy app.js script for legacy browsers
-                    PWAsset::add($this->slug.'-'.$key, get_template_directory_uri().self::$dist_path.$value->file)
+                    $asset = PWAsset::add($this->slug.'-'.$key, $this->getPath().$value->file)
                         ->version($key)
                         ->inFooter()
-                        ->nomodule()->toFront();
+                        ->nomodule();
+                    $this->setPosition($asset);
 
                 } else {
                     // Modern app.js module for modern browsers
-                    PWAsset::add($this->slug.'-'.$key, get_template_directory_uri().self::$dist_path.$value->file)
+                    $asset = PWAsset::add($this->slug.'-'.$key,
+                        $this->getPath().$value->file)
                         ->version($key)
                         ->inFooter()
-                        ->module()->toFront();
+                        ->module();
+                    $this->setPosition($asset);
                 }
             }
         }
@@ -109,7 +154,7 @@ class PWVite
     /**
      * get path after wp-content
      */
-    public function get_relative_path_from_wp_content()
+    public function get_relative_path_from_wp_content(): string
     {
         // get content dir name
         $content_dir = explode('/', WP_CONTENT_DIR);
@@ -119,7 +164,4 @@ class PWVite
 
         return count($_path_) > 0 ? $content_dir.$_path_[1] : '';
     }
-
-    // legacy
-
 }

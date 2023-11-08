@@ -27,7 +27,7 @@ if (file_exists(dirname(__FILE__).'/inc/pwa_head.php')) {
 }
 
 PWVite::init(3000, '');
-PWVite::init(4444, 'admin/', true);
+PWVite::init(4444, 'admin', 'admin');
 
 /**
  * Theme setup.

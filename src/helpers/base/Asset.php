@@ -82,7 +82,10 @@ class Asset
         return $this->ver ?? filemtime($file);
     }
 
-    public function inline($script, $position = 'after'): void
+    /**
+     * attach inline script to script
+     */
+    public function withInline(string $script, string $position = 'after'): void
     {
         add_action('wp_enqueue_scripts', function () use ($script, $position) {
             wp_add_inline_script($this->handle, $script, $position);
@@ -92,12 +95,14 @@ class Asset
     /**
      * enqueue asset in front
      */
-    public function toFront(): void
+    public function toFront(): Asset
     {
         $enqueue = function () {
             $this->enqueue();
         };
         add_action('wp_enqueue_scripts', $enqueue);
+
+        return $this;
     }
 
     protected function enqueue(): void

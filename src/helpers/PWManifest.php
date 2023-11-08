@@ -10,6 +10,8 @@ class PWManifest
     public static function get($path): array
     {
         $self = new self();
+        // add trailing slash if not exist
+        $path = str_ends_with($path, '/') ? $path : $path.'/';
         $manifest = $self->get_file($path);
 
         return $self->order_manifest($manifest);
