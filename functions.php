@@ -2,16 +2,12 @@
 
 namespace WP_Performance;
 
-use PressWind\src\helpers\PWVite;
+use PressWind\Helpers\PWApp;
+use PressWind\Helpers\PWVite;
 
 if (! defined('WP_ENV')) {
     define('WP_ENV', 'development');
 }
-
-require_once dirname(__FILE__).'/vendor/autoload.php';
-
-// include core files (don't touch this files !)
-require_once dirname(__FILE__).'/inc/core/core.php';
 
 // inc, you can modify this files like you want
 require_once dirname(__FILE__).'/inc/disable.php';
@@ -25,9 +21,6 @@ require_once dirname(__FILE__).'/post-type/snippet.php';
 if (file_exists(dirname(__FILE__).'/inc/pwa_head.php')) {
     include dirname(__FILE__).'/inc/pwa_head.php';
 }
-
-PWVite::init(3000, '');
-PWVite::init(4444, 'admin', 'admin');
 
 /**
  * Theme setup.
@@ -48,19 +41,20 @@ add_action('after_setup_theme', __NAMESPACE__.'\setup');
 /**
  * init assets front
  */
-//load_assets('press-wind', dirname(__FILE__).'', '3000');
+PWVite::init(port: 3000, path: '');
 /**
  * init assets admin
  */
-//load_assets('press-wind-admin', dirname(__FILE__).'/admin', '4444', true);
+PWVite::init(port: 4444, path: 'admin', position: 'admin', is_ts: false);
 
 /** disable caching wp query */
 function disable_caching($wp_query)
 {
-    if (WP_ENV === 'development') {
+    if (PWApp::isDev()) {
         $wp_query->query_vars['cache_results'] = false;
     }
 }
+
 add_action('parse_query', __NAMESPACE__.'\disable_caching');
 
 register_block_style(

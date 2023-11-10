@@ -1,8 +1,8 @@
 import fs from 'fs'
-import { favicons } from 'favicons'
+import {favicons} from 'favicons'
 
 /**
- * Get config from php file !
+ * Get config from json file !
  * @returns object
  */
 const getconfig = () => {
@@ -70,7 +70,7 @@ const configuration = {
 
 try {
   // delete dist
-  fs.rmSync(target, { recursive: true, force: true })
+  fs.rmSync(target, {recursive: true, force: true})
   console.log(`${target} is deleted!`)
 
   // create dist directory
