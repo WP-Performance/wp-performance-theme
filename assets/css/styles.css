@@ -12,3 +12,10 @@
 @import './patterns/index.css';
 
 /*@import 'instantsearch.css/themes/satellite-min.css';*/
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/Lora-Bold.woff2') format('woff2');
+}
