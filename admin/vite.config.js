@@ -3,7 +3,7 @@ import { resolve } from 'path'
 import react from '@vitejs/plugin-react'
 import EnvironmentPlugin from 'vite-plugin-environment'
 import viteConfig from '../vite.config'
-import getThemeDir from '../inc/js-helpers/getThemeDir.js'
+import getThemeDir from '../inc/js-helpers/getThemeDir.mjs'
 
 const viteAdminConfig = {
   ...viteConfig,

@@ -3,18 +3,12 @@ import { defineConfig } from 'vite'
 import legacy from '@vitejs/plugin-legacy'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 import liveReload from 'vite-plugin-live-reload'
-import getThemeDir from './inc/js-helpers/getThemeDir.js'
+import getThemeDir from './inc/js-helpers/getThemeDir.mjs'
 
 // https://vitejs.dev/config/
 export const viteConfig = {
   cacheDir: './node_modules/.vite/press-wind',
-  plugins: [
-    basicSsl(),
-    liveReload([
-      __dirname + '/**/*.php',
-    ]),
-    legacy({}),
-  ],
+  plugins: [basicSsl(), liveReload([__dirname + '/**/*.php']), legacy({})],
   base:
     process.env.APP_ENV === 'development'
       ? `/wp-content/themes/${getThemeDir()}/`
