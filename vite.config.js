@@ -2,8 +2,6 @@ import {resolve} from "path";
 import {defineConfig} from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import basicSsl from "@vitejs/plugin-basic-ssl";
-import browserslist from "browserslist";
-import {browserslistToTargets} from "lightningcss";
 import liveReload from "vite-plugin-live-reload";
 import getThemeDir from "./inc/js-helpers/getThemeDir.mjs"; // https://vitejs.dev/config/
 
@@ -16,12 +14,12 @@ export const viteConfig = {
 			? `/wp-content/themes/${getThemeDir()}/`
 			: `/wp-content/themes/${getThemeDir()}/dist/`,
 	root: "",
-	css: {
-		transformer: "lightningcss",
-		lightningcss: {
-			targets: browserslistToTargets(browserslist(">= 0.25%")),
-		},
-	},
+	// css: {
+	// 	transformer: "lightningcss",
+	// 	lightningcss: {
+	// 		targets: browserslistToTargets(browserslist(">= 0.25%")),
+	// 	},
+	// },
 	build: {
 		cssCodeSplit: true,
 		cssMinify: "lightningcss",
