@@ -41,6 +41,7 @@
     "@wordpress/stylelint-config": "^21.29.0",
     "autoprefixer": "^10.4.16",
     "babel-preset-env": "^1.7.0",
+    "browserslist": "^4.22.2",
     "classnames": "^2.3.2",
     "core-js": "^3.33.2",
     "cross-env": "^7.0.3",

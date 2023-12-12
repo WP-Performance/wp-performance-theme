@@ -23,13 +23,13 @@
     }
   },
   "disable": {
-    "rss": true,
-    "comment": true,
-    "emoji": true,
-    "media": true,
-    "oembed": true,
-    "xmlrpc": true,
-    "rest_user": true,
-    "jquery": true
+    "rss": false,
+    "comment": false,
+    "emoji": false,
+    "media": false,
+    "oembed": false,
+    "xmlrpc": false,
+    "rest_user": false,
+    "jquery": false
   }
 }
