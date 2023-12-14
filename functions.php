@@ -7,9 +7,9 @@ if (! defined('WP_ENV')) {
 }
 
 // inc, you can modify this files like you want
-require_once dirname(__FILE__).'/inc/disable.php';
 require_once dirname(__FILE__).'/inc/gutenberg.php';
-require_once dirname(__FILE__).'/inc/blocks.php';
+require_once dirname(__FILE__).'/inc/acf_blocks.php';
+require_once dirname(__FILE__).'/inc/login_assets.php';
 
 // post type
 require_once dirname(__FILE__).'/post-type/snippet.php';
@@ -35,13 +35,6 @@ function setup()
 
 add_action('after_setup_theme', __NAMESPACE__.'\setup');
 
-//// Remove X-Powered-By
-//add_action('wp', function () {
-//    if (function_exists('header_remove')) {
-//        header_remove('x-powered-by');
-//    }
-//});
-
 /**
  * init assets front
  */
@@ -66,6 +59,12 @@ function disable_caching($wp_query)
 }
 
 add_action('parse_query', __NAMESPACE__.'\disable_caching');
+
+add_action('init', function () {
+    add_filter('jpeg_quality', function () {
+        return 100;
+    }, 10, 2);
+});
 
 register_block_style(
     'core/image',
@@ -119,4 +118,4 @@ function add_img_size($content)
 
     return $content;
 }
-add_filter('the_content', __NAMESPACE__.'\add_img_size');
+//add_filter('the_content', __NAMESPACE__.'\add_img_size');

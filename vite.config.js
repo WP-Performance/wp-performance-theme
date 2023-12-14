@@ -3,7 +3,7 @@ import {defineConfig} from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 import liveReload from "vite-plugin-live-reload";
-import getThemeDir from "./inc/js-helpers/getThemeDir.mjs"; // https://vitejs.dev/config/
+import getThemeDir from "./js-helpers/getThemeDir.mjs"; // https://vitejs.dev/config/
 
 // https://vitejs.dev/config/
 export const viteConfig = {

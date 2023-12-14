@@ -11,7 +11,7 @@
     "build:admin": "APP_ENV=production bunx vite build --config admin/vite.config.js",
     "watch:editor": "APP_ENV=development IS_EDITOR=true node_modules/.bin/postcss  --watch --verbose --no-map assets/css/styles.css -o style-editor.css",
     "build:editor": "NODE_ENV=production IS_EDITOR=true node_modules/.bin/postcss  assets/css/styles.css -o style-editor.css -m",
-    "favicon": "node ./inc/faviconGenerator.mjs",
+    "favicon": "node js-helpers/faviconGenerator.mjs",
     "php:lint": "./vendor/bin/pint"
   },
   "author": "Faramaz Patrick<info@goodmotion.fr>",

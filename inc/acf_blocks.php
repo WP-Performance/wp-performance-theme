@@ -2,6 +2,9 @@
 
 namespace WP_Performance\Inc;
 
+/**
+ * for ACF blocks if you use that
+ */
 add_action(
     'init',
     function () {

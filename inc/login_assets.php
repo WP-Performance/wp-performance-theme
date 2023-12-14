@@ -2,12 +2,18 @@
 
 namespace WP_Performance\Inc;
 
-use PressWind\Helpers\PWAsset;
-
+/**
+ * load custom css for login page
+ *
+ * @throws \Exception
+ */
 function login_assets(): void
 {
-    if (file_exists(dirname(__FILE__).'/../../admin/assets/css/custom-login.css')) {
-        PWAsset::add('custom-login', get_template_directory_uri().'/admin/assets/css/custom-login.css')->toLogin();
+    if (file_exists(dirname(__FILE__).'/../admin/assets/css/custom-login.css')
+        && class_exists('PressWind\PWAsset')
+    ) {
+        \PressWind\PWAsset::add(handle: 'custom-login-assets',
+            src: get_stylesheet_directory_uri().'/admin/assets/css/custom-login.css')->dependencies(['login'])->toLogin();
     }
 }
-add_action('login_enqueue_scripts', __NAMESPACE__.'\login_assets');
+add_action('init', __NAMESPACE__.'\login_assets');
