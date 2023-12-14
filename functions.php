@@ -50,8 +50,12 @@ if (class_exists('PressWind\PWVite')) {
     /**
      * init assets admin
      */
-    \PressWind\PWVite::init(port: 4444, path: '/admin', position: 'editor',
-        is_ts: false);
+    \PressWind\PWVite::init(
+        port: 4444,
+        path: '/admin',
+        position: 'editor',
+        is_ts: false
+    );
 }
 /** disable caching wp query */
 function disable_caching($wp_query)
