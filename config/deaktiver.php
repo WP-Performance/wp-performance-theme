@@ -1,7 +1,7 @@
 <?php
 
 /**
- * de config file
+ * deaktiver config file
  */
 return [
     'emoji' => true,
@@ -11,6 +11,7 @@ return [
     'jquery' => true,
     'jquery-migrate' => true,
     'version' => true,
+    'powered-by' => false,
     'wlwmanifest' => true,
     'rsd_link' => true,
     'short_link' => true,

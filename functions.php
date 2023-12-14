@@ -35,12 +35,12 @@ function setup()
 
 add_action('after_setup_theme', __NAMESPACE__.'\setup');
 
-// Remove X-Powered-By
-add_action('wp', function () {
-    if (function_exists('header_remove')) {
-        header_remove('x-powered-by');
-    }
-});
+//// Remove X-Powered-By
+//add_action('wp', function () {
+//    if (function_exists('header_remove')) {
+//        header_remove('x-powered-by');
+//    }
+//});
 
 /**
  * init assets front
