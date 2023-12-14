@@ -1,35 +1,25 @@
 {
-  "iconsDir": "public",
-  "source": ".\/assets\/media\/logo-square.svg",
-  "manifest": {
-    "appName": "WP Performance",
-    "appShortName": "WP Performance",
-    "appDescription": "Améliorer les performances des sites WordPress",
-    "background": "#fff",
-    "theme_color": "rgb(190, 24, 93)",
-    "lang": "fr-FR",
-    "preferRelatedApplications": false,
-    "pixel_art": false,
-    "loadManifestWithCredentials": false,
-    "manifestMaskable": false,
-    "icons": {
-      "favicons": true,
-      "android": true,
-      "appleIcon": true,
-      "appleStartup": false,
-      "coast": false,
-      "yandex": false,
-      "windows": false
-    }
-  },
-  "disable": {
-    "rss": false,
-    "comment": false,
-    "emoji": false,
-    "media": false,
-    "oembed": false,
-    "xmlrpc": false,
-    "rest_user": false,
-    "jquery": false
-  }
+	"iconsDir": "public",
+	"source": "./assets/media/logo-square.svg",
+	"manifest": {
+		"appName": "WP Performance",
+		"appShortName": "WP Performance",
+		"appDescription": "Améliorer les performances des sites WordPress",
+		"background": "#fff",
+		"theme_color": "rgb(190, 24, 93)",
+		"lang": "fr-FR",
+		"preferRelatedApplications": false,
+		"pixel_art": false,
+		"loadManifestWithCredentials": false,
+		"manifestMaskable": false,
+		"icons": {
+			"favicons": true,
+			"android": true,
+			"appleIcon": true,
+			"appleStartup": false,
+			"coast": false,
+			"yandex": false,
+			"windows": false
+		}
+	}
 }
