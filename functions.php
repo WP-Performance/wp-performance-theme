@@ -2,9 +2,6 @@
 
 namespace WP_Performance;
 
-use PressWind\PWApp;
-use PressWind\PWVite;
-
 if (! defined('WP_ENV')) {
     define('WP_ENV', 'development');
 }
@@ -41,16 +38,18 @@ add_action('after_setup_theme', __NAMESPACE__.'\setup');
 /**
  * init assets front
  */
-PWVite::init(port: 3000, path: '');
-/**
- * init assets admin
- */
-PWVite::init(port: 4444, path: '/admin', position: 'editor', is_ts: false);
-
+if (class_exists('PressWind\PWVite')) {
+    \PressWind\PWVite::init(port: 3000, path: '');
+    /**
+     * init assets admin
+     */
+    \PressWind\PWVite::init(port: 4444, path: '/admin', position: 'editor',
+        is_ts: false);
+}
 /** disable caching wp query */
 function disable_caching($wp_query)
 {
-    if (PWApp::isDev()) {
+    if (WP_ENV === 'development') {
         $wp_query->query_vars['cache_results'] = false;
     }
 }
