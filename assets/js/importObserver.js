@@ -7,7 +7,7 @@ function importObserver(target, file) {
 	// import when target is in viewport
 	const observer = new IntersectionObserver(async (entries) => {
 		if (entries[0].isIntersecting) {
-			await import(`./${file}.js`);
+			await import(`./dynamic/${file}.js`);
 			// stop observing
 			observer.disconnect();
 		}

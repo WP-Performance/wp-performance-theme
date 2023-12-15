@@ -11,6 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// use only name of file without extension and ./, root is ./assets/js
 	importObserver(
 		document.querySelector("footer.wp-block-template-part"),
-		"test/hello",
+		"hello",
 	);
 });
