@@ -1,7 +1,7 @@
 /**
  * Import JS file when target is in viewport
  * @param target - DOM element
- * @param file - name of file without extension and ./, root is ./assets/js
+ * @param file - name of file in /dynamic directory without extension
  */
 function importObserver(target, file) {
 	// import when target is in viewport
