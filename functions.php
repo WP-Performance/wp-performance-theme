@@ -39,6 +39,7 @@ add_action('after_setup_theme', __NAMESPACE__.'\setup');
  * init assets front
  */
 if (class_exists('PressWind\PWVite')) {
+
     \PressWind\PWVite::init(port: 3000, path: '');
     /**
      * init assets admin

@@ -904,8 +904,8 @@ footer.wp-block-template-part .wpp-links-credit svg {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: var(--wp--preset--spacing--20);
+  padding-right: var(--wp--preset--spacing--20);
 }
 @media (min-width: 1024px) {
   .gm-hero-page > div:last-child {

@@ -1,6 +1,7 @@
 # Press Wind FSE
 
-Minimal boilerplate theme for WordPress with Tailwind CSS and Vite JS for Full Site Editing.
+Minimal starter theme for WordPress with Tailwind CSS and Vite JS for Full
+Site Editing.
 
 ## Concept
 
@@ -10,33 +11,45 @@ A example of pattern is in ```patterns``` directory.
 The theme.json is used for the settings of theme.
 The fonts pass by the new WP font loader. Not by CSS or TailwindCSS.
 
+## plugins required
+
+For use ViteJS
+
+- https://github.com/WP-Performance/presswind-plugin
+
+## Plugin recommended
+
+or disable lots of WP core functionality
+
+- https://github.com/WP-Performance/deaktiver
+
 ## PHP/HTML files
 
 This theme is developed for use Full Site Editing.
 
-
 ## Dependencies
 
 - [PostCSS](https://postcss.org/)
-- [TailwindCSS](https://tailwindcss.com/)
+- [TailwindCSS](https://tailwindcss.com/) - optional. You can use only postcss.
 - [ViteJS](https://vitejs.dev/)
-
 
 ## Requirement
 
-- Node JS (16)
-- Npm ou yarn
+- Node JS (>18)
+- Npm, yarn, pnpm or Bun !
 
 ## Quick Start
 
 In the root of press-wind theme
 
 Install dependencies
+
 ```
-yarn
+yarn or bun install
 ```
 
 In your ```wp-config.php``` file, add :
+
 ```
 # for dev
 define('WP_ENV', 'development');
@@ -49,11 +62,13 @@ define('WP_ENV', 'production');
 ## Scripts
 
 Launch dev mode
+
 ```
 yarn dev
 ```
 
 Build the assets
+
 ```
 yarn build
 ```
@@ -61,8 +76,26 @@ yarn build
 ## Enqueue Scripts and Styles
 
 The script and the style are automatically enqueued in theme.
-The "assets" code is in file : ```inc > assets.php```
+Code present in functions.php
 
+```php
+/**
+ * init assets front
+ */
+if (class_exists('PressWind\PWVite')) {
+
+    \PressWind\PWVite::init(port: 3000, path: '');
+    /**
+     * init assets admin
+     */
+    \PressWind\PWVite::init(
+        port: 4444,
+        path: '/admin',
+        position: 'editor',
+        is_ts: false
+    );
+}
+```
 
 ## CSS writing style
 
@@ -70,19 +103,15 @@ You must use ```@apply``` method for create the CSS style
 It's better for reusability of your code and the readability.
 
 Example :
+
 ```
 .site-header {
   @apply flex my-4 lg:my-10 lg:items-center lg:flex-row flex-col;
 }
 ```
 
-**But you can use the method by the class attribute, if you prefer. Be careful to keep maintainable project.**
-
-## Disabled WP core functionality
-
-In ```inc > disable.php```, lots of feature are disabled.
-You can comment for not disable stuff for your project like you want.
-
+**But you can use the method by the class attribute, if you prefer. Be careful
+to keep maintainable project.**
 
 ## Screenshot
 

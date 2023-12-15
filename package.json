@@ -12,7 +12,8 @@
     "watch:editor": "APP_ENV=development IS_EDITOR=true node_modules/.bin/postcss  --watch --verbose --no-map assets/css/styles.css -o style-editor.css",
     "build:editor": "NODE_ENV=production IS_EDITOR=true node_modules/.bin/postcss  assets/css/styles.css -o style-editor.css -m",
     "favicon": "node js-helpers/faviconGenerator.mjs",
-    "php:lint": "./vendor/bin/pint"
+    "php:lint": "./vendor/bin/duster lint",
+    "php:fix": "./vendor/bin/duster fix"
   },
   "author": "Faramaz Patrick<info@goodmotion.fr>",
   "license": "ISC",
