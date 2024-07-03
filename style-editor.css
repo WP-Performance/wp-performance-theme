@@ -50,6 +50,10 @@
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 ::backdrop {
   --tw-border-spacing-x: 0;
@@ -99,6 +103,10 @@
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 .mb-0 {
   margin-bottom: 0px;
@@ -1034,7 +1042,6 @@ footer.wp-block-template-part .wpp-links-credit svg {
   --tw-scroll-snap-strictness: proximity;
   align-items: stretch;
   overflow-x: scroll;
-  scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
 }
 .wpp-carousel ul::-webkit-scrollbar-track {
   background-color: var(--scrollbar-track);
@@ -1068,6 +1075,7 @@ footer.wp-block-template-part .wpp-links-credit svg {
 }
 .wpp-carousel ul {
   scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
 }
 .wpp-carousel ul::-webkit-scrollbar {
   display: block;
