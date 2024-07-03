@@ -119,4 +119,4 @@ function add_img_size($content)
 
     return $content;
 }
-//add_filter('the_content', __NAMESPACE__.'\add_img_size');
+add_filter('the_content', __NAMESPACE__.'\add_img_size');
