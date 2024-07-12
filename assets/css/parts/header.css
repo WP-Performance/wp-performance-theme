@@ -1,5 +1,6 @@
 /** header **/
-.site-header {
+
+body:not(.single-post) .site-header {
   @apply absolute z-10 w-full max-w-full;
 }
 
