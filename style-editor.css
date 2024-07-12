@@ -425,7 +425,7 @@ p > code {
 }
 /** parts */
 /** header **/
-.site-header {
+body:not(.single-post) .site-header {
   position: absolute;
   z-index: 10;
   width: 100%;
@@ -1180,10 +1180,10 @@ footer.wp-block-template-part .wpp-links-credit svg {
   display: none;
 }
 .gm-github-infos a.gm-star {
-  background-image: url('/wp-content/themes/wp-performance/assets/media/star.svg');
+  background-image: url('/wp-content/themes/wp-performance-theme/assets/media/star.svg');
 }
 .gm-github-infos a.gm-zip {
-  background-image: url('/wp-content/themes/wp-performance/assets/media/zip.svg');
+  background-image: url('/wp-content/themes/wp-performance-theme/assets/media/zip.svg');
 }
 /*@import 'instantsearch.css/themes/satellite-min.css';*/
 

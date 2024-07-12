@@ -11,6 +11,9 @@ require_once dirname(__FILE__).'/inc/gutenberg.php';
 require_once dirname(__FILE__).'/inc/acf_blocks.php';
 require_once dirname(__FILE__).'/inc/login_assets.php';
 
+// variations
+require_once dirname(__FILE__).'/inc/variations_blocks.php';
+
 // post type
 require_once dirname(__FILE__).'/post-type/snippet.php';
 
