@@ -8,14 +8,15 @@ if (! defined('WP_ENV')) {
 
 // inc, you can modify this files like you want
 require_once dirname(__FILE__).'/inc/gutenberg.php';
-require_once dirname(__FILE__).'/inc/acf_blocks.php';
 require_once dirname(__FILE__).'/inc/login_assets.php';
+require_once dirname(__FILE__).'/inc/sortable.php';
 
 // variations
 require_once dirname(__FILE__).'/inc/variations_blocks.php';
 
 // post type
 require_once dirname(__FILE__).'/post-type/snippet.php';
+require_once dirname(__FILE__).'/post-type/training.php';
 
 // pwa icons
 if (file_exists(dirname(__FILE__).'/inc/pwa_head.php')) {
