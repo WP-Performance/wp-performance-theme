@@ -124,3 +124,14 @@ function add_img_size($content)
     return $content;
 }
 add_filter('the_content', __NAMESPACE__.'\add_img_size');
+
+// pass youtube to youtube-nocookie
+add_filter('render_block',
+    function ($block_content, $block) {
+        // filter block
+        if ($block['blockName'] === 'core/embed') {
+            return preg_replace('/youtube\.com/s', 'youtube-nocookie.com', $block_content);
+        }
+
+        return $block_content;
+    }, 1, 2);
