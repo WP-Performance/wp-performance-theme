@@ -130,7 +130,27 @@ add_filter('render_block',
     function ($block_content, $block) {
         // filter block
         if ($block['blockName'] === 'core/embed') {
-            return preg_replace('/youtube\.com/s', 'youtube-nocookie.com', $block_content);
+            $tags = new \WP_HTML_Tag_Processor($block_content);
+            $tags->next_tag('iframe');
+            $url = $tags->get_attribute('src');
+            $parameters = parse_url($url);
+
+            // check if youtube
+            if ($parameters['host'] !== 'www.youtube.com') {
+                return $block_content;
+            }
+
+            // update host
+            $parameters['host'] = 'www.youtube-nocookie.com';
+            // add rel=0 for related video. Show only the video from the
+            // current channel, remove the next line if you want to show
+            // related videos from other channels
+            $parameters['query'] = $parameters['query'] === '' ? 'rel=0' : 'rel=0&'.$parameters['query'];
+            // reconstruct url
+            $url = $parameters['scheme'].'://'.$parameters['host'].$parameters['path'].'?'.$parameters['query'];
+            $tags->set_attribute('src', $url);
+
+            return $tags;
         }
 
         return $block_content;
