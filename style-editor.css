@@ -304,6 +304,12 @@ h5 > a:hover::after {
   content: var(--tw-content);
   display: none;
 }
+h1,
+h2,
+h3,
+h4 {
+  hyphens: auto;
+}
 /** core/separator */
 .wp-block-separator {
   border-bottom: 1px solid;
@@ -316,6 +322,9 @@ p > code {
   padding-right: 0.25rem;
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
+}
+code {
+  font-size: var(--wp--preset--font-size--base);
 }
 /** block style */
 .is-style-img-dropshadow img {
