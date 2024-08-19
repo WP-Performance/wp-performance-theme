@@ -1,70 +1,17 @@
-.gm-hero-home {
-  @apply grid w-full min-h-screen m-0 lg:grid-cols-2;
-}
-
-/** image */
-
-.gm-hero-home > div:first-child figure {
-  @apply flex w-5/6 h-full md:w-full max-h-[40vh] lg:max-h-[100vh] lg:min-h-[770px] overflow-hidden after:content-[''] after:bg-white/30 after:inset-0 after:absolute relative;
-}
-
-.gm-hero-home > div:first-child figure img,
-.gm-hero-home > div:first-child figure picture {
-  @apply object-cover w-full;
-}
-
-/** column right */
-.gm-hero-home > div:last-child {
-  @apply flex flex-col items-start justify-between px-10 lg:px-20;
-}
-
-/** content */
-.gm-hero-home > div:last-child > div:first-child {
-  @apply flex flex-col items-start justify-center flex-1;
-}
-
-.gm-hero-home > div:last-child > div p:first-child {
+/** text top */
+.gm-hero-home > div > div p:first-child {
   @apply flex items-center text-gray-600 before:content-[''] before:w-16 before:mr-2 before:bg-accent before:h-[1px] mt-20;
 }
 
+/** title */
 .gm-hero-home > div:last-child > div h2 {
-  @apply mt-10;
+  @apply mt-10 text-balance lg:max-w-screen-lg;
 }
 
 .gm-hero-home > div:last-child > div p {
-  @apply text-base text-gray-800;
+  @apply text-base text-gray-800 text-balance lg:max-w-screen-lg;
 }
 
 .gm-hero-home > div:last-child > div p a {
   @apply text-base font-bold no-underline text-accent;
 }
-
-/** social */
-.gm-hero-home > div:last-child > div:last-child {
-  @apply flex flex-wrap justify-start w-full mb-3;
-}
-
-.gm-hero-home > div:last-child > div:last-child h3 {
-  @apply w-full text-lg font-medium text-gray-700;
-}
-
-.gm-hero-home > div:last-child > div:last-child > div h4 {
-  @apply mt-1 text-base font-normal text-gray-800;
-}
-
-.gm-hero-home > div:last-child > div:last-child > div ul {
-  @apply inline-flex mx-auto;
-}
-
-.gm-hero-home > div:last-child > div:last-child > div {
-  @apply relative pl-0 pr-8 mr-2 text-center;
-}
-
-.gm-hero-home > div:last-child > div:last-child > div:last-child {
-  @apply pl-8;
-}
-
-/* .gm-hero-home > div:last-child > div:last-child > div a,
-.gm-hero-home > div:last-child > div:last-child > div a:hover {
-  @apply before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:content-[''] before:transform-none before:flex before:z-20 before:bg-transparent before:w-full before:h-full;
-} */

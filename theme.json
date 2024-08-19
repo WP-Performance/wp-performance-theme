@@ -121,6 +121,7 @@
 			"spacingScale": {
 				"steps": 10
 			},
+			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
 					"size": "clamp(0.5rem, 0.8vw, 1.1rem)",

@@ -1,23 +1,27 @@
 /** header **/
 
-body:not(.single-post) .site-header {
-  @apply absolute z-10 w-full max-w-full;
+/*body:not(.single-post) .site-header {*/
+/*  @apply absolute z-10 w-full max-w-full;*/
+/*}*/
+
+.site-header {
+  @apply bg-white border border-solid border-gray-200 border-t-0 border-l-0 border-r-0;
 }
 
 .site-header-wrapper {
-  @apply flex flex-row justify-between p-0 px-1 py-2 lg:py-4 xl:mx-auto xl:max-w-screen-2xl lg:items-center lg:flex-row;
+  @apply flex flex-row justify-between p-0 py-2 lg:py-2 xl:mx-auto xl:max-w-[var(--wp--style--global--wide-size)] lg:items-center lg:flex-row;
 }
 
 /** logo */
 .site-header .gm-logo-website {
-  @apply p-2 lg:pl-9;
+  @apply p-0;
 }
 .site-header .gm-logo-website a {
   @apply flex items-center;
 }
 
 .site-header .gm-logo-website a svg {
-  @apply w-64 lg:w-80;
+  @apply w-64 xl:w-72;
 }
 
 .site-header .gm-logo-website a svg path:first-child {
@@ -41,8 +45,9 @@ body:not(.single-post) .site-header {
 }
 
 .main-navigation ul,
-.wp-block-navigation__responsive-container-content ul {
-  @apply p-0 m-0 lg:flex;
+.wp-block-navigation__responsive-container-content ul,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+  @apply p-0 m-0 lg:flex gap-8 lg:gap-1;
 }
 
 .main-navigation ul > li,

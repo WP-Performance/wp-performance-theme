@@ -1,12 +1,17 @@
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"site-main", "layout":{"type":"constrained"}} -->
+<!-- wp:group {"tagName":"main","className":"site-main"} -->
 <main class="wp-block-group site-main">
     <!-- wp:group {"className":"main-content", "layout": {
     "type":"constrained"}} -->
     <div class="wp-block-group main-content">
         <!-- wp:post-content /-->
     </div>
+    <!-- /wp:group -->
+    
+    <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group"><!-- wp:post-navigation-link /-->
+        <!-- wp:post-navigation-link {"type":"previous"} /--></div>
     <!-- /wp:group -->
 </main>
 <!-- /wp:group -->
