@@ -323,8 +323,13 @@ p > code {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
 }
-code span {
+.shiki-line-numbers pre.shiki .line:before {
   font-size: var(--wp--preset--font-size--base);
+  line-height: 1rem;
+}
+.shiki-line-numbers pre.shiki code span {
+  font-size: var(--wp--preset--font-size--xsmall);
+  line-height: .8rem;
 }
 /** block style */
 .is-style-img-dropshadow img {
