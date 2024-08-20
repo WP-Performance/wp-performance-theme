@@ -69,15 +69,15 @@ p > code {
   @apply px-1 py-0.5 bg-slate-200;
 }
 
-.shiki-line-numbers pre.shiki .line:before {
-  font-size: var(--wp--preset--font-size--base);
-  line-height: 1rem;
-}
+/*.shiki-line-numbers pre.shiki .line:before {*/
+/*  font-size: var(--wp--preset--font-size--base);*/
+/*  line-height: 1rem;*/
+/*}*/
 
-.shiki-line-numbers pre.shiki code span {
-  font-size: var(--wp--preset--font-size--xsmall);
-  line-height: .8rem;
-}
+/*.shiki-line-numbers pre.shiki code span {*/
+/*  font-size: var(--wp--preset--font-size--xsmall);*/
+/*  line-height: .8rem;*/
+/*}*/
 
 /** block style */
 
