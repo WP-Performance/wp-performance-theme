@@ -323,7 +323,7 @@ p > code {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
 }
-code {
+code span {
   font-size: var(--wp--preset--font-size--base);
 }
 /** block style */
