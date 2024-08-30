@@ -5,7 +5,7 @@ module.exports = {
 	corePlugins: {
 		preflight: process.env.IS_EDITOR ? false : usePreflightFront,
 	},
-	content: ["./blocks/**/*.php"],
+	content: ["./footer-credit.php"],
 	theme: {
 		extend: {
 			gridTemplateColumns: {
