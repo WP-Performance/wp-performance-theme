@@ -5,8 +5,8 @@ namespace WP_Performance\Inc;
 function register_block_bindings()
 {
     register_meta(
-        'page',
-        'wp-page-thematic',
+        'post',
+        'wp_performance-page-thematic',
         array(
             'show_in_rest'      => true,
             'single'            => true,

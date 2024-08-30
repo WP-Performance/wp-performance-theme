@@ -14,12 +14,12 @@
 			"content":{
 				"source":"core/post-meta",
 				"args":{
-					"key":"wp-page-thematic"
+					"key":"wp_performance-page-thematic"
 				}
 			}
 		}
 	}} -->
-        <p class="is-style-underscore has-sora-font-family" style="font-style:normal;font-weight:600">Totalement open-source</p>
+        <p class="is-style-underscore has-sora-font-family" style="font-style:normal;font-weight:600"></p>
         <!-- /wp:paragraph -->
 
         <!-- wp:post-title {"className":"is-style-title-hero","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|30"}}},"fontSize":"6xlarge"} /-->
