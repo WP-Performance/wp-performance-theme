@@ -1,85 +1,52 @@
-<!-- wp:template-part {"slug":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header","theme":"wp-performance-theme","className":"site-header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"site-main"} -->
+<!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group site-main">
-  <!-- wp:group {"align":"wide","className":"gm-hero-page"} -->
-  <div class="wp-block-group alignwide gm-hero-page">
-    <!-- wp:group -->
-    <div class="wp-block-group">
-      <!-- wp:image {"id":177,"width":911,"height":507,"sizeSlug":"large","linkDestination":"none"} -->
-      <figure class="wp-block-image size-large is-resized">
-        <img
-          src="/wp-content/uploads/2022/10/taiki-ishikawa-uqXWq5naqt8-unsplash-1024x768.jpg"
-          alt=""
-          class="wp-image-177"
-          width="911"
-          height="507"
-        />
-      </figure>
-      <!-- /wp:image -->
+    <!-- wp:group {"align":"full","className":"gm-hero-page","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull gm-hero-page" style="margin-bottom:var(--wp--preset--spacing--50)">
+        <!-- wp:cover {"url":"https://www.wp-performance.com/wp-content/uploads/2022/11/mishal-ibrahim-jiNgKqKW5W4-unsplash-edited-scaled-e1667566138938.webp","id":262,"dimRatio":0,"overlayColor":"clear-gray","isUserOverlayColor":true,"focalPoint":{"x":0.51,"y":0.16},"minHeight":615,"minHeightUnit":"px","align":"full","style":{"color":{}},"layout":{"type":"constrained"}} -->
+        <div class="wp-block-cover alignfull" style="min-height:615px"><span aria-hidden="true"
+                class="wp-block-cover__background has-clear-gray-background-color has-background-dim-0 has-background-dim"></span><img
+                class="wp-block-cover__image-background wp-image-262" alt=""
+                src="https://www.wp-performance.com/wp-content/uploads/2022/11/mishal-ibrahim-jiNgKqKW5W4-unsplash-edited-scaled-e1667566138938.webp"
+                style="object-position:51% 16%" data-object-fit="cover" data-object-position="51% 16%" />
+            <div class="wp-block-cover__inner-container">
+                <!-- wp:paragraph {"align":"center","placeholder":"Rédigez le titre…","fontSize":"large"} -->
+                <p class="has-text-align-center has-large-font-size"></p>
+                <!-- /wp:paragraph -->
+            </div>
+        </div>
+        <!-- /wp:cover -->
     </div>
     <!-- /wp:group -->
 
-    <!-- wp:group {"className": "main-content"} -->
-    <div class="wp-block-group main-content">
-      <!-- wp:group -->
-      <div class="wp-block-group">
+    <!-- wp:group {"align":"wide","className":"main-content","style":{"spacing":{"padding":{"top":"var:preset|spacing|20","right":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"layout":{"type":"default"}} -->
+    <div class="wp-block-group alignwide main-content"
+        style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
         <!-- wp:heading {"level":1} -->
-        <h1>Erreur 404</h1>
+        <h1 class="wp-block-heading">Erreur 404</h1>
         <!-- /wp:heading -->
-      </div>
-      <!-- /wp:group -->
+
+        <!-- wp:heading -->
+        <h2 class="wp-block-heading">Page non trouvée !</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"textColor":"secondary","fontSize":"1xlarge"} -->
+        <p class="has-secondary-color has-text-color has-1-xlarge-font-size">
+            Désolé, la page que vous cherchez ne semble pas/plus exister.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>
+            <a href="/" data-type="page" data-id="71">
+                Retour à l'accueil
+            </a>
+        </p>
+        <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->
-  </div>
-  <!-- /wp:group -->
-
-  <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","right":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"className":"main-content"} -->
-  <div
-    class="wp-block-group main-content"
-    style="
-      padding-top: var(--wp--preset--spacing--20);
-      padding-right: var(--wp--preset--spacing--20);
-      padding-bottom: var(--wp--preset--spacing--20);
-      padding-left: var(--wp--preset--spacing--20);
-    "
-  >
-    <!-- wp:spacer -->
-    <div
-      style="height: 100px;"
-      aria-hidden="true"
-      class="wp-block-spacer"
-    ></div>
-    <!-- /wp:spacer -->
-
-    <!-- wp:heading -->
-    <h2>Page non trouvée !</h2>
-    <!-- /wp:heading -->
-
-    <!-- wp:paragraph {"textColor":"secondary","fontSize":"1xlarge"} -->
-    <p class="has-secondary-color has-text-color has-1-xlarge-font-size">
-      Désolé, la page que vous cherchez ne semble pas/plus exister.
-    </p>
-    <!-- /wp:paragraph -->
-
-    <!-- wp:paragraph -->
-    <p>
-      <a href="/" data-type="page" data-id="71">
-        Retour à l'accueil
-      </a>
-    </p>
-    <!-- /wp:paragraph -->
-
-    <!-- wp:spacer -->
-    <div
-      style="height: 100px;"
-      aria-hidden="true"
-      class="wp-block-spacer"
-    ></div>
-    <!-- /wp:spacer -->
-  </div>
-  <!-- /wp:group -->
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"wp-performance-theme"} /-->

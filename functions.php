@@ -7,20 +7,20 @@ if (! defined('WP_ENV')) {
 }
 
 // inc, you can modify this files like you want
-require_once dirname(__FILE__).'/inc/gutenberg.php';
-require_once dirname(__FILE__).'/inc/login_assets.php';
-require_once dirname(__FILE__).'/inc/sortable.php';
+require_once dirname(__FILE__) . '/inc/gutenberg.php';
+require_once dirname(__FILE__) . '/inc/login_assets.php';
+require_once dirname(__FILE__) . '/inc/sortable.php';
 
 // variations
-require_once dirname(__FILE__).'/inc/variations_blocks.php';
+require_once dirname(__FILE__) . '/inc/variations_blocks.php';
 
 // post type
-require_once dirname(__FILE__).'/post-type/snippet.php';
-require_once dirname(__FILE__).'/post-type/training.php';
+require_once dirname(__FILE__) . '/post-type/snippet.php';
+require_once dirname(__FILE__) . '/post-type/training.php';
 
 // pwa icons
-if (file_exists(dirname(__FILE__).'/inc/pwa_head.php')) {
-    include dirname(__FILE__).'/inc/pwa_head.php';
+if (file_exists(dirname(__FILE__) . '/inc/pwa_head.php')) {
+    include dirname(__FILE__) . '/inc/pwa_head.php';
 }
 
 /**
@@ -34,10 +34,10 @@ function setup()
 
     add_theme_support('post-thumbnails');
 
-    load_theme_textdomain('press-wind', get_template_directory().'/languages');
+    load_theme_textdomain('press-wind', get_template_directory() . '/languages');
 }
 
-add_action('after_setup_theme', __NAMESPACE__.'\setup');
+add_action('after_setup_theme', __NAMESPACE__ . '\setup');
 
 /**
  * init assets front
@@ -63,7 +63,7 @@ function disable_caching($wp_query)
     }
 }
 
-add_action('parse_query', __NAMESPACE__.'\disable_caching');
+add_action('parse_query', __NAMESPACE__ . '\disable_caching');
 
 add_action('init', function () {
     add_filter('jpeg_quality', function () {
@@ -103,6 +103,23 @@ register_block_style(
     ]
 );
 
+register_block_style(
+    'core/heading',
+    [
+        'name' => 'title-hero',
+        'label' => __('Title Hero', 'press-wind'),
+    ]
+);
+
+register_block_style(
+    'core/paragraph',
+    [
+        'name' => 'underscore',
+        'label' => __('Underscore', 'press-wind'),
+    ]
+);
+
+
 function add_img_size($content)
 {
     $pattern = '/<img [^>]*?src="(https?:\/\/[^"]+?)"[^>]*?>/iu';
@@ -117,16 +134,17 @@ function add_img_size($content)
         if ($img_size === false) {
             continue;
         }
-        $replaced_img = str_replace('<img ', '<img '.$img_size[3].' ', $imgs[0][$i]);
+        $replaced_img = str_replace('<img ', '<img ' . $img_size[3] . ' ', $imgs[0][$i]);
         $content = str_replace($img, $replaced_img, $content);
     }
 
     return $content;
 }
-add_filter('the_content', __NAMESPACE__.'\add_img_size');
+add_filter('the_content', __NAMESPACE__ . '\add_img_size');
 
 // pass youtube to youtube-nocookie
-add_filter('render_block',
+add_filter(
+    'render_block',
     function ($block_content, $block) {
         // filter block
         if ($block['blockName'] === 'core/embed') {
@@ -145,13 +163,16 @@ add_filter('render_block',
             // add rel=0 for related video. Show only the video from the
             // current channel, remove the next line if you want to show
             // related videos from other channels
-            $parameters['query'] = $parameters['query'] === '' ? 'rel=0' : 'rel=0&'.$parameters['query'];
+            $parameters['query'] = $parameters['query'] === '' ? 'rel=0' : 'rel=0&' . $parameters['query'];
             // reconstruct url
-            $url = $parameters['scheme'].'://'.$parameters['host'].$parameters['path'].'?'.$parameters['query'];
+            $url = $parameters['scheme'] . '://' . $parameters['host'] . $parameters['path'] . '?' . $parameters['query'];
             $tags->set_attribute('src', $url);
 
             return $tags;
         }
 
         return $block_content;
-    }, 1, 2);
+    },
+    1,
+    2
+);

@@ -1,15 +1,31 @@
 /** header **/
-
-/*body:not(.single-post) .site-header {*/
-/*  @apply absolute z-10 w-full max-w-full;*/
-/*}*/
-
 .site-header {
-  @apply bg-white border border-solid border-gray-200 border-t-0 border-l-0 border-r-0;
+  @apply bg-transparent border border-solid border-slate-300 border-t-0 border-l-0 border-r-0 h-[var(--gm-header-height)] lg:h-[var(--gm-header-height-lg)] flex items-stretch;
 }
 
 .site-header-wrapper {
-  @apply flex flex-row justify-between p-0 py-2 lg:py-2 xl:mx-auto xl:max-w-[var(--wp--style--global--wide-size)] lg:items-center lg:flex-row;
+  @apply flex flex-row justify-between xl:mx-auto xl:max-w-[var(--wp--style--global--wide-size)] lg:items-stretch lg:flex-row flex-1;
+}
+
+/** logo */
+.site-header-wrapper > div.wp-block-group:first-child {
+  @apply flex items-center pl-2;
+}
+
+.site-header-wrapper > div.wp-block-group:last-child {
+  @apply mt-0;
+}
+
+.site-header-wrapper .wperf-search-box {
+  @apply flex items-center justify-center w-16 h-full border border-t-0 border-b-0 border-solid border-slate-300 lg:w-20;
+}
+
+.site-header-wrapper .wperf-search-box svg {
+  @apply w-7 h-7 relative top-0.5;
+}
+
+.site-header-wrapper .wp-block-navigation button svg {
+  @apply w-8 h-8;
 }
 
 /** logo */
@@ -46,8 +62,10 @@
 
 .main-navigation ul,
 .wp-block-navigation__responsive-container-content ul,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
-  @apply p-0 m-0 lg:flex gap-8 lg:gap-1;
+.wp-block-navigation__responsive-container.is-menu-open
+  .wp-block-navigation__responsive-container-content
+  .wp-block-navigation__container {
+  @apply gap-8 p-0 m-0 lg:flex lg:gap-1;
 }
 
 .main-navigation ul > li,
@@ -93,7 +111,9 @@
   }
 }
 @media (max-width: 1024px) {
-  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(
+      .is-menu-open
+    ) {
     bottom: 0;
     display: none;
     left: 0;

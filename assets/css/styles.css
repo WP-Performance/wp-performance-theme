@@ -2,6 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import './variables.css';
+
 /** GLOBAL */
 @import './shared.css';
 
@@ -10,6 +12,4 @@
 
 /** patterns */
 @import './patterns/index.css';
-
-/*@import 'instantsearch.css/themes/satellite-min.css';*/
 

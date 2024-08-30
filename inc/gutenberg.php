@@ -50,9 +50,11 @@ function setup()
             unregister_block_pattern($pattern_name);
         }
     }
+
+    add_post_type_support('page', 'excerpt');
 }
 
-add_action('init', __NAMESPACE__.'\setup');
+add_action('init', __NAMESPACE__ . '\setup');
 
 function block_category($categories)
 {
@@ -71,4 +73,4 @@ function block_category($categories)
     return $categories;
 }
 
-add_filter('block_categories_all', __NAMESPACE__.'\block_category', 10, 2);
+add_filter('block_categories_all', __NAMESPACE__ . '\block_category', 10, 2);

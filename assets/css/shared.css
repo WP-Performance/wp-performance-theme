@@ -1,14 +1,22 @@
 body {
-  @apply bg-body;
+  @apply bg-[var(--wp--custom--colors--body)];
+}
+
+body::before {
+  @apply absolute content-[''] block top-0 left-0 right-0 bg-gradient-to-b from-gray-200 to-[var(--wp--custom--colors--body)] h-screen z-[-1] w-full;
 }
 
 .site-main,
 .main-content {
-  @apply mt-0;
+  @apply mt-0 mb-32;
 }
 
 .main-content {
   @apply min-h-[40vh] py-16 mt-0;
+}
+
+.main-content p {
+  @apply lg:text-balance;
 }
 
 .home .main-content {
@@ -69,16 +77,6 @@ p > code {
   @apply px-1 py-0.5 bg-slate-200;
 }
 
-/*.shiki-line-numbers pre.shiki .line:before {*/
-/*  font-size: var(--wp--preset--font-size--base);*/
-/*  line-height: 1rem;*/
-/*}*/
-
-/*.shiki-line-numbers pre.shiki code span {*/
-/*  font-size: var(--wp--preset--font-size--xsmall);*/
-/*  line-height: .8rem;*/
-/*}*/
-
 /** block style */
 
 .is-style-img-dropshadow img {
@@ -104,6 +102,14 @@ p > code {
 
 .presswind-link a span {
   @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient;
+}
+
+.is-style-title-hero {
+  @apply text-transparent from-accent to-pink-900 bg-gradient-to-tr bg-clip-text text-balance;
+}
+
+.is-style-underscore {
+  @apply before:content-[''] before:w-10 before:bg-accent before:h-[3px] before:block flex items-center gap-1;
 }
 
 /** button icon presswind */
@@ -146,4 +152,14 @@ p > code {
 
 .wp-search-algolia {
   @apply min-h-[500px];
+}
+
+/** hero **/
+.gm-hero-home p {
+  @apply lg:text-balance;
+}
+
+/** bug shiki in safari IOS **/
+pre.shiki code span.line span {
+  -webkit-text-size-adjust: none;
 }
