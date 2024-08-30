@@ -122,3 +122,7 @@
     top: 0;
   }
 }
+
+.wp-block-navigation .current-menu-item a[aria-current="page"] {
+  @apply after:content-[''] after:block after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 relative after:transition-all hover:after:w-full after:bg-link-gradient hover:no-underline no-underline after:w-full;
+}

@@ -14,7 +14,7 @@
         <!-- /wp:paragraph -->
 
         <!-- wp:heading {"textAlign":"left","className":"is-style-title-hero","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|30"}}},"fontSize":"6xlarge"} -->
-        <h2 class="wp-block-heading has-text-align-left is-style-title-hero has-6-xlarge-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--30)">Améliorer la performance et la qualité des sites WordPress</h2>
+        <h1 class="wp-block-heading has-text-align-left is-style-title-hero has-6-xlarge-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--30)">Améliorer la performance et la qualité des sites WordPress</h1>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph {"align":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary","fontSize":"xlarge"} -->

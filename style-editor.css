@@ -701,6 +701,31 @@ pre.shiki code span.line span {
     top: 0;
   }
 }
+.wp-block-navigation .current-menu-item a[aria-current="page"] {
+    position: relative;
+    text-decoration-line: none;
+}
+.wp-block-navigation .current-menu-item a[aria-current="page"]::after {
+    position: absolute;
+    bottom: -0.125rem;
+    left: 0px;
+    display: block;
+    height: 0.125rem;
+    width: 100%;
+    background-image: linear-gradient(to left,#BE185D,rgb(150,20,90));;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    --tw-content: '';
+    content: var(--tw-content);
+}
+.wp-block-navigation .current-menu-item a[aria-current="page"]:hover {
+    text-decoration-line: none;
+}
+.wp-block-navigation .current-menu-item a[aria-current="page"]:hover::after {
+    content: var(--tw-content);
+    width: 100%;
+}
 footer.wp-block-template-part {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));

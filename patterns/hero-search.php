@@ -13,11 +13,8 @@
         <p class="is-style-underscore has-sora-font-family" style="font-style:normal;font-weight:600">Recherche</p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:post-title {"type":"search","showSearchTerm":false,"className":"is-style-title-hero","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"fontSize":"6xlarge"} /-->
-
+        <!-- wp:query-title {"type":"search","className":"is-style-title-hero","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"fontSize":"6xlarge"} /-->
     </div>
     <!-- /wp:group -->
-</div>
-<!-- /wp:group -->
 </div>
 <!-- /wp:group -->
