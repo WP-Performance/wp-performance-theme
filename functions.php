@@ -14,6 +14,9 @@ require_once dirname(__FILE__) . '/inc/sortable.php';
 // variations
 require_once dirname(__FILE__) . '/inc/variations_blocks.php';
 
+// binding meta
+require_once dirname(__FILE__) . '/inc/binding-meta.php';
+
 // post type
 require_once dirname(__FILE__) . '/post-type/snippet.php';
 require_once dirname(__FILE__) . '/post-type/training.php';
