@@ -487,6 +487,23 @@ p > code {
 pre.shiki code span.line span {
   -webkit-text-size-adjust: none;
 }
+/** simple */
+.wpp-simple-bloc {
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .wpp-simple-bloc {
+        flex-direction: row;
+    }
+}
+.wpp-simple-bloc > div {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .wpp-simple-bloc > div {
+        width: auto;
+    }
+}
 /** parts */
 /** header **/
 .site-header {

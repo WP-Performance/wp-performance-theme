@@ -167,3 +167,11 @@ p > code {
 pre.shiki code span.line span {
   -webkit-text-size-adjust: none;
 }
+
+/** simple */
+.wpp-simple-bloc {
+  @apply flex-col md:flex-row;
+}
+.wpp-simple-bloc > div {
+  @apply w-full md:w-auto;
+}
