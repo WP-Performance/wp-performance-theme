@@ -382,15 +382,15 @@ p > code {
     12px 12px 0px var(--wp--preset--color--cyan-bluish-gray);
 }
 .presswind-link a span {
-    animation: gradient-text 5s ease infinite;
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-    --tw-gradient-from: #bd34fe var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(189 52 254 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    --tw-gradient-to: #41d1ff var(--tw-gradient-to-position);
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
+  /* @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient; */
+  font-weight: 800;
+  color: var(--wp--preset--color--accent);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  /* text-shadow: 1px 1px 0px var(--wp--preset--color--primary); */
+  /* 1.1px 1.1px 0px var(--wp--preset--color--secondary); */
+  /* 1.2px 1.2px 0px var(--wp--preset--color--cyan-bluish-gray); */
 }
 .is-style-title-hero {
     text-wrap: balance;

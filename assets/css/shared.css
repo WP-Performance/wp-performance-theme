@@ -101,7 +101,11 @@ p > code {
 }
 
 .presswind-link a span {
-  @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient;
+  /* @apply text-transparent bg-gradient-to-r bg-clip-text from-[#bd34fe] to-[#41d1ff] animate-text-gradient; */
+  @apply font-extrabold transition-all text-accent;
+  /* text-shadow: 1px 1px 0px var(--wp--preset--color--primary); */
+  /* 1.1px 1.1px 0px var(--wp--preset--color--secondary); */
+  /* 1.2px 1.2px 0px var(--wp--preset--color--cyan-bluish-gray); */
 }
 
 .is-style-title-hero {
