@@ -24,7 +24,7 @@ body::before {
 }
 
 /** width content align */
-.entry-content ul {
+.entry-content ul:not(.wp-block-post-template) {
   @apply pl-9;
 }
 

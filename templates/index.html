@@ -1,13 +1,12 @@
 <!-- wp:template-part {"slug":"header","className":"site-header"} /-->
 
-<!-- wp:pattern {"slug" : "press-wind/hero-page"} /-->
+<!-- wp:pattern {"slug" : "press-wind/hero-category"} /-->
 
-<!-- wp:group {"tagName":"main","className":"site-main"} -->
+<!-- wp:group {"tagName":"main","className":"site-main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group site-main">
-
-    <!-- wp:group {"className":"main-content"} -->
-    <div class="wp-block-group main-content">
-        <!-- wp:post-content /-->
+    <!-- wp:group {"align":"wide","className":"main-content","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignwide main-content">
+        <!-- wp:pattern {"slug": "press-wind/list-posts-category" ,"align":"wide"} /-->
     </div>
     <!-- /wp:group -->
 </main>

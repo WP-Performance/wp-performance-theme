@@ -255,7 +255,7 @@ body::before {
     padding-bottom: 0px;
 }
 /** width content align */
-.entry-content ul {
+.entry-content ul:not(.wp-block-post-template) {
     padding-left: 2.25rem;
 }
 .entry-content ul.wp-block-social-links,
