@@ -37,7 +37,7 @@
 }
 
 .site-header .gm-logo-website a svg {
-  @apply w-64 xl:w-72;
+  @apply w-60 xl:w-72;
 }
 
 .site-header .gm-logo-website a svg path:first-child {
