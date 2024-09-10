@@ -1,4 +1,4 @@
-# Press Wind FSE
+# WP Performance theme based on Press Wind FSE
 
 Minimal starter theme for WordPress with Tailwind CSS and Vite JS for Full
 Site Editing.
