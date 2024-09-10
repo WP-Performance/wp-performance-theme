@@ -19,6 +19,9 @@ jobs:
           bun run favicon
           bun run build
 
+      - name: write
+        run: echo ${{ secrets.FTP_HOST }}
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -26,6 +29,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ${{ secrets.FTP_PATH }}
+          protocol: ftp
           exclude: |
             **/.git*
             **/.git*/**
