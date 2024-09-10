@@ -20,7 +20,7 @@ jobs:
           bun run build
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
