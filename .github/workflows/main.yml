@@ -15,9 +15,10 @@ jobs:
 
       - name: 🔨 Build Project
         run: |
-          npm install
-          npm run build
-          npm run favicon
+          npm install -g bun
+          bun install
+          bun run favicon
+          bun run build
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action
