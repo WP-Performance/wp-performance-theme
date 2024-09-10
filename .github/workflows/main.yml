@@ -6,16 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v4
+        uses: oven-sh/setup-bun@v2
 
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.17.0'
+      # - name: Use Node.js 20.x
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '20.17.0'
 
       - name: 🔨 Build Project
         run: |
-          npm install -g bun
+          # npm install -g bun
           bun install
           bun run favicon
           bun run build
