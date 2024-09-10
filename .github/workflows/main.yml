@@ -19,15 +19,15 @@ jobs:
           bun run favicon
           bun run build
 
-      # - name: 📂 Sync files
-      #   uses: SamKirkland/FTP-Deploy-Action
-      #   with:
-      #     server: ${{ secrets.FTP_HOST }}
-      #     username: ${{ secrets.FTP_USERNAME }}
-      #     password: ${{ secrets.ftp_password }}
-      #     local-dir: ${{ secrets.FTP_PATH }}
-      #     exclude: |
-      #       **/.git*
-      #       **/.git*/**
-      #       **/node_modules/**
-      #       **/.pnpm-store/**
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: ${{ secrets.FTP_PATH }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.pnpm-store/**
